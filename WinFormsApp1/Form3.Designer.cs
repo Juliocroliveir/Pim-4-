@@ -222,7 +222,6 @@
             txtDataNascimento.PlaceholderText = "Data de nascimento";
             txtDataNascimento.Size = new Size(210, 23);
             txtDataNascimento.TabIndex = 30;
-            txtDataNascimento.TextChanged += txtDataNascimento_TextChanged;
             txtDataNascimento.KeyDown += txtDataNascimento_KeyDown;
             txtDataNascimento.KeyUp += txtDataNascimento_KeyUp;
             // 
@@ -257,7 +256,6 @@
             erroSenha.TabIndex = 34;
             erroSenha.Text = "*";
             erroSenha.Visible = false;
-            erroSenha.Click += label1_Click_1;
             // 
             // erroConfirmarSenha
             // 

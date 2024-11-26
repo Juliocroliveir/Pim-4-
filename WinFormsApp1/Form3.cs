@@ -153,10 +153,6 @@ namespace WinFormsApp1
 
         }
 
-        private void txtCPF_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void txtDataNascimento_TextChanged(object sender, EventArgs e)
         {
@@ -168,15 +164,8 @@ namespace WinFormsApp1
 
         }
 
-        private void label1_Click_1(object sender, EventArgs e)
-        {
+    
 
-        }
-
-        private void txtConfirmaSenha_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void erroTelefone_Click(object sender, EventArgs e)
         {
@@ -191,7 +180,6 @@ namespace WinFormsApp1
         private void Form3_Load(object sender, EventArgs e)
         {
 
-        }
         }
 
         private void txtCPF_KeyDown(object sender, KeyEventArgs e)
@@ -253,9 +241,5 @@ namespace WinFormsApp1
             }
         }
 
-        private void txtDataNascimento_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
