@@ -14,7 +14,7 @@ namespace WinFormsApp1.Conexao
         {
             builder = new SqlConnectionStringBuilder
             {
-                DataSource = "GENI-PC", // Nome do servidor
+                DataSource = "GENI-PC", // Nome do servidor "DESKTOP-4KFQHVM\\SQLEXPRESS"
                 InitialCatalog = "dbFazendaUrbana",        // Nome do banco de dados
                 TrustServerCertificate = true,
                 IntegratedSecurity = true                  // Usando autenticação do Windows
@@ -78,7 +78,7 @@ namespace WinFormsApp1.Conexao
             }
             catch (SqlException ex)
             {
-                MessageBox.Show($"Erro SQL: {ex.Message}", "Erro no Comando", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //MessageBox.Show($"Erro SQL: {ex.Message}", "Erro no Comando", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return -1;
             }
             finally

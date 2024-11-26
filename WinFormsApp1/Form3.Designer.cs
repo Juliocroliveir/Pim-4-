@@ -36,16 +36,16 @@
             button1 = new Button();
             linkLabel1 = new LinkLabel();
             label7 = new Label();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
-            button3 = new Button();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
-            textBox6 = new TextBox();
-            textBox7 = new TextBox();
-            textBox8 = new TextBox();
-            textBox9 = new TextBox();
+            txtEmail = new TextBox();
+            txtSenha = new TextBox();
+            btoCadastrarUsuario = new Button();
+            txtConfirmaSenha = new TextBox();
+            txtCPF = new TextBox();
+            txtNome = new TextBox();
+            txtRG = new TextBox();
+            txtTelefone = new TextBox();
+            txtDataNascimento = new TextBox();
+            txtEndereco = new TextBox();
             SuspendLayout();
             // 
             // label6
@@ -125,90 +125,90 @@
             label7.Size = new Size(168, 30);
             label7.TabIndex = 21;
             label7.Text = "Crie a sua conta";
-            label7.Click += label7_Click;
             // 
-            // textBox2
+            // txtEmail
             // 
-            textBox2.Location = new Point(124, 121);
-            textBox2.Name = "textBox2";
-            textBox2.PlaceholderText = "email@dominio.com";
-            textBox2.Size = new Size(210, 23);
-            textBox2.TabIndex = 24;
+            txtEmail.Location = new Point(124, 121);
+            txtEmail.Name = "txtEmail";
+            txtEmail.PlaceholderText = "email@dominio.com";
+            txtEmail.Size = new Size(210, 23);
+            txtEmail.TabIndex = 24;
             // 
-            // textBox1
+            // txtSenha
             // 
-            textBox1.Location = new Point(124, 162);
-            textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "Senha de no minimo 6 digitos";
-            textBox1.Size = new Size(210, 23);
-            textBox1.TabIndex = 23;
+            txtSenha.Location = new Point(124, 162);
+            txtSenha.Name = "txtSenha";
+            txtSenha.PlaceholderText = "Senha de no minimo 6 digitos";
+            txtSenha.Size = new Size(210, 23);
+            txtSenha.TabIndex = 23;
             // 
-            // button3
+            // btoCadastrarUsuario
             // 
-            button3.BackColor = Color.Gold;
-            button3.FlatStyle = FlatStyle.Popup;
-            button3.Location = new Point(285, 344);
-            button3.Name = "button3";
-            button3.Size = new Size(210, 23);
-            button3.TabIndex = 22;
-            button3.Text = "Cadastrar usando esse email";
-            button3.UseVisualStyleBackColor = false;
+            btoCadastrarUsuario.BackColor = Color.Gold;
+            btoCadastrarUsuario.FlatStyle = FlatStyle.Popup;
+            btoCadastrarUsuario.Location = new Point(285, 344);
+            btoCadastrarUsuario.Name = "btoCadastrarUsuario";
+            btoCadastrarUsuario.Size = new Size(210, 23);
+            btoCadastrarUsuario.TabIndex = 22;
+            btoCadastrarUsuario.Text = "Cadastrar usando esse email";
+            btoCadastrarUsuario.UseVisualStyleBackColor = false;
+            btoCadastrarUsuario.Click += btoCadastrarUsuario_Click;
             // 
-            // textBox3
+            // txtConfirmaSenha
             // 
-            textBox3.Location = new Point(124, 204);
-            textBox3.Name = "textBox3";
-            textBox3.PlaceholderText = "Repita a senha";
-            textBox3.Size = new Size(210, 23);
-            textBox3.TabIndex = 25;
+            txtConfirmaSenha.Location = new Point(124, 204);
+            txtConfirmaSenha.Name = "txtConfirmaSenha";
+            txtConfirmaSenha.PlaceholderText = "Repita a senha";
+            txtConfirmaSenha.Size = new Size(210, 23);
+            txtConfirmaSenha.TabIndex = 25;
             // 
-            // textBox4
+            // txtCPF
             // 
-            textBox4.Location = new Point(453, 121);
-            textBox4.Name = "textBox4";
-            textBox4.PlaceholderText = "CPF";
-            textBox4.Size = new Size(210, 23);
-            textBox4.TabIndex = 28;
+            txtCPF.Location = new Point(453, 121);
+            txtCPF.Name = "txtCPF";
+            txtCPF.PlaceholderText = "CPF";
+            txtCPF.Size = new Size(210, 23);
+            txtCPF.TabIndex = 28;
             // 
-            // textBox5
+            // txtNome
             // 
-            textBox5.Location = new Point(124, 245);
-            textBox5.Name = "textBox5";
-            textBox5.PlaceholderText = "Nome";
-            textBox5.Size = new Size(210, 23);
-            textBox5.TabIndex = 27;
+            txtNome.Location = new Point(124, 245);
+            txtNome.Name = "txtNome";
+            txtNome.PlaceholderText = "Nome";
+            txtNome.Size = new Size(210, 23);
+            txtNome.TabIndex = 27;
             // 
-            // textBox6
+            // txtRG
             // 
-            textBox6.Location = new Point(124, 286);
-            textBox6.Name = "textBox6";
-            textBox6.PlaceholderText = "RG";
-            textBox6.Size = new Size(210, 23);
-            textBox6.TabIndex = 26;
+            txtRG.Location = new Point(124, 286);
+            txtRG.Name = "txtRG";
+            txtRG.PlaceholderText = "RG";
+            txtRG.Size = new Size(210, 23);
+            txtRG.TabIndex = 26;
             // 
-            // textBox7
+            // txtTelefone
             // 
-            textBox7.Location = new Point(453, 245);
-            textBox7.Name = "textBox7";
-            textBox7.PlaceholderText = "Telefone";
-            textBox7.Size = new Size(210, 23);
-            textBox7.TabIndex = 31;
+            txtTelefone.Location = new Point(453, 245);
+            txtTelefone.Name = "txtTelefone";
+            txtTelefone.PlaceholderText = "Telefone";
+            txtTelefone.Size = new Size(210, 23);
+            txtTelefone.TabIndex = 31;
             // 
-            // textBox8
+            // txtDataNascimento
             // 
-            textBox8.Location = new Point(453, 162);
-            textBox8.Name = "textBox8";
-            textBox8.PlaceholderText = "Data de nascimento";
-            textBox8.Size = new Size(210, 23);
-            textBox8.TabIndex = 30;
+            txtDataNascimento.Location = new Point(453, 162);
+            txtDataNascimento.Name = "txtDataNascimento";
+            txtDataNascimento.PlaceholderText = "Data de nascimento";
+            txtDataNascimento.Size = new Size(210, 23);
+            txtDataNascimento.TabIndex = 30;
             // 
-            // textBox9
+            // txtEndereco
             // 
-            textBox9.Location = new Point(453, 203);
-            textBox9.Name = "textBox9";
-            textBox9.PlaceholderText = "Endereço";
-            textBox9.Size = new Size(210, 23);
-            textBox9.TabIndex = 29;
+            txtEndereco.Location = new Point(453, 203);
+            txtEndereco.Name = "txtEndereco";
+            txtEndereco.PlaceholderText = "Endereço";
+            txtEndereco.Size = new Size(210, 23);
+            txtEndereco.TabIndex = 29;
             // 
             // Form3
             // 
@@ -216,16 +216,16 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.AliceBlue;
             ClientSize = new Size(800, 450);
-            Controls.Add(textBox7);
-            Controls.Add(textBox8);
-            Controls.Add(textBox9);
-            Controls.Add(textBox4);
-            Controls.Add(textBox5);
-            Controls.Add(textBox6);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            Controls.Add(button3);
+            Controls.Add(txtTelefone);
+            Controls.Add(txtDataNascimento);
+            Controls.Add(txtEndereco);
+            Controls.Add(txtCPF);
+            Controls.Add(txtNome);
+            Controls.Add(txtRG);
+            Controls.Add(txtConfirmaSenha);
+            Controls.Add(txtEmail);
+            Controls.Add(txtSenha);
+            Controls.Add(btoCadastrarUsuario);
             Controls.Add(label7);
             Controls.Add(label6);
             Controls.Add(label5);
@@ -250,15 +250,15 @@
         private Button button1;
         private LinkLabel linkLabel1;
         private Label label7;
-        private TextBox textBox2;
-        private TextBox textBox1;
-        private Button button3;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private TextBox textBox5;
-        private TextBox textBox6;
-        private TextBox textBox7;
-        private TextBox textBox8;
-        private TextBox textBox9;
+        private TextBox txtEmail;
+        private TextBox txtSenha;
+        private Button btoCadastrarUsuario;
+        private TextBox txtConfirmaSenha;
+        private TextBox txtCPF;
+        private TextBox txtNome;
+        private TextBox txtRG;
+        private TextBox txtTelefone;
+        private TextBox txtDataNascimento;
+        private TextBox txtEndereco;
     }
 }
