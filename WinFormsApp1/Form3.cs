@@ -22,11 +22,101 @@ namespace WinFormsApp1
 
         private void btoCadastrarUsuario_Click(object sender, EventArgs e)
         {
+            bool erro = false;
             //validações dos campos
             //validar se confirmar senha e senha estão iguais
 
+            if (string.IsNullOrWhiteSpace(txtSenha.Text))
+            {
+                erroSenha.Visible = true;
+                erro = true;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtConfirmaSenha.Text))
+            {
+                erroConfirmarSenha.Visible = true;
+                erro = true;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtEmail.Text))
+            {
+                erroEmail.Visible = true;
+                erro = true;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtRG.Text))
+            {
+                erroRg.Visible = true;
+                erro = true;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtCPF.Text))
+            {
+                erroCpf.Visible = true;
+                erro = true;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtEndereco.Text))
+            {
+                erroEndereco.Visible = true;
+                erro = true;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtDataNascimento.Text))
+            {
+                erroDataNascimento.Visible = true;
+                erro = true;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtTelefone.Text))
+            {
+                erroTelefone.Visible = true;
+                erro = true;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtNome.Text))
+            {
+                erroNome.Visible = true;
+                erro = true;
+            }
+
+            if (erro)
+            {
+                erroMensagem.Text = "* Campos Obrigatórios";
+            }
+
+            var tam = txtEmail.Text.Count();
+            int i = 0;
+            int contArroba = 0;
+            while (i < tam)
+            {
+                if (txtEmail.Text.Substring(i, 1) == "@")
+                {
+                    contArroba++;
+                }
+            }
+            if (contArroba != 1)
+            {
+                erroEmail.Visible = true;
+                erro = true;
+            }
 
 
+            if (erro)
+            {
+                erroMensagem.Text = "* Campos Inválidos";
+            }
+
+            if (txtSenha.Text != txtConfirmaSenha.Text)
+            {
+                erroConfirmarSenha.Visible = true;
+                erro = true;
+            }
+
+            if (erro)
+            {
+                return;
+            }
 
 
             UsuarioCadastro usuarioCadastro = new UsuarioCadastro();
@@ -48,18 +138,60 @@ namespace WinFormsApp1
             }
             if (ret == 1)
             {
-                //mensagem de cadastro com sucesso
-                //redirecionar para a tela 5
+                MessageBox.Show("Usuário cadastrado com sucesso!");
+
+                //redirecionar para a tela 2
+                this.Visible = false;
+                Form2 form2 = new Form2();
+                form2.ShowDialog();
+                this.Visible = true;
             }
-            else
-            {
-                //tratar caso não cadastrou
-            }
 
 
 
 
 
+        }
+
+        private void txtCPF_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtDataNascimento_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtConfirmaSenha_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void erroTelefone_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtEmail_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+
+        }
         }
 
         private void txtCPF_KeyDown(object sender, KeyEventArgs e)

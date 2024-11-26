@@ -177,6 +177,7 @@
             label3.Size = new Size(66, 15);
             label3.TabIndex = 61;
             label3.Text = "Seus dados";
+            label3.Click += label3_Click;
             // 
             // label2
             // 
@@ -195,7 +196,7 @@
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 59;
-            button1.Text = "Login";
+            button1.Text = "Logout";
             button1.UseVisualStyleBackColor = false;
             // 
             // linkLabel1
