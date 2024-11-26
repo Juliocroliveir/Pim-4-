@@ -145,7 +145,6 @@
             label1.Size = new Size(204, 15);
             label1.TabIndex = 17;
             label1.Text = "Se não for registrado, crie a sua conta";
-            label1.Click += label1_Click;
             // 
             // textBox1
             // 
@@ -175,7 +174,6 @@
             label7.Size = new Size(229, 30);
             label7.TabIndex = 16;
             label7.Text = "Entre com a sua conta";
-            label7.Click += label7_Click;
             // 
             // label8
             // 

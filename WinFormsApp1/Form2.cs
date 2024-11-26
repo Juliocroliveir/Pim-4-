@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WinFormsApp1.Conexao;
 
 namespace WinFormsApp1
 {
@@ -27,16 +28,7 @@ namespace WinFormsApp1
             this.Visible = true;
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
 
-        }
-
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void button3_Click(object sender, EventArgs e)
         {
@@ -50,7 +42,24 @@ namespace WinFormsApp1
             if (erroEmail.Visible || erroSenha.Visible)
                 erroMensagem.Visible = true;
 
+            if(!textBox2.Text.IsNullOrEmpty() && !textBox1.Text.IsNullOrEmpty())
+            {
+                string email = textBox2.Text;
+                string pass = textBox1.Text;
 
+                Login login = new Login();
+                var ret = login.ValidarLogin(email, pass);
+
+                if (ret) 
+                {
+                    //chamar a tela principal
+                }
+                else
+                {
+                    MessageBox.Show("Usuário ou senha inválida");
+                }
+
+            }
 
 
         }
