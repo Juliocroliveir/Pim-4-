@@ -26,5 +26,13 @@ namespace WinFormsApp1
         {
 
         }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            Form4 form4 = new Form4();
+            form4.ShowDialog();
+            this.Visible = true;
+        }
     }
 }

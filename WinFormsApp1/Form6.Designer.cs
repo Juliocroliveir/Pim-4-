@@ -175,6 +175,7 @@
             label8.Size = new Size(66, 15);
             label8.TabIndex = 63;
             label8.Text = "Seus dados";
+            label8.Click += label8_Click;
             // 
             // label10
             // 

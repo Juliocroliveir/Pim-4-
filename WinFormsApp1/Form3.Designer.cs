@@ -85,6 +85,7 @@
             label3.Size = new Size(66, 15);
             label3.TabIndex = 11;
             label3.Text = "Seus dados";
+            label3.Visible = false;
             // 
             // label2
             // 
@@ -105,6 +106,7 @@
             button1.TabIndex = 9;
             button1.Text = "Login";
             button1.UseVisualStyleBackColor = false;
+            button1.Visible = false;
             // 
             // linkLabel1
             // 

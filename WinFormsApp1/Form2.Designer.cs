@@ -84,6 +84,7 @@
             label3.Size = new Size(66, 15);
             label3.TabIndex = 12;
             label3.Text = "Seus dados";
+            label3.Visible = false;
             // 
             // label2
             // 

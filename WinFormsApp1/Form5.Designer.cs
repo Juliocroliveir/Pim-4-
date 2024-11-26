@@ -89,6 +89,7 @@
             label3.Size = new Size(66, 15);
             label3.TabIndex = 42;
             label3.Text = "Seus dados";
+            label3.Click += label3_Click;
             // 
             // label2
             // 

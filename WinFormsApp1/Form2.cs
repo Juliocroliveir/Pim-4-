@@ -20,7 +20,11 @@ namespace WinFormsApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
+            this.Visible = false;
+            Form3 form3 = new Form3();
 
+            form3.ShowDialog();
+            this.Visible = true;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -57,7 +61,7 @@ namespace WinFormsApp1
                 erroEmail.Visible = false;
 
             if (erroSenha.Visible == false)
-                erroMensagem.Visible=false;
+                erroMensagem.Visible = false;
 
         }
         private void TextBox1_KeyDown(object sender, KeyEventArgs e)
@@ -70,5 +74,7 @@ namespace WinFormsApp1
                 erroMensagem.Visible = false;
 
         }
+
+       
     }
 }
