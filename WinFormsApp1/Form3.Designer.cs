@@ -165,10 +165,13 @@
             // txtCPF
             // 
             txtCPF.Location = new Point(453, 121);
+            txtCPF.MaxLength = 11;
             txtCPF.Name = "txtCPF";
             txtCPF.PlaceholderText = "CPF";
             txtCPF.Size = new Size(210, 23);
             txtCPF.TabIndex = 28;
+            txtCPF.KeyDown += txtCPF_KeyDown;
+            txtCPF.KeyUp += txtCPF_KeyUp;
             // 
             // txtNome
             // 
@@ -197,10 +200,14 @@
             // txtDataNascimento
             // 
             txtDataNascimento.Location = new Point(453, 162);
+            txtDataNascimento.MaxLength = 8;
             txtDataNascimento.Name = "txtDataNascimento";
             txtDataNascimento.PlaceholderText = "Data de nascimento";
             txtDataNascimento.Size = new Size(210, 23);
             txtDataNascimento.TabIndex = 30;
+            txtDataNascimento.TextChanged += txtDataNascimento_TextChanged;
+            txtDataNascimento.KeyDown += txtDataNascimento_KeyDown;
+            txtDataNascimento.KeyUp += txtDataNascimento_KeyUp;
             // 
             // txtEndereco
             // 

@@ -25,6 +25,23 @@ namespace WinFormsApp1.Conexao
 
             return linhasAfetadas;
         }
+        public int AtualizarUsuario(UsuarioCadastro recUsu)
+        {
+            UsuarioCadastro uCadas = new UsuarioCadastro();
+            uCadas = recUsu;
+
+            BancoSqlServer banco = new BancoSqlServer();
+
+            // Exemplo: Inserir um novo usuário
+            string queryInsert = $@"UPDATE [dbo].[Usuarios]
+            SET [Nome] = '{uCadas.Nome}',[RG] = '{uCadas.RG}',[CPF] = '{uCadas.CPF}',[DataNascimento] = '{uCadas.DataNascimento}',[Endereco] = '{uCadas.Endereco}',[Telefone] = '{uCadas.Telefone}'
+            WHERE [Email] = '{uCadas.Email}'";
+
+            int linhasAfetadas = banco.ExecutarComando(queryInsert);
+            //MessageBox.Show($"Linhas afetadas: {linhasAfetadas}");
+
+            return linhasAfetadas;
+        }
 
 
 

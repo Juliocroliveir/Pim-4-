@@ -42,7 +42,7 @@ namespace WinFormsApp1
             if (erroEmail.Visible || erroSenha.Visible)
                 erroMensagem.Visible = true;
 
-            if(!textBox2.Text.IsNullOrEmpty() && !textBox1.Text.IsNullOrEmpty())
+            if (!textBox2.Text.IsNullOrEmpty() && !textBox1.Text.IsNullOrEmpty())
             {
                 string email = textBox2.Text;
                 string pass = textBox1.Text;
@@ -50,7 +50,7 @@ namespace WinFormsApp1
                 Login login = new Login();
                 var ret = login.ValidarLogin(email, pass);
 
-                if (ret) 
+                if (ret)
                 {
                     //chamar a tela principal
                     this.Visible = false;
@@ -89,6 +89,5 @@ namespace WinFormsApp1
 
         }
 
-       
     }
 }
