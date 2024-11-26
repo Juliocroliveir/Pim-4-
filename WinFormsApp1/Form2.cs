@@ -53,6 +53,11 @@ namespace WinFormsApp1
                 if (ret) 
                 {
                     //chamar a tela principal
+                    this.Visible = false;
+                    Form5 form5 = new Form5();
+
+                    form5.ShowDialog();
+                    this.Visible = true;
                 }
                 else
                 {
