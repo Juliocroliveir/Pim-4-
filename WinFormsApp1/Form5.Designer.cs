@@ -108,7 +108,7 @@
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 40;
-            button1.Text = "Login";
+            button1.Text = "Logout";
             button1.UseVisualStyleBackColor = false;
             // 
             // linkLabel1

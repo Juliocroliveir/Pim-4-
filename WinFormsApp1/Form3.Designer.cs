@@ -46,6 +46,16 @@
             txtTelefone = new TextBox();
             txtDataNascimento = new TextBox();
             txtEndereco = new TextBox();
+            erroEmail = new Label();
+            erroSenha = new Label();
+            erroConfirmarSenha = new Label();
+            erroNome = new Label();
+            erroRg = new Label();
+            erroCpf = new Label();
+            erroDataNascimento = new Label();
+            erroEndereco = new Label();
+            erroTelefone = new Label();
+            erroMensagem = new Label();
             SuspendLayout();
             // 
             // label6
@@ -129,18 +139,21 @@
             // txtEmail
             // 
             txtEmail.Location = new Point(124, 121);
+            txtEmail.MaxLength = 20;
             txtEmail.Name = "txtEmail";
             txtEmail.PlaceholderText = "email@dominio.com";
             txtEmail.Size = new Size(210, 23);
             txtEmail.TabIndex = 24;
+            txtEmail.TextChanged += txtEmail_TextChanged;
             // 
             // txtSenha
             // 
             txtSenha.Location = new Point(124, 162);
+            txtSenha.MaxLength = 15;
             txtSenha.Name = "txtSenha";
             txtSenha.PlaceholderText = "Senha de no minimo 6 digitos";
             txtSenha.Size = new Size(210, 23);
-            txtSenha.TabIndex = 23;
+            txtSenha.TabIndex = 25;
             // 
             // btoCadastrarUsuario
             // 
@@ -157,22 +170,26 @@
             // txtConfirmaSenha
             // 
             txtConfirmaSenha.Location = new Point(124, 204);
+            txtConfirmaSenha.MaxLength = 15;
             txtConfirmaSenha.Name = "txtConfirmaSenha";
             txtConfirmaSenha.PlaceholderText = "Repita a senha";
             txtConfirmaSenha.Size = new Size(210, 23);
-            txtConfirmaSenha.TabIndex = 25;
+            txtConfirmaSenha.TabIndex = 26;
             // 
             // txtCPF
             // 
             txtCPF.Location = new Point(453, 121);
+            txtCPF.MaxLength = 11;
             txtCPF.Name = "txtCPF";
             txtCPF.PlaceholderText = "CPF";
             txtCPF.Size = new Size(210, 23);
-            txtCPF.TabIndex = 28;
+            txtCPF.TabIndex = 29;
+            txtCPF.TextChanged += txtCPF_TextChanged;
             // 
             // txtNome
             // 
             txtNome.Location = new Point(124, 245);
+            txtNome.MaxLength = 40;
             txtNome.Name = "txtNome";
             txtNome.PlaceholderText = "Nome";
             txtNome.Size = new Size(210, 23);
@@ -181,34 +198,152 @@
             // txtRG
             // 
             txtRG.Location = new Point(124, 286);
+            txtRG.MaxLength = 12;
             txtRG.Name = "txtRG";
             txtRG.PlaceholderText = "RG";
             txtRG.Size = new Size(210, 23);
-            txtRG.TabIndex = 26;
+            txtRG.TabIndex = 28;
             // 
             // txtTelefone
             // 
             txtTelefone.Location = new Point(453, 245);
+            txtTelefone.MaxLength = 15;
             txtTelefone.Name = "txtTelefone";
             txtTelefone.PlaceholderText = "Telefone";
             txtTelefone.Size = new Size(210, 23);
-            txtTelefone.TabIndex = 31;
+            txtTelefone.TabIndex = 32;
             // 
             // txtDataNascimento
             // 
             txtDataNascimento.Location = new Point(453, 162);
+            txtDataNascimento.MaxLength = 8;
             txtDataNascimento.Name = "txtDataNascimento";
             txtDataNascimento.PlaceholderText = "Data de nascimento";
             txtDataNascimento.Size = new Size(210, 23);
             txtDataNascimento.TabIndex = 30;
+            txtDataNascimento.TextChanged += txtDataNascimento_TextChanged;
             // 
             // txtEndereco
             // 
             txtEndereco.Location = new Point(453, 203);
+            txtEndereco.MaxLength = 100;
             txtEndereco.Name = "txtEndereco";
             txtEndereco.PlaceholderText = "Endereço";
             txtEndereco.Size = new Size(210, 23);
-            txtEndereco.TabIndex = 29;
+            txtEndereco.TabIndex = 31;
+            // 
+            // erroEmail
+            // 
+            erroEmail.AutoSize = true;
+            erroEmail.ForeColor = Color.Red;
+            erroEmail.Location = new Point(106, 124);
+            erroEmail.Name = "erroEmail";
+            erroEmail.Size = new Size(12, 15);
+            erroEmail.TabIndex = 33;
+            erroEmail.Text = "*";
+            erroEmail.Visible = false;
+            erroEmail.Click += label1_Click;
+            // 
+            // erroSenha
+            // 
+            erroSenha.AutoSize = true;
+            erroSenha.ForeColor = Color.Red;
+            erroSenha.Location = new Point(106, 165);
+            erroSenha.Name = "erroSenha";
+            erroSenha.Size = new Size(12, 15);
+            erroSenha.TabIndex = 34;
+            erroSenha.Text = "*";
+            erroSenha.Visible = false;
+            erroSenha.Click += label1_Click_1;
+            // 
+            // erroConfirmarSenha
+            // 
+            erroConfirmarSenha.AutoSize = true;
+            erroConfirmarSenha.ForeColor = Color.Red;
+            erroConfirmarSenha.Location = new Point(106, 207);
+            erroConfirmarSenha.Name = "erroConfirmarSenha";
+            erroConfirmarSenha.Size = new Size(12, 15);
+            erroConfirmarSenha.TabIndex = 35;
+            erroConfirmarSenha.Text = "*";
+            erroConfirmarSenha.Visible = false;
+            // 
+            // erroNome
+            // 
+            erroNome.AutoSize = true;
+            erroNome.ForeColor = Color.Red;
+            erroNome.Location = new Point(106, 248);
+            erroNome.Name = "erroNome";
+            erroNome.Size = new Size(12, 15);
+            erroNome.TabIndex = 36;
+            erroNome.Text = "*";
+            erroNome.Visible = false;
+            // 
+            // erroRg
+            // 
+            erroRg.AutoSize = true;
+            erroRg.ForeColor = Color.Red;
+            erroRg.Location = new Point(106, 289);
+            erroRg.Name = "erroRg";
+            erroRg.Size = new Size(12, 15);
+            erroRg.TabIndex = 37;
+            erroRg.Text = "*";
+            erroRg.Visible = false;
+            // 
+            // erroCpf
+            // 
+            erroCpf.AutoSize = true;
+            erroCpf.ForeColor = Color.Red;
+            erroCpf.Location = new Point(435, 124);
+            erroCpf.Name = "erroCpf";
+            erroCpf.Size = new Size(12, 15);
+            erroCpf.TabIndex = 38;
+            erroCpf.Text = "*";
+            erroCpf.Visible = false;
+            // 
+            // erroDataNascimento
+            // 
+            erroDataNascimento.AutoSize = true;
+            erroDataNascimento.ForeColor = Color.Red;
+            erroDataNascimento.Location = new Point(435, 165);
+            erroDataNascimento.Name = "erroDataNascimento";
+            erroDataNascimento.Size = new Size(12, 15);
+            erroDataNascimento.TabIndex = 39;
+            erroDataNascimento.Text = "*";
+            erroDataNascimento.Visible = false;
+            // 
+            // erroEndereco
+            // 
+            erroEndereco.AutoSize = true;
+            erroEndereco.ForeColor = Color.Red;
+            erroEndereco.Location = new Point(435, 207);
+            erroEndereco.Name = "erroEndereco";
+            erroEndereco.Size = new Size(12, 15);
+            erroEndereco.TabIndex = 40;
+            erroEndereco.Text = "*";
+            erroEndereco.Visible = false;
+            // 
+            // erroTelefone
+            // 
+            erroTelefone.AutoSize = true;
+            erroTelefone.ForeColor = Color.Red;
+            erroTelefone.Location = new Point(435, 248);
+            erroTelefone.Name = "erroTelefone";
+            erroTelefone.Size = new Size(12, 15);
+            erroTelefone.TabIndex = 41;
+            erroTelefone.Text = "*";
+            erroTelefone.Visible = false;
+            erroTelefone.Click += erroTelefone_Click;
+            // 
+            // erroMensagem
+            // 
+            erroMensagem.AutoSize = true;
+            erroMensagem.ForeColor = Color.Red;
+            erroMensagem.Location = new Point(382, 390);
+            erroMensagem.Name = "erroMensagem";
+            erroMensagem.Size = new Size(18, 15);
+            erroMensagem.TabIndex = 42;
+            erroMensagem.Text = "*  ";
+            erroMensagem.Visible = false;
             // 
             // Form3
             // 
@@ -216,6 +351,16 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.AliceBlue;
             ClientSize = new Size(800, 450);
+            Controls.Add(erroMensagem);
+            Controls.Add(erroTelefone);
+            Controls.Add(erroEndereco);
+            Controls.Add(erroDataNascimento);
+            Controls.Add(erroCpf);
+            Controls.Add(erroRg);
+            Controls.Add(erroNome);
+            Controls.Add(erroConfirmarSenha);
+            Controls.Add(erroSenha);
+            Controls.Add(erroEmail);
             Controls.Add(txtTelefone);
             Controls.Add(txtDataNascimento);
             Controls.Add(txtEndereco);
@@ -236,6 +381,7 @@
             Controls.Add(linkLabel1);
             Name = "Form3";
             Text = "Form3";
+            Load += Form3_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -260,5 +406,15 @@
         private TextBox txtTelefone;
         private TextBox txtDataNascimento;
         private TextBox txtEndereco;
+        private Label erroEmail;
+        private Label erroSenha;
+        private Label erroConfirmarSenha;
+        private Label erroNome;
+        private Label erroRg;
+        private Label erroCpf;
+        private Label erroDataNascimento;
+        private Label erroEndereco;
+        private Label erroTelefone;
+        private Label erroMensagem;
     }
 }

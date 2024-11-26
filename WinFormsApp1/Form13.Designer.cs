@@ -50,7 +50,7 @@
             textBox7.Name = "textBox7";
             textBox7.PlaceholderText = "Telefone";
             textBox7.Size = new Size(210, 23);
-            textBox7.TabIndex = 65;
+            textBox7.TabIndex = 62;
             // 
             // textBox9
             // 
@@ -58,7 +58,7 @@
             textBox9.Name = "textBox9";
             textBox9.PlaceholderText = "Endereço";
             textBox9.Size = new Size(210, 23);
-            textBox9.TabIndex = 63;
+            textBox9.TabIndex = 61;
             // 
             // textBox5
             // 
@@ -66,7 +66,7 @@
             textBox5.Name = "textBox5";
             textBox5.PlaceholderText = "Nome";
             textBox5.Size = new Size(210, 23);
-            textBox5.TabIndex = 61;
+            textBox5.TabIndex = 59;
             // 
             // textBox6
             // 
@@ -75,6 +75,7 @@
             textBox6.PlaceholderText = "CNPJ";
             textBox6.Size = new Size(210, 23);
             textBox6.TabIndex = 60;
+            textBox6.TextChanged += textBox6_TextChanged;
             // 
             // textBox2
             // 
@@ -82,7 +83,7 @@
             textBox2.Name = "textBox2";
             textBox2.PlaceholderText = "email@dominio.com";
             textBox2.Size = new Size(210, 23);
-            textBox2.TabIndex = 59;
+            textBox2.TabIndex = 58;
             // 
             // button3
             // 
@@ -91,9 +92,10 @@
             button3.Location = new Point(285, 344);
             button3.Name = "button3";
             button3.Size = new Size(210, 23);
-            button3.TabIndex = 58;
+            button3.TabIndex = 63;
             button3.Text = "Cadastra Fornecedor";
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // label7
             // 
@@ -142,6 +144,7 @@
             label3.Size = new Size(66, 15);
             label3.TabIndex = 53;
             label3.Text = "Seus dados";
+            label3.Click += label3_Click;
             // 
             // label2
             // 
@@ -160,7 +163,7 @@
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 51;
-            button1.Text = "Login";
+            button1.Text = "Logout";
             button1.UseVisualStyleBackColor = false;
             // 
             // linkLabel1
@@ -193,6 +196,7 @@
             Controls.Add(linkLabel1);
             Name = "Form13";
             Text = "Form13";
+            Load += Form13_Load;
             ResumeLayout(false);
             PerformLayout();
         }

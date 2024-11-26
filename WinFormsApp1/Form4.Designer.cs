@@ -49,6 +49,7 @@
             // textBox7
             // 
             textBox7.Location = new Point(453, 204);
+            textBox7.MaxLength = 15;
             textBox7.Name = "textBox7";
             textBox7.PlaceholderText = "Telefone";
             textBox7.Size = new Size(210, 23);
@@ -57,6 +58,7 @@
             // textBox8
             // 
             textBox8.Location = new Point(453, 121);
+            textBox8.MaxLength = 8;
             textBox8.Name = "textBox8";
             textBox8.PlaceholderText = "Data de nascimento";
             textBox8.Size = new Size(210, 23);
@@ -65,6 +67,7 @@
             // textBox9
             // 
             textBox9.Location = new Point(453, 162);
+            textBox9.MaxLength = 100;
             textBox9.Name = "textBox9";
             textBox9.PlaceholderText = "Endereço";
             textBox9.Size = new Size(210, 23);
@@ -73,6 +76,7 @@
             // textBox4
             // 
             textBox4.Location = new Point(124, 245);
+            textBox4.MaxLength = 11;
             textBox4.Name = "textBox4";
             textBox4.PlaceholderText = "CPF";
             textBox4.Size = new Size(210, 23);
@@ -81,6 +85,7 @@
             // textBox5
             // 
             textBox5.Location = new Point(124, 162);
+            textBox5.MaxLength = 40;
             textBox5.Name = "textBox5";
             textBox5.PlaceholderText = "Nome";
             textBox5.Size = new Size(210, 23);
@@ -89,6 +94,7 @@
             // textBox6
             // 
             textBox6.Location = new Point(124, 203);
+            textBox6.MaxLength = 12;
             textBox6.Name = "textBox6";
             textBox6.PlaceholderText = "RG";
             textBox6.Size = new Size(210, 23);
@@ -97,6 +103,7 @@
             // textBox2
             // 
             textBox2.Location = new Point(124, 121);
+            textBox2.MaxLength = 20;
             textBox2.Name = "textBox2";
             textBox2.PlaceholderText = "email@dominio.com";
             textBox2.Size = new Size(210, 23);
