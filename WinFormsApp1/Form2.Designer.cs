@@ -42,6 +42,9 @@
             textBox2 = new TextBox();
             label7 = new Label();
             label8 = new Label();
+            erroMensagem = new Label();
+            erroEmail = new Label();
+            erroSenha = new Label();
             SuspendLayout();
             // 
             // label6
@@ -99,8 +102,9 @@
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 10;
-            button1.Text = "Login";
+            button1.Text = "Logout";
             button1.UseVisualStyleBackColor = false;
+            button1.Visible = false;
             // 
             // linkLabel1
             // 
@@ -115,7 +119,7 @@
             button2.Location = new Point(274, 302);
             button2.Name = "button2";
             button2.Size = new Size(210, 23);
-            button2.TabIndex = 15;
+            button2.TabIndex = 21;
             button2.Text = "Crie uma conta";
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
@@ -127,9 +131,10 @@
             button3.Location = new Point(274, 248);
             button3.Name = "button3";
             button3.Size = new Size(210, 23);
-            button3.TabIndex = 16;
+            button3.TabIndex = 20;
             button3.Text = "Entrar";
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // label1
             // 
@@ -145,10 +150,11 @@
             // 
             textBox1.Location = new Point(274, 199);
             textBox1.Name = "textBox1";
+            textBox1.PasswordChar = '*';
             textBox1.PlaceholderText = "Senha";
             textBox1.Size = new Size(210, 23);
-            textBox1.TabIndex = 18;
-            textBox1.TextChanged += textBox1_TextChanged;
+            textBox1.TabIndex = 19;
+            textBox1.KeyDown += TextBox1_KeyDown;
             // 
             // textBox2
             // 
@@ -156,7 +162,8 @@
             textBox2.Name = "textBox2";
             textBox2.PlaceholderText = "E-mail";
             textBox2.Size = new Size(210, 23);
-            textBox2.TabIndex = 19;
+            textBox2.TabIndex = 18;
+            textBox2.KeyDown += TextBox2_KeyDown;
             // 
             // label7
             // 
@@ -165,7 +172,7 @@
             label7.Location = new Point(265, 76);
             label7.Name = "label7";
             label7.Size = new Size(229, 30);
-            label7.TabIndex = 20;
+            label7.TabIndex = 16;
             label7.Text = "Entre com a sua conta";
             label7.Click += label7_Click;
             // 
@@ -175,8 +182,41 @@
             label8.Location = new Point(304, 123);
             label8.Name = "label8";
             label8.Size = new Size(153, 15);
-            label8.TabIndex = 21;
+            label8.TabIndex = 15;
             label8.Text = "Usando o seu email e senha";
+            // 
+            // erroMensagem
+            // 
+            erroMensagem.AutoSize = true;
+            erroMensagem.ForeColor = Color.Red;
+            erroMensagem.Location = new Point(304, 344);
+            erroMensagem.Name = "erroMensagem";
+            erroMensagem.Size = new Size(128, 15);
+            erroMensagem.TabIndex = 22;
+            erroMensagem.Text = "* Campos Obrigatórios";
+            erroMensagem.Visible = false;
+            // 
+            // erroEmail
+            // 
+            erroEmail.AutoSize = true;
+            erroEmail.ForeColor = Color.Red;
+            erroEmail.Location = new Point(256, 156);
+            erroEmail.Name = "erroEmail";
+            erroEmail.Size = new Size(12, 15);
+            erroEmail.TabIndex = 23;
+            erroEmail.Text = "*";
+            erroEmail.Visible = false;
+            // 
+            // erroSenha
+            // 
+            erroSenha.AutoSize = true;
+            erroSenha.ForeColor = Color.Red;
+            erroSenha.Location = new Point(256, 202);
+            erroSenha.Name = "erroSenha";
+            erroSenha.Size = new Size(12, 15);
+            erroSenha.TabIndex = 24;
+            erroSenha.Text = "*";
+            erroSenha.Visible = false;
             // 
             // Form2
             // 
@@ -184,6 +224,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.AliceBlue;
             ClientSize = new Size(800, 450);
+            Controls.Add(erroSenha);
+            Controls.Add(erroEmail);
+            Controls.Add(erroMensagem);
             Controls.Add(label8);
             Controls.Add(label7);
             Controls.Add(textBox2);
@@ -204,6 +247,11 @@
             PerformLayout();
         }
 
+        private void TextBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
         #endregion
 
         private Label label6;
@@ -220,5 +268,8 @@
         private TextBox textBox2;
         private Label label7;
         private Label label8;
+        private Label erroMensagem;
+        private Label erroEmail;
+        private Label erroSenha;
     }
 }
