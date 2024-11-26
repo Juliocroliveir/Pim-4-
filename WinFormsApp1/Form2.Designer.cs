@@ -66,6 +66,7 @@
             label5.Size = new Size(55, 15);
             label5.TabIndex = 14;
             label5.Text = "Produtos";
+            label5.Visible = false;
             // 
             // label4
             // 
@@ -106,6 +107,7 @@
             button1.Text = "Logout";
             button1.UseVisualStyleBackColor = false;
             button1.Visible = false;
+            button1.Click += button1_Click;
             // 
             // linkLabel1
             // 

@@ -48,6 +48,7 @@ namespace WinFormsApp1
                 this.Visible = false;
                 Form4 form4 = new Form4();
                 form4.ShowDialog();
+                Close();
                 this.Visible = true;
             }
 

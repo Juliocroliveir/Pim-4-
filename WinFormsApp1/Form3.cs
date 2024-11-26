@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using WinFormsApp1.Conexao;
 using WinFormsApp1.Objetos;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace WinFormsApp1
 {
@@ -164,7 +165,7 @@ namespace WinFormsApp1
 
         }
 
-    
+
 
 
         private void erroTelefone_Click(object sender, EventArgs e)
@@ -174,7 +175,11 @@ namespace WinFormsApp1
 
         private void txtEmail_TextChanged(object sender, EventArgs e)
         {
+            if (txtEmail.Text != "")
+                erroEmail.Visible = false;
 
+            if (erroEmail.Visible == false)
+                erroMensagem.Visible = false;
         }
 
         private void Form3_Load(object sender, EventArgs e)
@@ -241,5 +246,76 @@ namespace WinFormsApp1
             }
         }
 
+        private void txtSenha_TextChanged(object sender, EventArgs e)
+        {
+            if (txtSenha.Text != "")
+                erroSenha.Visible = false;
+
+            if (erroSenha.Visible == false)
+                erroMensagem.Visible = false;
+        }
+
+        private void txtConfirmaSenha_TextChanged(object sender, EventArgs e)
+        {
+            if (txtConfirmaSenha.Text != "")
+                erroConfirmarSenha.Visible = false;
+
+            if (erroConfirmarSenha.Visible == false)
+                erroMensagem.Visible = false;
+        }
+
+        private void txtNome_TextChanged(object sender, EventArgs e)
+        {
+            if (txtNome.Text != "")
+                erroNome.Visible = false;
+
+            if (erroNome.Visible == false)
+                erroMensagem.Visible = false;
+        }
+
+        private void txtRG_TextChanged(object sender, EventArgs e)
+        {
+            if (txtRG.Text != "")
+                erroRg.Visible = false;
+
+            if (erroRg.Visible == false)
+                erroMensagem.Visible = false;
+        }
+
+        private void txtCPF_TextChanged(object sender, EventArgs e)
+        {
+            if (txtCPF.Text != "")
+                erroCpf.Visible = false;
+
+            if (erroCpf.Visible == false)
+                erroMensagem.Visible = false;
+        }
+
+        private void txtDataNascimento_TextChanged_1(object sender, EventArgs e)
+        {
+            if (txtDataNascimento.Text != "")
+                erroDataNascimento.Visible = false;
+
+            if (erroDataNascimento.Visible == false)
+                erroMensagem.Visible = false;
+        }
+
+        private void txtEndereco_TextChanged(object sender, EventArgs e)
+        {
+            if (txtEndereco.Text != "")
+                erroEndereco.Visible = false;
+
+            if (erroEndereco.Visible == false)
+                erroMensagem.Visible = false;
+        }
+
+        private void txtTelefone_TextChanged(object sender, EventArgs e)
+        {
+            if (txtTelefone.Text != "")
+                erroTelefone.Visible = false;
+
+            if (erroTelefone.Visible == false)
+                erroMensagem.Visible = false;
+        }
     }
 }

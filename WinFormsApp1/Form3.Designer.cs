@@ -77,6 +77,7 @@
             label5.Size = new Size(55, 15);
             label5.TabIndex = 13;
             label5.Text = "Produtos";
+            label5.Visible = false;
             // 
             // label4
             // 
@@ -154,6 +155,7 @@
             txtSenha.PlaceholderText = "Senha de no minimo 6 digitos";
             txtSenha.Size = new Size(210, 23);
             txtSenha.TabIndex = 25;
+            txtSenha.TextChanged += txtSenha_TextChanged;
             // 
             // btoCadastrarUsuario
             // 
@@ -175,6 +177,7 @@
             txtConfirmaSenha.PlaceholderText = "Repita a senha";
             txtConfirmaSenha.Size = new Size(210, 23);
             txtConfirmaSenha.TabIndex = 26;
+            txtConfirmaSenha.TextChanged += txtConfirmaSenha_TextChanged;
             // 
             // txtCPF
             // 
@@ -183,7 +186,8 @@
             txtCPF.Name = "txtCPF";
             txtCPF.PlaceholderText = "CPF";
             txtCPF.Size = new Size(210, 23);
-            txtCPF.TabIndex = 28;
+            txtCPF.TabIndex = 29;
+            txtCPF.TextChanged += txtCPF_TextChanged;
             txtCPF.KeyDown += txtCPF_KeyDown;
             txtCPF.KeyUp += txtCPF_KeyUp;
             // 
@@ -195,6 +199,7 @@
             txtNome.PlaceholderText = "Nome";
             txtNome.Size = new Size(210, 23);
             txtNome.TabIndex = 27;
+            txtNome.TextChanged += txtNome_TextChanged;
             // 
             // txtRG
             // 
@@ -204,6 +209,7 @@
             txtRG.PlaceholderText = "RG";
             txtRG.Size = new Size(210, 23);
             txtRG.TabIndex = 28;
+            txtRG.TextChanged += txtRG_TextChanged;
             // 
             // txtTelefone
             // 
@@ -213,6 +219,7 @@
             txtTelefone.PlaceholderText = "Telefone";
             txtTelefone.Size = new Size(210, 23);
             txtTelefone.TabIndex = 32;
+            txtTelefone.TextChanged += txtTelefone_TextChanged;
             // 
             // txtDataNascimento
             // 
@@ -222,6 +229,7 @@
             txtDataNascimento.PlaceholderText = "Data de nascimento";
             txtDataNascimento.Size = new Size(210, 23);
             txtDataNascimento.TabIndex = 30;
+            txtDataNascimento.TextChanged += txtDataNascimento_TextChanged_1;
             txtDataNascimento.KeyDown += txtDataNascimento_KeyDown;
             txtDataNascimento.KeyUp += txtDataNascimento_KeyUp;
             // 
@@ -233,6 +241,7 @@
             txtEndereco.PlaceholderText = "Endereço";
             txtEndereco.Size = new Size(210, 23);
             txtEndereco.TabIndex = 31;
+            txtEndereco.TextChanged += txtEndereco_TextChanged;
             // 
             // erroEmail
             // 

@@ -16,5 +16,36 @@ namespace WinFormsApp1
         {
             InitializeComponent();
         }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox7_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            //MessageBox.Show("Deseja sair da tela atual")
+
+            DialogResult resultado = MessageBox.Show(
+            "Você deseja continuar?", // Texto da mensagem
+            "Confirmação",            // Título da caixa de diálogo
+            MessageBoxButtons.YesNo,  // Botões disponíveis (Sim e Não)
+            MessageBoxIcon.Question   // Ícone (opcional, aqui é de interrogação)
+            );
+
+            if (resultado == DialogResult.Yes)
+            {
+                this.Visible = false;
+                Form5 form5 = new Form5();
+                form5.ShowDialog();
+                Close();
+                this.Visible = true;
+            }
+        }
     }
 }

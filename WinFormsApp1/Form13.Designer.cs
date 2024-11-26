@@ -126,6 +126,7 @@
             label5.Size = new Size(55, 15);
             label5.TabIndex = 55;
             label5.Text = "Produtos";
+            label5.Visible = false;
             // 
             // label4
             // 
@@ -144,6 +145,7 @@
             label3.Size = new Size(66, 15);
             label3.TabIndex = 53;
             label3.Text = "Seus dados";
+            label3.Visible = false;
             label3.Click += label3_Click;
             // 
             // label2

@@ -157,6 +157,7 @@
             label5.Size = new Size(55, 15);
             label5.TabIndex = 65;
             label5.Text = "Produtos";
+            label5.Click += label5_Click;
             // 
             // label7
             // 

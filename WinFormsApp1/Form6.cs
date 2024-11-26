@@ -32,7 +32,27 @@ namespace WinFormsApp1
             this.Visible = false;
             Form4 form4 = new Form4();
             form4.ShowDialog();
+            Close();
             this.Visible = true;
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+            DialogResult resultado = MessageBox.Show(
+            "Você deseja continuar?", // Texto da mensagem
+            "Confirmação",            // Título da caixa de diálogo
+            MessageBoxButtons.YesNo,  // Botões disponíveis (Sim e Não)
+            MessageBoxIcon.Question   // Ícone (opcional, aqui é de interrogação)
+            );
+
+            if (resultado == DialogResult.Yes)
+            {
+                this.Visible = false;
+                Form5 form5 = new Form5();
+                form5.ShowDialog();
+                Close();
+                this.Visible = true;
+            }
         }
     }
 }

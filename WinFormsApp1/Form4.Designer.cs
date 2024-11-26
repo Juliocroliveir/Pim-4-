@@ -53,7 +53,8 @@
             textBox7.Name = "textBox7";
             textBox7.PlaceholderText = "Telefone";
             textBox7.Size = new Size(210, 23);
-            textBox7.TabIndex = 49;
+            textBox7.TabIndex = 48;
+            textBox7.TextChanged += textBox7_TextChanged;
             // 
             // textBox8
             // 
@@ -62,7 +63,7 @@
             textBox8.Name = "textBox8";
             textBox8.PlaceholderText = "Data de nascimento";
             textBox8.Size = new Size(210, 23);
-            textBox8.TabIndex = 48;
+            textBox8.TabIndex = 46;
             // 
             // textBox9
             // 
@@ -80,7 +81,7 @@
             textBox4.Name = "textBox4";
             textBox4.PlaceholderText = "CPF";
             textBox4.Size = new Size(210, 23);
-            textBox4.TabIndex = 46;
+            textBox4.TabIndex = 45;
             // 
             // textBox5
             // 
@@ -89,7 +90,7 @@
             textBox5.Name = "textBox5";
             textBox5.PlaceholderText = "Nome";
             textBox5.Size = new Size(210, 23);
-            textBox5.TabIndex = 45;
+            textBox5.TabIndex = 43;
             // 
             // textBox6
             // 
@@ -108,6 +109,7 @@
             textBox2.PlaceholderText = "email@dominio.com";
             textBox2.Size = new Size(210, 23);
             textBox2.TabIndex = 42;
+            textBox2.TextChanged += textBox2_TextChanged;
             // 
             // button3
             // 
@@ -149,6 +151,7 @@
             label5.Size = new Size(55, 15);
             label5.TabIndex = 37;
             label5.Text = "Produtos";
+            label5.Click += label5_Click;
             // 
             // label4
             // 
