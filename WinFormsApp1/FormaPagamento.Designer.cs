@@ -74,6 +74,7 @@
             label7.Size = new Size(73, 15);
             label7.TabIndex = 71;
             label7.Text = "Informações";
+            label7.Click += label7_Click;
             // 
             // label8
             // 
@@ -184,7 +185,7 @@
             button2.Text = "Finalizar compra";
             button2.UseVisualStyleBackColor = false;
             // 
-            // Form7
+            // FormaPagamento
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -205,7 +206,7 @@
             Controls.Add(label10);
             Controls.Add(button1);
             Controls.Add(linkLabel1);
-            Name = "Form7";
+            Name = "FormaPagamento";
             Text = "Form7";
             ResumeLayout(false);
             PerformLayout();

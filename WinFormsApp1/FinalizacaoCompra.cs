@@ -56,5 +56,13 @@ namespace WinFormsApp1
                 this.Visible = true;
             }
         }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            Informacoes form14 = new Informacoes();
+            form14.ShowDialog();
+            this.Visible = true;
+        }
     }
 }

@@ -68,6 +68,7 @@
             label7.Size = new Size(73, 15);
             label7.TabIndex = 78;
             label7.Text = "Informações";
+            label7.Click += label7_Click;
             // 
             // label8
             // 
@@ -128,7 +129,7 @@
             button2.Text = "Verificar novas opções";
             button2.UseVisualStyleBackColor = false;
             // 
-            // Form8
+            // FinalizacaoCompra
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -143,7 +144,7 @@
             Controls.Add(label10);
             Controls.Add(button1);
             Controls.Add(linkLabel1);
-            Name = "Form8";
+            Name = "FinalizacaoCompra";
             Text = "Form8";
             ResumeLayout(false);
             PerformLayout();

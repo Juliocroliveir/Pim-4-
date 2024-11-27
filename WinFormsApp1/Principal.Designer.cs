@@ -89,6 +89,7 @@
             label4.Size = new Size(73, 15);
             label4.TabIndex = 5;
             label4.Text = "Informações";
+            label4.Click += label4_Click;
             // 
             // label6
             // 
@@ -180,8 +181,10 @@
             Controls.Add(button1);
             Controls.Add(linkLabel1);
             Controls.Add(label1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Principal";
             Text = "Onion's Farmers";
+            TransparencyKey = Color.Transparent;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();

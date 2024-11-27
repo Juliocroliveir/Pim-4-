@@ -87,6 +87,7 @@
             label4.Size = new Size(73, 15);
             label4.TabIndex = 12;
             label4.Text = "Informações";
+            label4.Click += label4_Click;
             // 
             // label3
             // 
@@ -355,7 +356,7 @@
             erroMensagem.Text = "*  ";
             erroMensagem.Visible = false;
             // 
-            // Form3
+            // CadastroCliente
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -389,7 +390,7 @@
             Controls.Add(label2);
             Controls.Add(button1);
             Controls.Add(linkLabel1);
-            Name = "Form3";
+            Name = "CadastroCliente";
             Text = "Form3";
             Load += Form3_Load;
             ResumeLayout(false);

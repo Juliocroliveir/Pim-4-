@@ -317,5 +317,13 @@ namespace WinFormsApp1
             if (erroTelefone.Visible == false)
                 erroMensagem.Visible = false;
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            Informacoes form14 = new Informacoes();
+            form14.ShowDialog();
+            this.Visible = true;
+        }
     }
 }

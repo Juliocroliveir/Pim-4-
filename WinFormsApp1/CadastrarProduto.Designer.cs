@@ -116,6 +116,7 @@
             label4.Size = new Size(73, 15);
             label4.TabIndex = 85;
             label4.Text = "Informações";
+            label4.Click += label4_Click;
             // 
             // label3
             // 

@@ -66,7 +66,7 @@ namespace WinFormsApp1
             sqlProdutos prod = new sqlProdutos();
             ProdutoCadastro produto = new ProdutoCadastro();
 
-            produto =  prod.BuscarProdutoPorId(int.Parse(this.id));
+            produto = prod.BuscarProdutoPorId(int.Parse(this.id));
 
             txtNomeProduto.Text = produto.Nome;
             txtValidade.Text = produto.Validade.ToString();
@@ -149,6 +149,14 @@ namespace WinFormsApp1
                 erroPureza.Visible = false;
 
             limpaErro();
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            Informacoes form14 = new Informacoes();
+            form14.ShowDialog();
+            this.Visible = true;
         }
     }
 }

@@ -81,6 +81,7 @@
             label4.Size = new Size(73, 15);
             label4.TabIndex = 130;
             label4.Text = "Informações";
+            label4.Click += label4_Click;
             // 
             // label3
             // 
@@ -152,7 +153,7 @@
             button2.Text = "Adicionar Fornecedor";
             button2.UseVisualStyleBackColor = false;
             // 
-            // Form12
+            // ListarFornecedores
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -169,7 +170,7 @@
             Controls.Add(label2);
             Controls.Add(button1);
             Controls.Add(linkLabel1);
-            Name = "Form12";
+            Name = "ListarFornecedores";
             Text = "Form12";
             ResumeLayout(false);
             PerformLayout();
