@@ -21,14 +21,20 @@ namespace WinFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //var TesteConexao1 = new TesteConexao();
-            //TesteConexao1.Testar();
+            chamarLogin();
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            chamarLogin();
+        }
+        private void chamarLogin()
+        {
             this.Visible = false;
             Login form2 = new Login();
-            
             form2.ShowDialog();
             this.Visible = true;
-
         }
     }
 }
