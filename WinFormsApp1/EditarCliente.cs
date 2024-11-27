@@ -47,5 +47,10 @@ namespace WinFormsApp1
                 this.Visible = true;
             }
         }
+
+        private void EditarCliente_Load(object sender, EventArgs e)
+        {
+            MessageBox.Show("");
+        }
     }
 }

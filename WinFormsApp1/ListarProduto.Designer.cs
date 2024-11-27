@@ -28,12 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button4 = new Button();
-            button3 = new Button();
-            button2 = new Button();
-            label8 = new Label();
-            label7 = new Label();
-            label1 = new Label();
+            btoDeletarProduto = new Button();
             pictureBox3 = new PictureBox();
             pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
@@ -45,98 +40,50 @@
             button1 = new Button();
             linkLabel1 = new LinkLabel();
             button5 = new Button();
-            button6 = new Button();
-            button7 = new Button();
-            button8 = new Button();
+            btoEditarProduto = new Button();
+            lbProdutos = new ListBox();
+            btoNovoProduto = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // button4
+            // btoDeletarProduto
             // 
-            button4.BackColor = Color.Red;
-            button4.FlatStyle = FlatStyle.Popup;
-            button4.Location = new Point(660, 397);
-            button4.Name = "button4";
-            button4.Size = new Size(75, 23);
-            button4.TabIndex = 76;
-            button4.Text = "Deletar";
-            button4.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            button3.BackColor = Color.Red;
-            button3.FlatStyle = FlatStyle.Popup;
-            button3.Location = new Point(431, 397);
-            button3.Name = "button3";
-            button3.Size = new Size(75, 23);
-            button3.TabIndex = 75;
-            button3.Text = "Deletar";
-            button3.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            button2.BackColor = Color.Red;
-            button2.FlatStyle = FlatStyle.Popup;
-            button2.Location = new Point(198, 397);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 74;
-            button2.Text = "Deletar";
-            button2.UseVisualStyleBackColor = false;
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Location = new Point(532, 364);
-            label8.Name = "label8";
-            label8.Size = new Size(156, 15);
-            label8.TabIndex = 70;
-            label8.Text = "Semente de cebola organica";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Location = new Point(305, 364);
-            label7.Name = "label7";
-            label7.Size = new Size(142, 15);
-            label7.TabIndex = 69;
-            label7.Text = "Semente de soja organica";
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(70, 364);
-            label1.Name = "label1";
-            label1.Size = new Size(166, 15);
-            label1.TabIndex = 68;
-            label1.Text = "Semente de tomante organica";
+            btoDeletarProduto.BackColor = Color.Red;
+            btoDeletarProduto.FlatStyle = FlatStyle.Popup;
+            btoDeletarProduto.Location = new Point(648, 396);
+            btoDeletarProduto.Name = "btoDeletarProduto";
+            btoDeletarProduto.Size = new Size(75, 23);
+            btoDeletarProduto.TabIndex = 74;
+            btoDeletarProduto.Text = "Deletar";
+            btoDeletarProduto.UseVisualStyleBackColor = false;
+            btoDeletarProduto.Click += btoDeletarProduto_Click;
             // 
             // pictureBox3
             // 
             pictureBox3.BackgroundImage = Properties.Resources.OIP__1_;
-            pictureBox3.Location = new Point(532, 104);
+            pictureBox3.Location = new Point(12, 289);
             pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(203, 243);
+            pictureBox3.Size = new Size(88, 102);
             pictureBox3.TabIndex = 67;
             pictureBox3.TabStop = false;
             // 
             // pictureBox2
             // 
             pictureBox2.BackgroundImage = Properties.Resources.semente_800x445;
-            pictureBox2.Location = new Point(303, 104);
+            pictureBox2.Location = new Point(12, 182);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(203, 243);
+            pictureBox2.Size = new Size(88, 101);
             pictureBox2.TabIndex = 66;
             pictureBox2.TabStop = false;
             // 
             // pictureBox1
             // 
             pictureBox1.BackgroundImage = Properties.Resources.pngtree_red_fresh_tomato_with_green_leaf_png_image_6561484;
-            pictureBox1.Location = new Point(70, 104);
+            pictureBox1.Location = new Point(12, 82);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(203, 243);
+            pictureBox1.Size = new Size(88, 94);
             pictureBox1.TabIndex = 65;
             pictureBox1.TabStop = false;
             // 
@@ -219,55 +166,50 @@
             button5.Text = "Fornecedores";
             button5.UseVisualStyleBackColor = false;
             // 
-            // button6
+            // btoEditarProduto
             // 
-            button6.BackColor = Color.Gold;
-            button6.FlatStyle = FlatStyle.Popup;
-            button6.Location = new Point(532, 397);
-            button6.Name = "button6";
-            button6.Size = new Size(75, 23);
-            button6.TabIndex = 80;
-            button6.Text = "Editar";
-            button6.UseVisualStyleBackColor = false;
+            btoEditarProduto.BackColor = Color.Gold;
+            btoEditarProduto.FlatStyle = FlatStyle.Popup;
+            btoEditarProduto.Location = new Point(567, 396);
+            btoEditarProduto.Name = "btoEditarProduto";
+            btoEditarProduto.Size = new Size(75, 23);
+            btoEditarProduto.TabIndex = 78;
+            btoEditarProduto.Text = "Editar";
+            btoEditarProduto.UseVisualStyleBackColor = false;
+            btoEditarProduto.Click += btoEditarProduto_Click;
             // 
-            // button7
+            // lbProdutos
             // 
-            button7.BackColor = Color.Gold;
-            button7.FlatStyle = FlatStyle.Popup;
-            button7.Location = new Point(303, 397);
-            button7.Name = "button7";
-            button7.Size = new Size(75, 23);
-            button7.TabIndex = 79;
-            button7.Text = "Editar";
-            button7.UseVisualStyleBackColor = false;
+            lbProdutos.FormattingEnabled = true;
+            lbProdutos.ItemHeight = 15;
+            lbProdutos.Location = new Point(106, 86);
+            lbProdutos.Name = "lbProdutos";
+            lbProdutos.Size = new Size(682, 304);
+            lbProdutos.TabIndex = 81;
             // 
-            // button8
+            // btoNovoProduto
             // 
-            button8.BackColor = Color.Gold;
-            button8.FlatStyle = FlatStyle.Popup;
-            button8.Location = new Point(70, 397);
-            button8.Name = "button8";
-            button8.Size = new Size(75, 23);
-            button8.TabIndex = 78;
-            button8.Text = "Editar";
-            button8.UseVisualStyleBackColor = false;
+            btoNovoProduto.BackColor = Color.FromArgb(0, 192, 0);
+            btoNovoProduto.FlatStyle = FlatStyle.Popup;
+            btoNovoProduto.Location = new Point(486, 396);
+            btoNovoProduto.Name = "btoNovoProduto";
+            btoNovoProduto.Size = new Size(75, 23);
+            btoNovoProduto.TabIndex = 82;
+            btoNovoProduto.Text = "Novo";
+            btoNovoProduto.UseVisualStyleBackColor = false;
+            btoNovoProduto.Click += btoNovoProduto_Click;
             // 
-            // Form9
+            // ListarProduto
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.AliceBlue;
             ClientSize = new Size(800, 450);
-            Controls.Add(button6);
-            Controls.Add(button7);
-            Controls.Add(button8);
+            Controls.Add(btoNovoProduto);
+            Controls.Add(lbProdutos);
+            Controls.Add(btoEditarProduto);
             Controls.Add(button5);
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(label8);
-            Controls.Add(label7);
-            Controls.Add(label1);
+            Controls.Add(btoDeletarProduto);
             Controls.Add(pictureBox3);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
@@ -278,8 +220,9 @@
             Controls.Add(label2);
             Controls.Add(button1);
             Controls.Add(linkLabel1);
-            Name = "Form9";
-            Text = "Form9";
+            Name = "ListarProduto";
+            Text = "Onion's Farmer";
+            Load += ListarProduto_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -288,13 +231,7 @@
         }
 
         #endregion
-
-        private Button button4;
-        private Button button3;
-        private Button button2;
-        private Label label8;
-        private Label label7;
-        private Label label1;
+        private Button btoDeletarProduto;
         private PictureBox pictureBox3;
         private PictureBox pictureBox2;
         private PictureBox pictureBox1;
@@ -306,8 +243,8 @@
         private Button button1;
         private LinkLabel linkLabel1;
         private Button button5;
-        private Button button6;
-        private Button button7;
-        private Button button8;
+        private Button btoEditarProduto;
+        private ListBox lbProdutos;
+        private Button btoNovoProduto;
     }
 }

@@ -33,9 +33,7 @@
             linkLabel1 = new LinkLabel();
             button1 = new Button();
             label2 = new Label();
-            label3 = new Label();
             label4 = new Label();
-            label5 = new Label();
             label6 = new Label();
             label7 = new Label();
             label8 = new Label();
@@ -83,16 +81,6 @@
             label2.TabIndex = 3;
             label2.Text = "Quem somos";
             // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(616, 25);
-            label3.Name = "label3";
-            label3.Size = new Size(66, 15);
-            label3.TabIndex = 4;
-            label3.Text = "Seus dados";
-            label3.Visible = false;
-            // 
             // label4
             // 
             label4.AutoSize = true;
@@ -101,16 +89,6 @@
             label4.Size = new Size(73, 15);
             label4.TabIndex = 5;
             label4.Text = "Informações";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(392, 25);
-            label5.Name = "label5";
-            label5.Size = new Size(55, 15);
-            label5.TabIndex = 6;
-            label5.Text = "Produtos";
-            label5.Visible = false;
             // 
             // label6
             // 
@@ -183,7 +161,7 @@
             label10.TabIndex = 14;
             label10.Text = "0800 4002-8922";
             // 
-            // Form1
+            // Principal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -196,15 +174,13 @@
             Controls.Add(label8);
             Controls.Add(label7);
             Controls.Add(label6);
-            Controls.Add(label5);
             Controls.Add(label4);
-            Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(button1);
             Controls.Add(linkLabel1);
             Controls.Add(label1);
-            Name = "Form1";
-            Text = "Form1";
+            Name = "Principal";
+            Text = "Onion's Farmers";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -216,9 +192,7 @@
         private LinkLabel linkLabel1;
         private Button button1;
         private Label label2;
-        private Label label3;
         private Label label4;
-        private Label label5;
         private Label label6;
         private Label label7;
         private Label label8;

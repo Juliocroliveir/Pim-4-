@@ -25,10 +25,11 @@ namespace WinFormsApp1
             //TesteConexao1.Testar();
             this.Visible = false;
             Login form2 = new Login();
-            
+
             form2.ShowDialog();
             this.Visible = true;
 
         }
+
     }
 }

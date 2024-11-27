@@ -29,9 +29,7 @@
         private void InitializeComponent()
         {
             label6 = new Label();
-            label5 = new Label();
             label4 = new Label();
-            label3 = new Label();
             label2 = new Label();
             button1 = new Button();
             linkLabel1 = new LinkLabel();
@@ -58,16 +56,6 @@
             label6.TabIndex = 8;
             label6.Text = "Onion's Farmers";
             // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(392, 25);
-            label5.Name = "label5";
-            label5.Size = new Size(55, 15);
-            label5.TabIndex = 14;
-            label5.Text = "Produtos";
-            label5.Visible = false;
-            // 
             // label4
             // 
             label4.AutoSize = true;
@@ -76,16 +64,6 @@
             label4.Size = new Size(73, 15);
             label4.TabIndex = 13;
             label4.Text = "Informações";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(616, 25);
-            label3.Name = "label3";
-            label3.Size = new Size(66, 15);
-            label3.TabIndex = 12;
-            label3.Text = "Seus dados";
-            label3.Visible = false;
             // 
             // label2
             // 
@@ -107,7 +85,6 @@
             button1.Text = "Logout";
             button1.UseVisualStyleBackColor = false;
             button1.Visible = false;
-            button1.Click += button1_Click;
             // 
             // linkLabel1
             // 
@@ -219,7 +196,7 @@
             erroSenha.Text = "*";
             erroSenha.Visible = false;
             // 
-            // Form2
+            // Login
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -235,15 +212,13 @@
             Controls.Add(label1);
             Controls.Add(button3);
             Controls.Add(button2);
-            Controls.Add(label5);
             Controls.Add(label4);
-            Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(button1);
             Controls.Add(linkLabel1);
             Controls.Add(label6);
-            Name = "Form2";
-            Text = "Form2";
+            Name = "Login";
+            Text = "Onion's Farmers";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -256,9 +231,7 @@
         #endregion
 
         private Label label6;
-        private Label label5;
         private Label label4;
-        private Label label3;
         private Label label2;
         private Button button1;
         private LinkLabel linkLabel1;

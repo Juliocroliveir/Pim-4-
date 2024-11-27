@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             button5 = new Button();
-            label1 = new Label();
             pictureBox1 = new PictureBox();
             label6 = new Label();
             label5 = new Label();
@@ -38,16 +37,15 @@
             label2 = new Label();
             button1 = new Button();
             linkLabel1 = new LinkLabel();
-            label9 = new Label();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            textBox4 = new TextBox();
-            textBox5 = new TextBox();
-            textBox6 = new TextBox();
-            textBox7 = new TextBox();
-            textBox8 = new TextBox();
-            button2 = new Button();
+            txtNomeProduto = new TextBox();
+            txtPreco = new TextBox();
+            txtQualidade = new TextBox();
+            txtTamanho = new TextBox();
+            txtQuantidade = new TextBox();
+            txtPureza = new TextBox();
+            txtGerminacao = new TextBox();
+            txtValidade = new TextBox();
+            btoAdicionarProduto = new Button();
             label12 = new Label();
             label7 = new Label();
             label8 = new Label();
@@ -57,6 +55,15 @@
             label14 = new Label();
             label15 = new Label();
             label16 = new Label();
+            erroNomeProduto = new Label();
+            erroValidade = new Label();
+            erroMensagem = new Label();
+            erroGerminacao = new Label();
+            erroPureza = new Label();
+            erroQuantidade = new Label();
+            erroPreco = new Label();
+            erroQualidade = new Label();
+            erroTamanho = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -70,15 +77,6 @@
             button5.TabIndex = 97;
             button5.Text = "Fornecedores";
             button5.UseVisualStyleBackColor = false;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(70, 364);
-            label1.Name = "label1";
-            label1.Size = new Size(166, 15);
-            label1.TabIndex = 91;
-            label1.Text = "Semente de tomante organica";
             // 
             // pictureBox1
             // 
@@ -157,81 +155,81 @@
             linkLabel1.Size = new Size(0, 15);
             linkLabel1.TabIndex = 81;
             // 
-            // label9
+            // txtNomeProduto
             // 
-            label9.AutoSize = true;
-            label9.Location = new Point(70, 397);
-            label9.Name = "label9";
-            label9.Size = new Size(68, 15);
-            label9.TabIndex = 98;
-            label9.Text = "R$ 5.99 / kg";
+            txtNomeProduto.Location = new Point(297, 128);
+            txtNomeProduto.Name = "txtNomeProduto";
+            txtNomeProduto.Size = new Size(196, 23);
+            txtNomeProduto.TabIndex = 99;
+            txtNomeProduto.KeyDown += txtNomeProduto_KeyDown;
             // 
-            // textBox1
+            // txtPreco
             // 
-            textBox1.Location = new Point(297, 128);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(196, 23);
-            textBox1.TabIndex = 99;
+            txtPreco.Location = new Point(297, 181);
+            txtPreco.Name = "txtPreco";
+            txtPreco.Size = new Size(196, 23);
+            txtPreco.TabIndex = 100;
+            txtPreco.KeyDown += txtPreco_KeyDown;
             // 
-            // textBox2
+            // txtQualidade
             // 
-            textBox2.Location = new Point(297, 181);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(196, 23);
-            textBox2.TabIndex = 100;
+            txtQualidade.Location = new Point(297, 232);
+            txtQualidade.Name = "txtQualidade";
+            txtQualidade.Size = new Size(196, 23);
+            txtQualidade.TabIndex = 101;
+            txtQualidade.KeyDown += txtQualidade_KeyDown;
             // 
-            // textBox3
+            // txtTamanho
             // 
-            textBox3.Location = new Point(297, 232);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(196, 23);
-            textBox3.TabIndex = 101;
+            txtTamanho.Location = new Point(297, 284);
+            txtTamanho.Name = "txtTamanho";
+            txtTamanho.Size = new Size(196, 23);
+            txtTamanho.TabIndex = 102;
+            txtTamanho.KeyDown += txtTamanho_KeyDown;
             // 
-            // textBox4
+            // txtQuantidade
             // 
-            textBox4.Location = new Point(297, 284);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(196, 23);
-            textBox4.TabIndex = 102;
+            txtQuantidade.Location = new Point(532, 284);
+            txtQuantidade.Name = "txtQuantidade";
+            txtQuantidade.Size = new Size(196, 23);
+            txtQuantidade.TabIndex = 106;
+            txtQuantidade.KeyDown += txtQuantidade_KeyDown;
             // 
-            // textBox5
+            // txtPureza
             // 
-            textBox5.Location = new Point(532, 284);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(196, 23);
-            textBox5.TabIndex = 106;
+            txtPureza.Location = new Point(532, 232);
+            txtPureza.Name = "txtPureza";
+            txtPureza.Size = new Size(196, 23);
+            txtPureza.TabIndex = 105;
+            txtPureza.KeyDown += txtPureza_KeyDown;
             // 
-            // textBox6
+            // txtGerminacao
             // 
-            textBox6.Location = new Point(532, 232);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(196, 23);
-            textBox6.TabIndex = 105;
+            txtGerminacao.Location = new Point(532, 181);
+            txtGerminacao.Name = "txtGerminacao";
+            txtGerminacao.Size = new Size(196, 23);
+            txtGerminacao.TabIndex = 104;
+            txtGerminacao.KeyDown += txtGerminacao_KeyDown;
             // 
-            // textBox7
+            // txtValidade
             // 
-            textBox7.Location = new Point(532, 181);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(196, 23);
-            textBox7.TabIndex = 104;
+            txtValidade.Location = new Point(532, 128);
+            txtValidade.Name = "txtValidade";
+            txtValidade.Size = new Size(196, 23);
+            txtValidade.TabIndex = 103;
+            txtValidade.KeyDown += txtValidade_KeyDown;
             // 
-            // textBox8
+            // btoAdicionarProduto
             // 
-            textBox8.Location = new Point(532, 128);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(196, 23);
-            textBox8.TabIndex = 103;
-            // 
-            // button2
-            // 
-            button2.BackColor = Color.Gold;
-            button2.FlatStyle = FlatStyle.Popup;
-            button2.Location = new Point(297, 343);
-            button2.Name = "button2";
-            button2.Size = new Size(193, 23);
-            button2.TabIndex = 107;
-            button2.Text = "Adicionar";
-            button2.UseVisualStyleBackColor = false;
+            btoAdicionarProduto.BackColor = Color.Gold;
+            btoAdicionarProduto.FlatStyle = FlatStyle.Popup;
+            btoAdicionarProduto.Location = new Point(297, 343);
+            btoAdicionarProduto.Name = "btoAdicionarProduto";
+            btoAdicionarProduto.Size = new Size(193, 23);
+            btoAdicionarProduto.TabIndex = 107;
+            btoAdicionarProduto.Text = "Adicionar";
+            btoAdicionarProduto.UseVisualStyleBackColor = false;
+            btoAdicionarProduto.Click += btoAdicionarProduto_Click;
             // 
             // label12
             // 
@@ -323,11 +321,119 @@
             label16.TabIndex = 145;
             label16.Text = "Adicionar Produto";
             // 
-            // Form10
+            // erroNomeProduto
+            // 
+            erroNomeProduto.AutoSize = true;
+            erroNomeProduto.ForeColor = Color.Red;
+            erroNomeProduto.Location = new Point(279, 136);
+            erroNomeProduto.Name = "erroNomeProduto";
+            erroNomeProduto.Size = new Size(12, 15);
+            erroNomeProduto.TabIndex = 146;
+            erroNomeProduto.Text = "*";
+            erroNomeProduto.Visible = false;
+            // 
+            // erroValidade
+            // 
+            erroValidade.AutoSize = true;
+            erroValidade.ForeColor = Color.Red;
+            erroValidade.Location = new Point(514, 136);
+            erroValidade.Name = "erroValidade";
+            erroValidade.Size = new Size(12, 15);
+            erroValidade.TabIndex = 147;
+            erroValidade.Text = "*";
+            erroValidade.Visible = false;
+            // 
+            // erroMensagem
+            // 
+            erroMensagem.AutoSize = true;
+            erroMensagem.ForeColor = Color.Red;
+            erroMensagem.Location = new Point(542, 343);
+            erroMensagem.Name = "erroMensagem";
+            erroMensagem.Size = new Size(12, 15);
+            erroMensagem.TabIndex = 147;
+            erroMensagem.Text = "*";
+            erroMensagem.Visible = false;
+            // 
+            // erroGerminacao
+            // 
+            erroGerminacao.AutoSize = true;
+            erroGerminacao.ForeColor = Color.Red;
+            erroGerminacao.Location = new Point(514, 189);
+            erroGerminacao.Name = "erroGerminacao";
+            erroGerminacao.Size = new Size(12, 15);
+            erroGerminacao.TabIndex = 147;
+            erroGerminacao.Text = "*";
+            erroGerminacao.Visible = false;
+            // 
+            // erroPureza
+            // 
+            erroPureza.AutoSize = true;
+            erroPureza.ForeColor = Color.Red;
+            erroPureza.Location = new Point(514, 240);
+            erroPureza.Name = "erroPureza";
+            erroPureza.Size = new Size(12, 15);
+            erroPureza.TabIndex = 147;
+            erroPureza.Text = "*";
+            erroPureza.Visible = false;
+            // 
+            // erroQuantidade
+            // 
+            erroQuantidade.AutoSize = true;
+            erroQuantidade.ForeColor = Color.Red;
+            erroQuantidade.Location = new Point(514, 292);
+            erroQuantidade.Name = "erroQuantidade";
+            erroQuantidade.Size = new Size(12, 15);
+            erroQuantidade.TabIndex = 147;
+            erroQuantidade.Text = "*";
+            erroQuantidade.Visible = false;
+            // 
+            // erroPreco
+            // 
+            erroPreco.AutoSize = true;
+            erroPreco.ForeColor = Color.Red;
+            erroPreco.Location = new Point(279, 181);
+            erroPreco.Name = "erroPreco";
+            erroPreco.Size = new Size(12, 15);
+            erroPreco.TabIndex = 147;
+            erroPreco.Text = "*";
+            erroPreco.Visible = false;
+            // 
+            // erroQualidade
+            // 
+            erroQualidade.AutoSize = true;
+            erroQualidade.ForeColor = Color.Red;
+            erroQualidade.Location = new Point(279, 232);
+            erroQualidade.Name = "erroQualidade";
+            erroQualidade.Size = new Size(12, 15);
+            erroQualidade.TabIndex = 147;
+            erroQualidade.Text = "*";
+            erroQualidade.Visible = false;
+            // 
+            // erroTamanho
+            // 
+            erroTamanho.AutoSize = true;
+            erroTamanho.ForeColor = Color.Red;
+            erroTamanho.Location = new Point(279, 284);
+            erroTamanho.Name = "erroTamanho";
+            erroTamanho.Size = new Size(12, 15);
+            erroTamanho.TabIndex = 147;
+            erroTamanho.Text = "*";
+            erroTamanho.Visible = false;
+            // 
+            // CadastrarProduto
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(erroMensagem);
+            Controls.Add(erroTamanho);
+            Controls.Add(erroQuantidade);
+            Controls.Add(erroQualidade);
+            Controls.Add(erroPreco);
+            Controls.Add(erroPureza);
+            Controls.Add(erroGerminacao);
+            Controls.Add(erroValidade);
+            Controls.Add(erroNomeProduto);
             Controls.Add(label16);
             Controls.Add(label11);
             Controls.Add(label13);
@@ -337,18 +443,16 @@
             Controls.Add(label8);
             Controls.Add(label7);
             Controls.Add(label12);
-            Controls.Add(button2);
-            Controls.Add(textBox5);
-            Controls.Add(textBox6);
-            Controls.Add(textBox7);
-            Controls.Add(textBox8);
-            Controls.Add(textBox4);
-            Controls.Add(textBox3);
-            Controls.Add(textBox2);
-            Controls.Add(textBox1);
-            Controls.Add(label9);
+            Controls.Add(btoAdicionarProduto);
+            Controls.Add(txtQuantidade);
+            Controls.Add(txtPureza);
+            Controls.Add(txtGerminacao);
+            Controls.Add(txtValidade);
+            Controls.Add(txtTamanho);
+            Controls.Add(txtQualidade);
+            Controls.Add(txtPreco);
+            Controls.Add(txtNomeProduto);
             Controls.Add(button5);
-            Controls.Add(label1);
             Controls.Add(pictureBox1);
             Controls.Add(label6);
             Controls.Add(label5);
@@ -357,7 +461,7 @@
             Controls.Add(label2);
             Controls.Add(button1);
             Controls.Add(linkLabel1);
-            Name = "Form10";
+            Name = "CadastrarProduto";
             Text = "Form10";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
@@ -367,7 +471,7 @@
         #endregion
 
         private Button button5;
-        private Label label1;
+        private Label erroValidade;
         private PictureBox pictureBox1;
         private Label label6;
         private Label label5;
@@ -376,16 +480,16 @@
         private Label label2;
         private Button button1;
         private LinkLabel linkLabel1;
-        private Label label9;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
-        private TextBox textBox4;
-        private TextBox textBox5;
-        private TextBox textBox6;
-        private TextBox textBox7;
-        private TextBox textBox8;
-        private Button button2;
+        private Label erroPureza;
+        private TextBox txtNomeProduto;
+        private TextBox txtPreco;
+        private TextBox txtQualidade;
+        private TextBox txtTamanho;
+        private TextBox txtQuantidade;
+        private TextBox txtPureza;
+        private TextBox txtGerminacao;
+        private TextBox txtValidade;
+        private Button btoAdicionarProduto;
         private Label label12;
         private Label label7;
         private Label label8;
@@ -395,5 +499,12 @@
         private Label label14;
         private Label label15;
         private Label label16;
+        private Label erroNomeProduto;
+        private Label erroMensagem;
+        private Label erroGerminacao;
+        private Label erroQuantidade;
+        private Label erroPreco;
+        private Label erroQualidade;
+        private Label erroTamanho;
     }
 }

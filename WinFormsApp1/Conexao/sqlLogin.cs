@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace WinFormsApp1.Conexao
 {
-    public class Login
+    public class sqlLogin
     {
 
         public bool ValidarLogin(string email, string pass) {
