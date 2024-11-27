@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CarrinhoCompra));
             pictureBox2 = new PictureBox();
             pictureBox3 = new PictureBox();
             label9 = new Label();
@@ -336,8 +337,9 @@
             Controls.Add(label1);
             Controls.Add(pictureBox3);
             Controls.Add(pictureBox2);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "CarrinhoCompra";
-            Text = "Form6";
+            Text = "Onion's Farmers";
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);

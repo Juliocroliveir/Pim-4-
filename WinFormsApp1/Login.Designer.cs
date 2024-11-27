@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             label6 = new Label();
             label4 = new Label();
             label2 = new Label();
@@ -218,6 +219,7 @@
             Controls.Add(button1);
             Controls.Add(linkLabel1);
             Controls.Add(label6);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Login";
             Text = "Onion's Farmers";
             ResumeLayout(false);

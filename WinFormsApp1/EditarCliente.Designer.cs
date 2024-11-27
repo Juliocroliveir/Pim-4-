@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditarCliente));
             textBox7 = new TextBox();
             textBox8 = new TextBox();
             textBox9 = new TextBox();
@@ -223,6 +224,7 @@
             Controls.Add(label2);
             Controls.Add(button1);
             Controls.Add(linkLabel1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "EditarCliente";
             Text = "Onion's Farmers";
             Load += EditarCliente_Load;

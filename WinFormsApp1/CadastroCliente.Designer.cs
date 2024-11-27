@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastroCliente));
             label6 = new Label();
             label5 = new Label();
             label4 = new Label();
@@ -390,8 +391,9 @@
             Controls.Add(label2);
             Controls.Add(button1);
             Controls.Add(linkLabel1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "CadastroCliente";
-            Text = "Form3";
+            Text = "Onion's Farmers";
             Load += Form3_Load;
             ResumeLayout(false);
             PerformLayout();

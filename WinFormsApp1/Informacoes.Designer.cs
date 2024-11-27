@@ -174,6 +174,7 @@
             Controls.Add(label6);
             Controls.Add(linkLabel1);
             Controls.Add(label1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Informacoes";
             Text = "Onion's Farmers";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

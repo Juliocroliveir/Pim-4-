@@ -116,6 +116,7 @@
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
             Controls.Add(label6);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "QuemSomos";
             RightToLeftLayout = true;
             Text = "Onion's Farmers";

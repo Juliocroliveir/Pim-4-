@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListarFornecedores));
             button5 = new Button();
             label6 = new Label();
             label5 = new Label();
@@ -170,8 +171,9 @@
             Controls.Add(label2);
             Controls.Add(button1);
             Controls.Add(linkLabel1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "ListarFornecedores";
-            Text = "Form12";
+            Text = "Onion's Farmers";
             ResumeLayout(false);
             PerformLayout();
         }

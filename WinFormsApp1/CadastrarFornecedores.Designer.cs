@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastrarFornecedores));
             textBox7 = new TextBox();
             textBox9 = new TextBox();
             textBox5 = new TextBox();
@@ -197,8 +198,9 @@
             Controls.Add(label2);
             Controls.Add(button1);
             Controls.Add(linkLabel1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "CadastrarFornecedores";
-            Text = "Form13";
+            Text = "Onion's Farmers";
             Load += Form13_Load;
             ResumeLayout(false);
             PerformLayout();

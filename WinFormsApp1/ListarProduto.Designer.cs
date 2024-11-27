@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListarProduto));
             btoDeletarProduto = new Button();
             pictureBox3 = new PictureBox();
             pictureBox2 = new PictureBox();
@@ -221,6 +222,7 @@
             Controls.Add(label2);
             Controls.Add(button1);
             Controls.Add(linkLabel1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "ListarProduto";
             Text = "Onion's Farmer";
             Load += ListarProduto_Load;
