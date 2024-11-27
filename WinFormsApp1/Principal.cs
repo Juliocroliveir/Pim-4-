@@ -36,5 +36,6 @@ namespace WinFormsApp1
             form2.ShowDialog();
             this.Visible = true;
         }
+
     }
 }

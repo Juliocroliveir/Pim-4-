@@ -7,7 +7,7 @@ using WinFormsApp1.Objetos;
 
 namespace WinFormsApp1.Conexao
 {
-    public class Usuarios
+    public class sqlUsuarios
     {
         public int CadastrarUsuario(UsuarioCadastro recUsu)
         {
@@ -33,11 +33,11 @@ namespace WinFormsApp1.Conexao
             BancoSqlServer banco = new BancoSqlServer();
 
             // Exemplo: Inserir um novo usuário
-            string queryInsert = $@"UPDATE [dbo].[Usuarios]
+            string queryUpdate = $@"UPDATE [dbo].[Usuarios]
             SET [Nome] = '{uCadas.Nome}',[RG] = '{uCadas.RG}',[CPF] = '{uCadas.CPF}',[DataNascimento] = '{uCadas.DataNascimento}',[Endereco] = '{uCadas.Endereco}',[Telefone] = '{uCadas.Telefone}'
             WHERE [Email] = '{uCadas.Email}'";
 
-            int linhasAfetadas = banco.ExecutarComando(queryInsert);
+            int linhasAfetadas = banco.ExecutarComando(queryUpdate);
             //MessageBox.Show($"Linhas afetadas: {linhasAfetadas}");
 
             return linhasAfetadas;

@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WinFormsApp1.Conexao;
+using WinFormsApp1.Objetos;
 
 namespace WinFormsApp1
 {
@@ -55,6 +57,84 @@ namespace WinFormsApp1
                 Close();
                 this.Visible = true;
             }
+        }
+
+        private void ListarProduto_Load(object sender, EventArgs e)
+        {
+            // Limpa o ListBox
+            lbProdutos.Items.Clear();
+
+            sqlProdutos listProd = new sqlProdutos();
+
+            // Busca a lista de produtos
+            List<ProdutoCadastro> listaProdutos = listProd.ListarProdutos();
+
+            // Verifica se há produtos cadastrados
+            if (listaProdutos == null || listaProdutos.Count == 0)
+            {
+                MessageBox.Show("Nenhum produto cadastrado.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+
+            // Adiciona o cabeçalho no ListBox
+            lbProdutos.Items.Add("ID\tNome\tValidade\tPreço (Kg)\tGerminação\tQualidade\tPureza\tTamanho\tQuantidade");
+            lbProdutos.Items.Add(new string('-', 80)); // Linha de separação
+
+            // Adiciona cada produto no ListBox
+            foreach (var produto in listaProdutos)
+            {
+                string linha = $"{produto.id}\t{produto.Nome}\t{produto.Validade:dd/MM/yyyy}\t{produto.PrecoKg}\t{produto.Germinacao}\t{produto.Qualidade}\t{produto.Pureza}\t{produto.Tamanho}\t{produto.Quantidade}";
+                lbProdutos.Items.Add(linha);
+            }
+        }
+
+        private void btoNovoProduto_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            CadastrarProduto produto = new CadastrarProduto();
+            produto.ShowDialog();
+            this.Visible = true;
+        }
+
+        private void btoEditarProduto_Click(object sender, EventArgs e)
+        {
+            if (lbProdutos.SelectedIndex == -1)
+            {
+                MessageBox.Show("Nenhum item selecionado.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string itemSelecionado = lbProdutos.SelectedItem.ToString();
+
+
+            string idString = itemSelecionado.Split('\t')[0]; // Separa pelo caractere de tabulação (\t)
+
+
+            this.Visible = false;
+            EditarProduto produto = new EditarProduto(idString);
+            produto.ShowDialog();
+            this.Visible = true;
+
+        }
+
+        private void btoDeletarProduto_Click(object sender, EventArgs e)
+        {
+
+            if (lbProdutos.SelectedIndex == -1)
+            {
+                MessageBox.Show("Nenhum item selecionado.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            string itemSelecionado = lbProdutos.SelectedItem.ToString();
+
+
+            string idString = itemSelecionado.Split('\t')[0]; // Separa pelo caractere de tabulação (\t)
+
+
+            sqlProdutos prod = new sqlProdutos();
+            bool ret = prod.DeletarProdutoPorId(int.Parse(idString));
+
         }
     }
 }

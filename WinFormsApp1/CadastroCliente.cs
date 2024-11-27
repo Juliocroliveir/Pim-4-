@@ -130,7 +130,7 @@ namespace WinFormsApp1
             usuarioCadastro.Endereco = txtEndereco.Text;
             usuarioCadastro.Telefone = txtTelefone.Text;
 
-            Usuarios usuarios = new Usuarios();
+            sqlUsuarios usuarios = new sqlUsuarios();
 
             int ret = usuarios.CadastrarUsuario(usuarioCadastro);
             if (ret == -1)

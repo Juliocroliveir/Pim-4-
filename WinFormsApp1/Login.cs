@@ -22,9 +22,9 @@ namespace WinFormsApp1
         private void button2_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            CadastroCliente form3 = new CadastroCliente();
+            CadastroCliente cadastroCliente = new CadastroCliente();
 
-            form3.ShowDialog();
+            cadastroCliente.ShowDialog();
             this.Visible = true;
         }
 
@@ -47,16 +47,16 @@ namespace WinFormsApp1
                 string email = textBox2.Text;
                 string pass = textBox1.Text;
 
-                Conexao.Login login = new Conexao.Login();
+                Conexao.sqlLogin login = new Conexao.sqlLogin();
                 var ret = login.ValidarLogin(email, pass);
 
                 if (ret)
                 {
                     //chamar a tela principal
                     this.Visible = false;
-                    Produtos form5 = new Produtos();
+                    Produtos produto = new Produtos();
 
-                    form5.ShowDialog();
+                    produto.ShowDialog();
                     this.Visible = true;
                 }
                 else
@@ -89,9 +89,5 @@ namespace WinFormsApp1
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -200,7 +200,7 @@
             linkLabel1.Size = new Size(0, 15);
             linkLabel1.TabIndex = 32;
             // 
-            // Form4
+            // EditarCliente
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -222,8 +222,9 @@
             Controls.Add(label2);
             Controls.Add(button1);
             Controls.Add(linkLabel1);
-            Name = "Form4";
-            Text = "Form4";
+            Name = "EditarCliente";
+            Text = "Onion's Farmers";
+            Load += EditarCliente_Load;
             ResumeLayout(false);
             PerformLayout();
         }

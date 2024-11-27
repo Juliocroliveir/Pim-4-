@@ -7,6 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
+using WinFormsApp1.Conexao;
+using WinFormsApp1.Objetos;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace WinFormsApp1
 {
@@ -55,6 +60,182 @@ namespace WinFormsApp1
                 Close();
                 this.Visible = true;
             }
+        }
+
+        private void btoAdicionarProduto_Click(object sender, EventArgs e)
+        {
+
+            bool erro = false;
+            //validações dos campos
+            //validar se confirmar senha e senha estão iguais
+
+            if (string.IsNullOrWhiteSpace(txtNomeProduto.Text))
+            {
+                erroNomeProduto.Visible = true;
+                erro = true;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtValidade.Text))
+            {
+                erroValidade.Visible = true;
+                erro = true;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtPreco.Text))
+            {
+                erroPreco.Visible = true;
+                erro = true;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtGerminacao.Text))
+            {
+                erroGerminacao.Visible = true;
+                erro = true;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtQualidade.Text))
+            {
+                erroQualidade.Visible = true;
+                erro = true;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtPureza.Text))
+            {
+                erroPureza.Visible = true;
+                erro = true;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtTamanho.Text))
+            {
+                erroTamanho.Visible = true;
+                erro = true;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtQuantidade.Text))
+            {
+                erroQuantidade.Visible = true;
+                erro = true;
+            }
+
+            if (erro)
+            {
+                erroMensagem.Text = "* Campos Obrigatórios";
+                erroMensagem.Visible = true;
+                return;
+            }
+
+
+            if (!DateTime.TryParse(txtValidade.Text, out DateTime dataConvertida))
+            {
+                erroValidade.Visible = true;
+                erro = true;
+            }
+
+            if (erro)
+            {
+                erroMensagem.Text = "* Informação inválida";
+                erroMensagem.Visible = true;
+                return;
+            }
+
+
+
+            ProdutoCadastro produtoCadastro = new ProdutoCadastro();
+            produtoCadastro.Nome = txtNomeProduto.Text;
+            produtoCadastro.Validade = DateTime.Parse(txtValidade.Text);
+            produtoCadastro.PrecoKg = txtPreco.Text;
+            produtoCadastro.Germinacao = txtGerminacao.Text;
+            produtoCadastro.Qualidade = txtQualidade.Text;
+            produtoCadastro.Pureza = txtPureza.Text;
+            produtoCadastro.Tamanho = txtTamanho.Text;
+            produtoCadastro.Quantidade = txtQuantidade.Text;
+
+
+            sqlProdutos produtosC = new sqlProdutos();
+
+            int ret = produtosC.CadastrarProduto(produtoCadastro);
+            if (ret == -1)
+            {
+                MessageBox.Show("Não foi possível cadastrar, contate o Administrador");
+            }
+            if (ret == 1)
+            {
+                MessageBox.Show("Produto cadastrado com sucesso!");
+            }
+
+
+
+        }
+
+        private void limpaErro()
+        {
+
+            if (erroNomeProduto.Visible == false &&
+                erroValidade.Visible == false &&
+                erroPreco.Visible == false &&
+                erroGerminacao.Visible == false &&
+                erroPureza.Visible == false &&
+                erroTamanho.Visible == false &&
+                erroQualidade.Visible == false &&
+                erroQuantidade.Visible == false)
+                erroMensagem.Visible = false;
+
+        }
+        private void txtNomeProduto_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (txtNomeProduto.Text != "")
+                erroNomeProduto.Visible = false;
+
+            limpaErro();
+        }
+        private void txtValidade_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (txtValidade.Text != "")
+                erroValidade.Visible = false;
+
+            limpaErro();
+        }
+        private void txtGerminacao_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (txtGerminacao.Text != "")
+                erroGerminacao.Visible = false;
+
+            limpaErro();
+        }
+        private void txtQualidade_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (txtQualidade.Text != "")
+                erroQualidade.Visible = false;
+
+            limpaErro();
+        }
+        private void txtQuantidade_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (txtQuantidade.Text != "")
+                erroQuantidade.Visible = false;
+
+            limpaErro();
+        }
+        private void txtTamanho_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (txtTamanho.Text != "")
+                erroTamanho.Visible = false;
+
+            limpaErro();
+        }
+        private void txtPreco_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (txtPreco.Text != "")
+                erroPreco.Visible = false;
+
+            limpaErro();
+        }
+        private void txtPureza_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (txtPureza.Text != "")
+                erroPureza.Visible = false;
+
+            limpaErro();
         }
     }
 }
