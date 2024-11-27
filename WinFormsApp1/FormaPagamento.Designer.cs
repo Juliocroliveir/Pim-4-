@@ -1,6 +1,6 @@
 ﻿namespace WinFormsApp1
 {
-    partial class Form7
+    partial class FormaPagamento
     {
         /// <summary>
         /// Required designer variable.

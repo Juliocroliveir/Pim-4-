@@ -1,6 +1,6 @@
 ﻿namespace WinFormsApp1
 {
-    partial class Form8
+    partial class FinalizacaoCompra
     {
         /// <summary>
         /// Required designer variable.

@@ -10,14 +10,24 @@ using System.Windows.Forms;
 
 namespace WinFormsApp1
 {
-    public partial class Form11 : Form
+    public partial class EditarCliente : Form
     {
-        public Form11()
+        public EditarCliente()
         {
             InitializeComponent();
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox7_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
         {
             //MessageBox.Show("Deseja sair da tela atual")
 
@@ -31,26 +41,7 @@ namespace WinFormsApp1
             if (resultado == DialogResult.Yes)
             {
                 this.Visible = false;
-                Form4 form4 = new Form4();
-                form4.ShowDialog();
-                Close();
-                this.Visible = true;
-            }
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-            DialogResult resultado = MessageBox.Show(
-            "Você deseja continuar?", // Texto da mensagem
-            "Confirmação",            // Título da caixa de diálogo
-            MessageBoxButtons.YesNo,  // Botões disponíveis (Sim e Não)
-            MessageBoxIcon.Question   // Ícone (opcional, aqui é de interrogação)
-            );
-
-            if (resultado == DialogResult.Yes)
-            {
-                this.Visible = false;
-                Form5 form5 = new Form5();
+                Produtos form5 = new Produtos();
                 form5.ShowDialog();
                 Close();
                 this.Visible = true;

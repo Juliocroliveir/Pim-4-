@@ -1,6 +1,6 @@
 ﻿namespace WinFormsApp1
 {
-    partial class Form6
+    partial class CarrinhoCompra
     {
         /// <summary>
         /// Required designer variable.

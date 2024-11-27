@@ -1,6 +1,6 @@
 ﻿namespace WinFormsApp1
 {
-    partial class Form12
+    partial class CadastrarFornecedores
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            button5 = new Button();
+            textBox7 = new TextBox();
+            textBox9 = new TextBox();
+            textBox5 = new TextBox();
+            textBox6 = new TextBox();
+            textBox2 = new TextBox();
+            button3 = new Button();
+            label7 = new Label();
             label6 = new Label();
             label5 = new Label();
             label4 = new Label();
@@ -36,21 +42,70 @@
             label2 = new Label();
             button1 = new Button();
             linkLabel1 = new LinkLabel();
-            listBox1 = new ListBox();
-            label16 = new Label();
-            button2 = new Button();
             SuspendLayout();
             // 
-            // button5
+            // textBox7
             // 
-            button5.BackColor = Color.DodgerBlue;
-            button5.FlatStyle = FlatStyle.Popup;
-            button5.Location = new Point(287, 21);
-            button5.Name = "button5";
-            button5.Size = new Size(91, 23);
-            button5.TabIndex = 133;
-            button5.Text = "Fornecedores";
-            button5.UseVisualStyleBackColor = false;
+            textBox7.Location = new Point(285, 293);
+            textBox7.Name = "textBox7";
+            textBox7.PlaceholderText = "Telefone";
+            textBox7.Size = new Size(210, 23);
+            textBox7.TabIndex = 62;
+            // 
+            // textBox9
+            // 
+            textBox9.Location = new Point(285, 247);
+            textBox9.Name = "textBox9";
+            textBox9.PlaceholderText = "Endereço";
+            textBox9.Size = new Size(210, 23);
+            textBox9.TabIndex = 61;
+            // 
+            // textBox5
+            // 
+            textBox5.Location = new Point(285, 157);
+            textBox5.Name = "textBox5";
+            textBox5.PlaceholderText = "Nome";
+            textBox5.Size = new Size(210, 23);
+            textBox5.TabIndex = 59;
+            // 
+            // textBox6
+            // 
+            textBox6.Location = new Point(285, 198);
+            textBox6.Name = "textBox6";
+            textBox6.PlaceholderText = "CNPJ";
+            textBox6.Size = new Size(210, 23);
+            textBox6.TabIndex = 60;
+            textBox6.TextChanged += textBox6_TextChanged;
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(285, 116);
+            textBox2.Name = "textBox2";
+            textBox2.PlaceholderText = "email@dominio.com";
+            textBox2.Size = new Size(210, 23);
+            textBox2.TabIndex = 58;
+            // 
+            // button3
+            // 
+            button3.BackColor = Color.Gold;
+            button3.FlatStyle = FlatStyle.Popup;
+            button3.Location = new Point(285, 344);
+            button3.Name = "button3";
+            button3.Size = new Size(210, 23);
+            button3.TabIndex = 63;
+            button3.Text = "Cadastra Fornecedor";
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label7.Location = new Point(285, 66);
+            label7.Name = "label7";
+            label7.Size = new Size(222, 30);
+            label7.TabIndex = 57;
+            label7.Text = "Cadastrar Fornecedor";
             // 
             // label6
             // 
@@ -60,7 +115,7 @@
             label6.Location = new Point(12, 9);
             label6.Name = "label6";
             label6.Size = new Size(197, 32);
-            label6.TabIndex = 132;
+            label6.TabIndex = 56;
             label6.Text = "Onion's Farmers";
             // 
             // label5
@@ -69,9 +124,9 @@
             label5.Location = new Point(392, 25);
             label5.Name = "label5";
             label5.Size = new Size(55, 15);
-            label5.TabIndex = 131;
+            label5.TabIndex = 55;
             label5.Text = "Produtos";
-            label5.Click += label5_Click;
+            label5.Visible = false;
             // 
             // label4
             // 
@@ -79,7 +134,7 @@
             label4.Location = new Point(453, 25);
             label4.Name = "label4";
             label4.Size = new Size(73, 15);
-            label4.TabIndex = 130;
+            label4.TabIndex = 54;
             label4.Text = "Informações";
             // 
             // label3
@@ -88,8 +143,9 @@
             label3.Location = new Point(616, 25);
             label3.Name = "label3";
             label3.Size = new Size(66, 15);
-            label3.TabIndex = 129;
+            label3.TabIndex = 53;
             label3.Text = "Seus dados";
+            label3.Visible = false;
             label3.Click += label3_Click;
             // 
             // label2
@@ -98,7 +154,7 @@
             label2.Location = new Point(532, 25);
             label2.Name = "label2";
             label2.Size = new Size(78, 15);
-            label2.TabIndex = 128;
+            label2.TabIndex = 52;
             label2.Text = "Quem somos";
             // 
             // button1
@@ -108,7 +164,7 @@
             button1.Location = new Point(702, 21);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
-            button1.TabIndex = 127;
+            button1.TabIndex = 51;
             button1.Text = "Logout";
             button1.UseVisualStyleBackColor = false;
             // 
@@ -118,50 +174,21 @@
             linkLabel1.Location = new Point(654, 29);
             linkLabel1.Name = "linkLabel1";
             linkLabel1.Size = new Size(0, 15);
-            linkLabel1.TabIndex = 126;
+            linkLabel1.TabIndex = 50;
             // 
-            // listBox1
-            // 
-            listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 15;
-            listBox1.Items.AddRange(new object[] { "1 Cliente", "2 Cliente ", "3 Cliente ", "4 Cliente ", "5 Cliente ", "6 Cliente ", "7 Cliente ", "8 Cliente ", "9 Cliente ", "10 Cliente ", "11 Cliente ", "12 Cliente ", "13 Cliente " });
-            listBox1.Location = new Point(80, 161);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(619, 199);
-            listBox1.TabIndex = 134;
-            listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
-            // 
-            // label16
-            // 
-            label16.AutoSize = true;
-            label16.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label16.Location = new Point(277, 120);
-            label16.Name = "label16";
-            label16.Size = new Size(209, 21);
-            label16.TabIndex = 145;
-            label16.Text = "Fornecedores Cadastrados";
-            // 
-            // button2
-            // 
-            button2.BackColor = Color.Gold;
-            button2.FlatStyle = FlatStyle.Popup;
-            button2.Location = new Point(287, 383);
-            button2.Name = "button2";
-            button2.Size = new Size(193, 23);
-            button2.TabIndex = 146;
-            button2.Text = "Adicionar Fornecedor";
-            button2.UseVisualStyleBackColor = false;
-            // 
-            // Form12
+            // Form13
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.AliceBlue;
             ClientSize = new Size(800, 450);
-            Controls.Add(button2);
-            Controls.Add(label16);
-            Controls.Add(listBox1);
-            Controls.Add(button5);
+            Controls.Add(textBox7);
+            Controls.Add(textBox9);
+            Controls.Add(textBox5);
+            Controls.Add(textBox6);
+            Controls.Add(textBox2);
+            Controls.Add(button3);
+            Controls.Add(label7);
             Controls.Add(label6);
             Controls.Add(label5);
             Controls.Add(label4);
@@ -169,15 +196,22 @@
             Controls.Add(label2);
             Controls.Add(button1);
             Controls.Add(linkLabel1);
-            Name = "Form12";
-            Text = "Form12";
+            Name = "Form13";
+            Text = "Form13";
+            Load += Form13_Load;
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private Button button5;
+        private TextBox textBox7;
+        private TextBox textBox9;
+        private TextBox textBox5;
+        private TextBox textBox6;
+        private TextBox textBox2;
+        private Button button3;
+        private Label label7;
         private Label label6;
         private Label label5;
         private Label label4;
@@ -185,8 +219,5 @@
         private Label label2;
         private Button button1;
         private LinkLabel linkLabel1;
-        private ListBox listBox1;
-        private Label label16;
-        private Button button2;
     }
 }

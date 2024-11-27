@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WinFormsApp1
 {
-    public partial class Form7 : Form
+    public partial class FormaPagamento : Form
     {
-        public Form7()
+        public FormaPagamento()
         {
             InitializeComponent();
         }
@@ -31,7 +31,7 @@ namespace WinFormsApp1
             if (resultado == DialogResult.Yes)
             {
                 this.Visible = false;
-                Form4 form4 = new Form4();
+                EditarCliente form4 = new EditarCliente();
                 form4.ShowDialog();
                 Close();
                 this.Visible = true;
@@ -50,7 +50,7 @@ namespace WinFormsApp1
             if (resultado == DialogResult.Yes)
             {
                 this.Visible = false;
-                Form5 form5 = new Form5();
+                Produtos form5 = new Produtos();
                 form5.ShowDialog();
                 Close();
                 this.Visible = true;

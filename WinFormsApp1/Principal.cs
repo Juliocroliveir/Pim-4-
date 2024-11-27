@@ -2,9 +2,9 @@ using WinFormsApp1.Conexao;
 
 namespace WinFormsApp1
 {
-    public partial class Form1 : Form
+    public partial class Principal : Form
     {
-        public Form1()
+        public Principal()
         {
             InitializeComponent();
         }
@@ -24,7 +24,7 @@ namespace WinFormsApp1
             //var TesteConexao1 = new TesteConexao();
             //TesteConexao1.Testar();
             this.Visible = false;
-            Form2 form2 = new Form2();
+            Login form2 = new Login();
             
             form2.ShowDialog();
             this.Visible = true;

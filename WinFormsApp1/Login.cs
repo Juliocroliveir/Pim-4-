@@ -12,9 +12,9 @@ using WinFormsApp1.Conexao;
 
 namespace WinFormsApp1
 {
-    public partial class Form2 : Form
+    public partial class Login : Form
     {
-        public Form2()
+        public Login()
         {
             InitializeComponent();
         }
@@ -22,7 +22,7 @@ namespace WinFormsApp1
         private void button2_Click(object sender, EventArgs e)
         {
             this.Visible = false;
-            Form3 form3 = new Form3();
+            CadastroCliente form3 = new CadastroCliente();
 
             form3.ShowDialog();
             this.Visible = true;
@@ -47,14 +47,14 @@ namespace WinFormsApp1
                 string email = textBox2.Text;
                 string pass = textBox1.Text;
 
-                Login login = new Login();
+                Conexao.Login login = new Conexao.Login();
                 var ret = login.ValidarLogin(email, pass);
 
                 if (ret)
                 {
                     //chamar a tela principal
                     this.Visible = false;
-                    Form5 form5 = new Form5();
+                    Produtos form5 = new Produtos();
 
                     form5.ShowDialog();
                     this.Visible = true;

@@ -10,24 +10,14 @@ using System.Windows.Forms;
 
 namespace WinFormsApp1
 {
-    public partial class Form4 : Form
+    public partial class CadastrarFornecedores : Form
     {
-        public Form4()
+        public CadastrarFornecedores()
         {
             InitializeComponent();
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox7_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
+        private void label3_Click(object sender, EventArgs e)
         {
             //MessageBox.Show("Deseja sair da tela atual")
 
@@ -41,11 +31,25 @@ namespace WinFormsApp1
             if (resultado == DialogResult.Yes)
             {
                 this.Visible = false;
-                Form5 form5 = new Form5();
-                form5.ShowDialog();
-                Close();
+                EditarCliente form4 = new EditarCliente();
+                form4.ShowDialog();
                 this.Visible = true;
             }
+        }
+
+        private void Form13_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

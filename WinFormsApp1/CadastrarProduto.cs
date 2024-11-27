@@ -10,26 +10,11 @@ using System.Windows.Forms;
 
 namespace WinFormsApp1
 {
-    public partial class Form5 : Form
+    public partial class CadastrarProduto : Form
     {
-        public Form5()
+        public CadastrarProduto()
         {
             InitializeComponent();
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -43,15 +28,33 @@ namespace WinFormsApp1
             MessageBoxIcon.Question   // Ícone (opcional, aqui é de interrogação)
             );
 
-            if ( resultado == DialogResult.Yes ) 
+            if (resultado == DialogResult.Yes)
             {
                 this.Visible = false;
-                Form4 form4 = new Form4();
+                EditarCliente form4 = new EditarCliente();
                 form4.ShowDialog();
                 Close();
                 this.Visible = true;
             }
+        }
 
+        private void label5_Click(object sender, EventArgs e)
+        {
+            DialogResult resultado = MessageBox.Show(
+            "Você deseja continuar?", // Texto da mensagem
+            "Confirmação",            // Título da caixa de diálogo
+            MessageBoxButtons.YesNo,  // Botões disponíveis (Sim e Não)
+            MessageBoxIcon.Question   // Ícone (opcional, aqui é de interrogação)
+            );
+
+            if (resultado == DialogResult.Yes)
+            {
+                this.Visible = false;
+                Produtos form5 = new Produtos();
+                form5.ShowDialog();
+                Close();
+                this.Visible = true;
+            }
         }
     }
 }

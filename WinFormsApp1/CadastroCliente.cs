@@ -13,9 +13,9 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace WinFormsApp1
 {
-    public partial class Form3 : Form
+    public partial class CadastroCliente : Form
     {
-        public Form3()
+        public CadastroCliente()
         {
             InitializeComponent();
         }
@@ -143,7 +143,7 @@ namespace WinFormsApp1
 
                 //redirecionar para a tela 2
                 this.Visible = false;
-                Form2 form2 = new Form2();
+                Login form2 = new Login();
                 form2.ShowDialog();
                 this.Visible = true;
             }

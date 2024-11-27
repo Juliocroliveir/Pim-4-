@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace WinFormsApp1
 {
-    public partial class Form13 : Form
+    public partial class ListarFornecedores : Form
     {
-        public Form13()
+        public ListarFornecedores()
         {
             InitializeComponent();
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -31,25 +36,30 @@ namespace WinFormsApp1
             if (resultado == DialogResult.Yes)
             {
                 this.Visible = false;
-                Form4 form4 = new Form4();
+                EditarCliente form4 = new EditarCliente();
                 form4.ShowDialog();
+                Close();
                 this.Visible = true;
             }
         }
 
-        private void Form13_Load(object sender, EventArgs e)
+        private void label5_Click(object sender, EventArgs e)
         {
+            DialogResult resultado = MessageBox.Show(
+            "Você deseja continuar?", // Texto da mensagem
+            "Confirmação",            // Título da caixa de diálogo
+            MessageBoxButtons.YesNo,  // Botões disponíveis (Sim e Não)
+            MessageBoxIcon.Question   // Ícone (opcional, aqui é de interrogação)
+            );
 
-        }
-
-        private void textBox6_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
+            if (resultado == DialogResult.Yes)
+            {
+                this.Visible = false;
+                Produtos form5 = new Produtos();
+                form5.ShowDialog();
+                Close();
+                this.Visible = true;
+            }
         }
     }
 }
