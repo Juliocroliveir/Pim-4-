@@ -84,6 +84,7 @@ namespace WinFormsApp1
             if (erro)
             {
                 erroMensagem.Text = "* Campos Obrigatórios";
+                
             }
 
             var tam = txtEmail.Text.Count();
@@ -103,9 +104,12 @@ namespace WinFormsApp1
             }
 
 
+
+
+
             if (erro)
             {
-                erroMensagem.Text = "* Campos Inválidos";
+                erroMensagem.Text = "* Campos Obrigatórios";
             }
 
             if (txtSenha.Text != txtConfirmaSenha.Text)
@@ -324,6 +328,19 @@ namespace WinFormsApp1
             Informacoes form14 = new Informacoes();
             form14.ShowDialog();
             this.Visible = true;
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            QuemSomos form15 = new QuemSomos();
+            form15.ShowDialog();
+            this.Visible = true;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

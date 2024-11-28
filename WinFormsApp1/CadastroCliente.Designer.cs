@@ -30,9 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastroCliente));
             label6 = new Label();
-            label5 = new Label();
             label4 = new Label();
-            label3 = new Label();
             label2 = new Label();
             button1 = new Button();
             linkLabel1 = new LinkLabel();
@@ -70,16 +68,6 @@
             label6.TabIndex = 14;
             label6.Text = "Onion's Farmers";
             // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(392, 25);
-            label5.Name = "label5";
-            label5.Size = new Size(55, 15);
-            label5.TabIndex = 13;
-            label5.Text = "Produtos";
-            label5.Visible = false;
-            // 
             // label4
             // 
             label4.AutoSize = true;
@@ -90,16 +78,6 @@
             label4.Text = "Informações";
             label4.Click += label4_Click;
             // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(616, 25);
-            label3.Name = "label3";
-            label3.Size = new Size(66, 15);
-            label3.TabIndex = 11;
-            label3.Text = "Seus dados";
-            label3.Visible = false;
-            // 
             // label2
             // 
             label2.AutoSize = true;
@@ -108,6 +86,7 @@
             label2.Size = new Size(78, 15);
             label2.TabIndex = 10;
             label2.Text = "Quem somos";
+            label2.Click += label2_Click;
             // 
             // button1
             // 
@@ -120,6 +99,7 @@
             button1.Text = "Login";
             button1.UseVisualStyleBackColor = false;
             button1.Visible = false;
+            button1.Click += button1_Click;
             // 
             // linkLabel1
             // 
@@ -350,11 +330,11 @@
             // 
             erroMensagem.AutoSize = true;
             erroMensagem.ForeColor = Color.Red;
-            erroMensagem.Location = new Point(382, 390);
+            erroMensagem.Location = new Point(385, 392);
             erroMensagem.Name = "erroMensagem";
-            erroMensagem.Size = new Size(18, 15);
+            erroMensagem.Size = new Size(15, 15);
             erroMensagem.TabIndex = 42;
-            erroMensagem.Text = "*  ";
+            erroMensagem.Text = "* ";
             erroMensagem.Visible = false;
             // 
             // CadastroCliente
@@ -385,9 +365,7 @@
             Controls.Add(btoCadastrarUsuario);
             Controls.Add(label7);
             Controls.Add(label6);
-            Controls.Add(label5);
             Controls.Add(label4);
-            Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(button1);
             Controls.Add(linkLabel1);
@@ -402,9 +380,7 @@
         #endregion
 
         private Label label6;
-        private Label label5;
         private Label label4;
-        private Label label3;
         private Label label2;
         private Button button1;
         private LinkLabel linkLabel1;

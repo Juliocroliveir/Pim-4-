@@ -81,6 +81,7 @@
             label4.Size = new Size(73, 15);
             label4.TabIndex = 43;
             label4.Text = "Informações";
+            label4.Click += label4_Click;
             // 
             // label3
             // 
@@ -100,6 +101,7 @@
             label2.Size = new Size(78, 15);
             label2.TabIndex = 41;
             label2.Text = "Quem somos";
+            label2.Click += label2_Click;
             // 
             // button1
             // 
@@ -111,6 +113,7 @@
             button1.TabIndex = 40;
             button1.Text = "Logout";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // linkLabel1
             // 

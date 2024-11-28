@@ -158,5 +158,13 @@ namespace WinFormsApp1
             form14.ShowDialog();
             this.Visible = true;
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            QuemSomos form15 = new QuemSomos();
+            form15.ShowDialog();
+            this.Visible = true;
+        }
     }
 }
