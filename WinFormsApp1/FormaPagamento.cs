@@ -57,6 +57,14 @@ namespace WinFormsApp1
             }
         }
 
+        private void label7_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            Informacoes form14 = new Informacoes();
+            form14.ShowDialog();
+            this.Visible = true;
+        }
+
         private void button2_Click(object sender, EventArgs e)
         {
             //chamar a tela principal

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EditarProduto));
             label11 = new Label();
             label13 = new Label();
             label14 = new Label();
@@ -271,6 +272,7 @@
             label4.Size = new Size(73, 15);
             label4.TabIndex = 120;
             label4.Text = "Informações";
+            label4.Click += label4_Click;
             // 
             // label3
             // 
@@ -290,6 +292,7 @@
             label2.Size = new Size(78, 15);
             label2.TabIndex = 118;
             label2.Text = "Quem somos";
+            label2.Click += label2_Click;
             // 
             // button1
             // 
@@ -470,8 +473,9 @@
             Controls.Add(label2);
             Controls.Add(button1);
             Controls.Add(linkLabel1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "EditarProduto";
-            Text = "Form11";
+            Text = "Onion's Farmers";
             Load += EditarProduto_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);

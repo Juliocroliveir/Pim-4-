@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Produtos));
             label6 = new Label();
             label4 = new Label();
             label3 = new Label();
@@ -70,6 +71,7 @@
             label4.Size = new Size(73, 15);
             label4.TabIndex = 43;
             label4.Text = "Informações";
+            label4.Click += label4_Click;
             // 
             // label3
             // 
@@ -89,6 +91,7 @@
             label2.Size = new Size(78, 15);
             label2.TabIndex = 41;
             label2.Text = "Quem somos";
+            label2.Click += label2_Click;
             // 
             // button1
             // 
@@ -280,6 +283,12 @@
             Controls.Add(btoIrPagamento);
             Controls.Add(button1);
             Controls.Add(linkLabel1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            Name = "Produtos";
+            Text = "Onion's Farmers";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             Name = "Produtos";
             Text = "Form5";
             Load += Produtos_Load;

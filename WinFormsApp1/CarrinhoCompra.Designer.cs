@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CarrinhoCompra));
             pictureBox2 = new PictureBox();
             pictureBox3 = new PictureBox();
             label9 = new Label();
@@ -167,6 +168,7 @@
             label7.Size = new Size(73, 15);
             label7.TabIndex = 64;
             label7.Text = "Informações";
+            label7.Click += label7_Click;
             // 
             // label8
             // 
@@ -303,7 +305,7 @@
             label19.TabIndex = 73;
             label19.Text = "R$ 7,00";
             // 
-            // Form6
+            // CarrinhoCompra
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -335,8 +337,9 @@
             Controls.Add(label1);
             Controls.Add(pictureBox3);
             Controls.Add(pictureBox2);
-            Name = "Form6";
-            Text = "Form6";
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            Name = "CarrinhoCompra";
+            Text = "Onion's Farmers";
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);

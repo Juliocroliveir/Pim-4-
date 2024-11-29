@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormaPagamento));
             label6 = new Label();
             label5 = new Label();
             label7 = new Label();
@@ -74,6 +75,7 @@
             label7.Size = new Size(73, 15);
             label7.TabIndex = 71;
             label7.Text = "Informações";
+            label7.Click += label7_Click;
             // 
             // label8
             // 
@@ -206,8 +208,9 @@
             Controls.Add(label10);
             Controls.Add(button1);
             Controls.Add(linkLabel1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FormaPagamento";
-            Text = "Form7";
+            Text = "Onion's Farmers";
             ResumeLayout(false);
             PerformLayout();
         }

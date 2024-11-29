@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListarFornecedores));
             button5 = new Button();
             label6 = new Label();
             label5 = new Label();
@@ -81,6 +82,7 @@
             label4.Size = new Size(73, 15);
             label4.TabIndex = 130;
             label4.Text = "Informações";
+            label4.Click += label4_Click;
             // 
             // label3
             // 
@@ -152,7 +154,7 @@
             button2.Text = "Adicionar Fornecedor";
             button2.UseVisualStyleBackColor = false;
             // 
-            // Form12
+            // ListarFornecedores
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -169,8 +171,9 @@
             Controls.Add(label2);
             Controls.Add(button1);
             Controls.Add(linkLabel1);
-            Name = "Form12";
-            Text = "Form12";
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            Name = "ListarFornecedores";
+            Text = "Onion's Farmers";
             ResumeLayout(false);
             PerformLayout();
         }

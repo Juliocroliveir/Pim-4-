@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastrarProduto));
             button5 = new Button();
             pictureBox1 = new PictureBox();
             label6 = new Label();
@@ -116,6 +117,7 @@
             label4.Size = new Size(73, 15);
             label4.TabIndex = 85;
             label4.Text = "Informações";
+            label4.Click += label4_Click;
             // 
             // label3
             // 
@@ -461,8 +463,9 @@
             Controls.Add(label2);
             Controls.Add(button1);
             Controls.Add(linkLabel1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "CadastrarProduto";
-            Text = "Form10";
+            Text = "Onion's Farmers";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();

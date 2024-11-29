@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             label6 = new Label();
             label4 = new Label();
             label2 = new Label();
@@ -64,6 +65,7 @@
             label4.Size = new Size(73, 15);
             label4.TabIndex = 13;
             label4.Text = "Informações";
+            label4.Click += label4_Click;
             // 
             // label2
             // 
@@ -73,6 +75,7 @@
             label2.Size = new Size(78, 15);
             label2.TabIndex = 11;
             label2.Text = "Quem somos";
+            label2.Click += label2_Click;
             // 
             // button1
             // 
@@ -217,6 +220,7 @@
             Controls.Add(button1);
             Controls.Add(linkLabel1);
             Controls.Add(label6);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Login";
             Text = "Onion's Farmers";
             ResumeLayout(false);

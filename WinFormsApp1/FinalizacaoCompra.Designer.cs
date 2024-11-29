@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FinalizacaoCompra));
             label6 = new Label();
             label5 = new Label();
             label7 = new Label();
@@ -68,6 +69,7 @@
             label7.Size = new Size(73, 15);
             label7.TabIndex = 78;
             label7.Text = "Informações";
+            label7.Click += label7_Click;
             // 
             // label8
             // 
@@ -128,7 +130,7 @@
             button2.Text = "Verificar novas opções";
             button2.UseVisualStyleBackColor = false;
             // 
-            // Form8
+            // FinalizacaoCompra
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -143,8 +145,9 @@
             Controls.Add(label10);
             Controls.Add(button1);
             Controls.Add(linkLabel1);
-            Name = "Form8";
-            Text = "Form8";
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            Name = "FinalizacaoCompra";
+            Text = "Onion's Farmers";
             ResumeLayout(false);
             PerformLayout();
         }

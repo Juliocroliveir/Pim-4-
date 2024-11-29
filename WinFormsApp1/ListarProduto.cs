@@ -136,5 +136,21 @@ namespace WinFormsApp1
             bool ret = prod.DeletarSementePorId(int.Parse(idString));
 
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            Informacoes form14 = new Informacoes();
+            form14.ShowDialog();
+            this.Visible = true;
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            QuemSomos form15 = new QuemSomos();
+            form15.ShowDialog();
+            this.Visible = true;
+        }
     }
 }

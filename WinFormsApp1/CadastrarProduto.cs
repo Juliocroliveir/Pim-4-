@@ -237,5 +237,13 @@ namespace WinFormsApp1
 
             limpaErro();
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            Informacoes form14 = new Informacoes();
+            form14.ShowDialog();
+            this.Visible = true;
+        }
     }
 }
