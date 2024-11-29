@@ -160,5 +160,9 @@ namespace WinFormsApp1
             form15.ShowDialog();
             this.Visible = true;
         }
+        private void btoVoltar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

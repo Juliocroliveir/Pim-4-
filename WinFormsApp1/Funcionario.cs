@@ -17,26 +17,14 @@ namespace WinFormsApp1
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btoListarFuncionario_Click(object sender, EventArgs e)
         {
-            //MessageBox.Show("Deseja sair da tela atual")
-
-            DialogResult resultado = MessageBox.Show(
-            "Você deseja sair?", // Texto da mensagem
-            "Confirmação",            // Título da caixa de diálogo
-            MessageBoxButtons.YesNo,  // Botões disponíveis (Sim e Não)
-            MessageBoxIcon.Question   // Ícone (opcional, aqui é de interrogação)
-            );
-
-            if (resultado == DialogResult.Yes)
-            {
-                this.Visible = false;
-                Login form2 = new Login();
-                form2.ShowDialog();
-                Close();
-                this.Visible = true;
-            }
+            this.Visible = false;
+            Funcionario listfornec = new Funcionario();
+            listfornec.ShowDialog();
+            this.Visible = true;
         }
+
 
         private void label2_Click(object sender, EventArgs e)
         {
@@ -52,6 +40,29 @@ namespace WinFormsApp1
             Informacoes form14 = new Informacoes();
             form14.ShowDialog();
             this.Visible = true;
+        }
+
+        private void btoListarFornecedor_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            ListarFornecedores listfornec = new ListarFornecedores();
+            listfornec.ShowDialog();
+            this.Visible = true;
+        }
+
+
+
+        private void btoListarSementes_Click_1(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            ListarSementes listfornec = new ListarSementes();
+            listfornec.ShowDialog();
+            this.Visible = true;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

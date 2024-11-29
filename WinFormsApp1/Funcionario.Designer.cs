@@ -33,9 +33,10 @@
             label4 = new Label();
             label2 = new Label();
             button1 = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
+            btoListarFornecedor = new Button();
+            btoListarSementes = new Button();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // label6
@@ -81,41 +82,39 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
-            // button2
+            // btoListarFornecedor
             // 
-            button2.BackColor = Color.Gold;
-            button2.FlatStyle = FlatStyle.Popup;
-            button2.Location = new Point(364, 144);
-            button2.Name = "button2";
-            button2.Size = new Size(122, 23);
-            button2.TabIndex = 58;
-            button2.Text = "Listar Funcionário";
-            button2.UseVisualStyleBackColor = false;
-            button2.Click += button1_Click;
+            btoListarFornecedor.BackColor = Color.Gold;
+            btoListarFornecedor.FlatStyle = FlatStyle.Popup;
+            btoListarFornecedor.Location = new Point(514, 140);
+            btoListarFornecedor.Name = "btoListarFornecedor";
+            btoListarFornecedor.Size = new Size(122, 23);
+            btoListarFornecedor.TabIndex = 58;
+            btoListarFornecedor.Text = "Listar Fornecedor";
+            btoListarFornecedor.UseVisualStyleBackColor = false;
+            btoListarFornecedor.Click += btoListarFornecedor_Click;
             // 
-            // button3
+            // btoListarSementes
             // 
-            button3.BackColor = Color.Gold;
-            button3.FlatStyle = FlatStyle.Popup;
-            button3.Location = new Point(364, 173);
-            button3.Name = "button3";
-            button3.Size = new Size(122, 23);
-            button3.TabIndex = 58;
-            button3.Text = "Listar Fornecedor";
-            button3.UseVisualStyleBackColor = false;
-            button3.Click += button1_Click;
+            btoListarSementes.BackColor = Color.Gold;
+            btoListarSementes.FlatStyle = FlatStyle.Popup;
+            btoListarSementes.Location = new Point(514, 242);
+            btoListarSementes.Name = "btoListarSementes";
+            btoListarSementes.Size = new Size(122, 23);
+            btoListarSementes.TabIndex = 58;
+            btoListarSementes.Text = "Listar Sementes";
+            btoListarSementes.UseVisualStyleBackColor = false;
+            btoListarSementes.Click += btoListarSementes_Click_1;
             // 
-            // button4
+            // pictureBox1
             // 
-            button4.BackColor = Color.Gold;
-            button4.FlatStyle = FlatStyle.Popup;
-            button4.Location = new Point(364, 202);
-            button4.Name = "button4";
-            button4.Size = new Size(122, 23);
-            button4.TabIndex = 58;
-            button4.Text = "Listar Produto";
-            button4.UseVisualStyleBackColor = false;
-            button4.Click += button1_Click;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(139, 116);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(149, 187);
+            pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
+            pictureBox1.TabIndex = 62;
+            pictureBox1.TabStop = false;
             // 
             // Funcionario
             // 
@@ -123,16 +122,17 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.AliceBlue;
             ClientSize = new Size(800, 450);
+            Controls.Add(pictureBox1);
             Controls.Add(label6);
             Controls.Add(label4);
             Controls.Add(label2);
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
+            Controls.Add(btoListarSementes);
+            Controls.Add(btoListarFornecedor);
             Controls.Add(button1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Funcionario";
             Text = "Onion Farmers";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -143,8 +143,8 @@
         private Label label4;
         private Label label2;
         private Button button1;
-        private Button button2;
-        private Button button3;
-        private Button button4;
+        private Button btoListarFornecedor;
+        private Button btoListarSementes;
+        private PictureBox pictureBox1;
     }
 }

@@ -70,6 +70,7 @@
             label2.Size = new Size(78, 15);
             label2.TabIndex = 128;
             label2.Text = "Quem somos";
+            label2.Click += label2_Click;
             // 
             // button1
             // 

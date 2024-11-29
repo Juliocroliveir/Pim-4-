@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Produtos));
             label6 = new Label();
             label4 = new Label();
-            label3 = new Label();
             label2 = new Label();
             button1 = new Button();
             linkLabel1 = new LinkLabel();
@@ -72,16 +71,6 @@
             label4.TabIndex = 43;
             label4.Text = "Informações";
             label4.Click += label4_Click;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(616, 25);
-            label3.Name = "label3";
-            label3.Size = new Size(66, 15);
-            label3.TabIndex = 42;
-            label3.Text = "Seus dados";
-            label3.Click += label3_Click;
             // 
             // label2
             // 
@@ -279,14 +268,13 @@
             Controls.Add(lbSubTotal);
             Controls.Add(label5);
             Controls.Add(label4);
-            Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(btoIrPagamento);
             Controls.Add(button1);
             Controls.Add(linkLabel1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Produtos";
-            Text = "Form5";
+            Text = "Onion Farmers";
             Load += Produtos_Load;
             ResumeLayout(false);
             PerformLayout();
@@ -301,7 +289,6 @@
 
         private Label label6;
         private Label label4;
-        private Label label3;
         private Label label2;
         private Button button1;
         private LinkLabel linkLabel1;

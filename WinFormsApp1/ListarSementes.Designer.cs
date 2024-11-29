@@ -33,7 +33,7 @@
             label6 = new Label();
             label4 = new Label();
             label2 = new Label();
-            button1 = new Button();
+            btoVoltar = new Button();
             linkLabel1 = new LinkLabel();
             btoEditarProduto = new Button();
             lbProdutos = new ListBox();
@@ -84,16 +84,17 @@
             label2.Text = "Quem somos";
             label2.Click += label2_Click;
             // 
-            // button1
+            // btoVoltar
             // 
-            button1.BackColor = Color.Gold;
-            button1.FlatStyle = FlatStyle.Popup;
-            button1.Location = new Point(702, 21);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 59;
-            button1.Text = "Logout";
-            button1.UseVisualStyleBackColor = false;
+            btoVoltar.BackColor = Color.Gold;
+            btoVoltar.FlatStyle = FlatStyle.Popup;
+            btoVoltar.Location = new Point(702, 21);
+            btoVoltar.Name = "btoVoltar";
+            btoVoltar.Size = new Size(75, 23);
+            btoVoltar.TabIndex = 59;
+            btoVoltar.Text = "Logout";
+            btoVoltar.UseVisualStyleBackColor = false;
+            btoVoltar.Click += this.btoVoltar_Click;
             // 
             // linkLabel1
             // 
@@ -160,7 +161,7 @@
             Controls.Add(label6);
             Controls.Add(label4);
             Controls.Add(label2);
-            Controls.Add(button1);
+            Controls.Add(btoVoltar);
             Controls.Add(linkLabel1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "ListarSementes";
@@ -175,7 +176,7 @@
         private Label label6;
         private Label label4;
         private Label label2;
-        private Button button1;
+        private Button btoVoltar;
         private LinkLabel linkLabel1;
         private Button btoEditarProduto;
         private ListBox lbProdutos;

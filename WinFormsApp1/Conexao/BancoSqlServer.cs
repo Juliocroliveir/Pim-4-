@@ -14,7 +14,7 @@ namespace WinFormsApp1.Conexao
         {
             builder = new SqlConnectionStringBuilder
             {
-                DataSource = "DESKTOP-4KFQHVM\\SQLEXPRESS", // Nome do servidor "DESKTOP-4KFQHVM\\SQLEXPRESS"
+                DataSource = "GENI-PC", // Nome do servidor "DESKTOP-4KFQHVM\\SQLEXPRESS"
                 InitialCatalog = "Onion",        // Nome do banco de dados
                 TrustServerCertificate = true,
                 IntegratedSecurity = true                  // Usando autenticação do Windows

@@ -30,9 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormaPagamento));
             label6 = new Label();
-            label5 = new Label();
             label7 = new Label();
-            label8 = new Label();
             label10 = new Label();
             button1 = new Button();
             linkLabel1 = new LinkLabel();
@@ -57,16 +55,6 @@
             label6.TabIndex = 73;
             label6.Text = "Onion Farmers";
             // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(392, 25);
-            label5.Name = "label5";
-            label5.Size = new Size(55, 15);
-            label5.TabIndex = 72;
-            label5.Text = "Produtos";
-            label5.Click += label5_Click;
-            // 
             // label7
             // 
             label7.AutoSize = true;
@@ -76,16 +64,6 @@
             label7.TabIndex = 71;
             label7.Text = "Informações";
             label7.Click += label7_Click;
-            // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Location = new Point(616, 25);
-            label8.Name = "label8";
-            label8.Size = new Size(66, 15);
-            label8.TabIndex = 70;
-            label8.Text = "Seus dados";
-            label8.Click += label8_Click;
             // 
             // label10
             // 
@@ -106,6 +84,7 @@
             button1.TabIndex = 68;
             button1.Text = "Logout";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // linkLabel1
             // 
@@ -202,9 +181,7 @@
             Controls.Add(checkedListBox1);
             Controls.Add(label12);
             Controls.Add(label6);
-            Controls.Add(label5);
             Controls.Add(label7);
-            Controls.Add(label8);
             Controls.Add(label10);
             Controls.Add(button1);
             Controls.Add(linkLabel1);
@@ -218,9 +195,7 @@
         #endregion
 
         private Label label6;
-        private Label label5;
         private Label label7;
-        private Label label8;
         private Label label10;
         private Button button1;
         private LinkLabel linkLabel1;

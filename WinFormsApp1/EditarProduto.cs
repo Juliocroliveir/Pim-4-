@@ -66,7 +66,7 @@ namespace WinFormsApp1
             sqlSemente prod = new sqlSemente();
             SementeCadastro produto = new SementeCadastro();
 
-            produto =  prod.BuscarSementePorId(int.Parse(this.id));
+            produto = prod.BuscarSementePorId(int.Parse(this.id));
 
             txtNomeProduto.Text = produto.Nome;
             txtValidade.Text = produto.Validade.ToString();
@@ -165,6 +165,27 @@ namespace WinFormsApp1
             QuemSomos form15 = new QuemSomos();
             form15.ShowDialog();
             this.Visible = true;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //MessageBox.Show("Deseja sair da tela atual")
+
+            DialogResult resultado = MessageBox.Show(
+            "Você deseja sair?", // Texto da mensagem
+            "Confirmação",            // Título da caixa de diálogo
+            MessageBoxButtons.YesNo,  // Botões disponíveis (Sim e Não)
+            MessageBoxIcon.Question   // Ícone (opcional, aqui é de interrogação)
+            );
+
+            if (resultado == DialogResult.Yes)
+            {
+                this.Visible = false;
+                Login form2 = new Login();
+                form2.ShowDialog();
+                Close();
+                this.Visible = true;
+            }
         }
     }
 }
