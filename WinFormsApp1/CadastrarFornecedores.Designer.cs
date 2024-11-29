@@ -163,6 +163,7 @@
             erroEmail.Size = new Size(12, 15);
             erroEmail.TabIndex = 54;
             erroEmail.Text = "*";
+            erroEmail.Visible = false;
             erroEmail.Click += label4_Click;
             // 
             // erroNome
@@ -174,6 +175,7 @@
             erroNome.Size = new Size(12, 15);
             erroNome.TabIndex = 54;
             erroNome.Text = "*";
+            erroNome.Visible = false;
             erroNome.Click += label4_Click;
             // 
             // erroCNPJ
@@ -185,6 +187,7 @@
             erroCNPJ.Size = new Size(12, 15);
             erroCNPJ.TabIndex = 54;
             erroCNPJ.Text = "*";
+            erroCNPJ.Visible = false;
             erroCNPJ.Click += label4_Click;
             // 
             // erroTelefone
@@ -196,6 +199,7 @@
             erroTelefone.Size = new Size(12, 15);
             erroTelefone.TabIndex = 54;
             erroTelefone.Text = "*";
+            erroTelefone.Visible = false;
             erroTelefone.Click += label4_Click;
             // 
             // erroMensagem
@@ -207,6 +211,7 @@
             erroMensagem.Size = new Size(12, 15);
             erroMensagem.TabIndex = 54;
             erroMensagem.Text = "*";
+            erroMensagem.Visible = false;
             erroMensagem.Click += label4_Click;
             // 
             // erroEndereco
@@ -218,6 +223,7 @@
             erroEndereco.Size = new Size(12, 15);
             erroEndereco.TabIndex = 54;
             erroEndereco.Text = "*";
+            erroEndereco.Visible = false;
             erroEndereco.Click += label4_Click;
             // 
             // CadastrarFornecedores

@@ -114,7 +114,7 @@ namespace WinFormsApp1
             }
             if (ret == 1)
             {
-                MessageBox.Show("Produto cadastrado com sucesso!");
+                MessageBox.Show("Fornecedor cadastrado com sucesso!");
             }
 
 

@@ -85,12 +85,11 @@ namespace WinFormsApp1
             string idString = itemSelecionado.Split('\t')[0]; // Separa pelo caractere de tabulação (\t)
 
 
-            sqlFornecedor prod = new sqlFornecedor();
-            bool ret = prod.DeletarFornecedorPorId(int.Parse(idString));
-
             // Remove o item selecionado
             if (indexSelecionado > 1)
             {
+                sqlFornecedor prod = new sqlFornecedor();
+                bool ret = prod.DeletarFornecedorPorId(int.Parse(idString));
                 lbFornecedores.Items.RemoveAt(indexSelecionado);
             }
         }

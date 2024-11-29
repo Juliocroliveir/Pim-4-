@@ -282,7 +282,7 @@
 
         private void TxtQtd_KeyDown(object sender, KeyEventArgs e)
         {
-            throw new NotImplementedException();
+            
         }
 
         #endregion

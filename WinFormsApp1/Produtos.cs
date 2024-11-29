@@ -224,10 +224,6 @@ namespace WinFormsApp1
 
         }
 
-        private void txtQtd_TextChanged(object sender, EventArgs e)
-        {
-
-        }
         private void txtQtd_KeyDown(object sender, KeyEventArgs e)
         {
             // Permitir apenas teclas numéricas e algumas teclas adicionais (Backspace, Delete, etc.)
@@ -243,5 +239,6 @@ namespace WinFormsApp1
                 e.SuppressKeyPress = true;
             }
         }
+
     }
 }
