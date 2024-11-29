@@ -1,6 +1,6 @@
 ﻿namespace WinFormsApp1
 {
-    partial class ListarProduto
+    partial class ListarSementes
     {
         /// <summary>
         /// Required designer variable.
@@ -28,19 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListarProduto));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListarSementes));
             btoDeletarProduto = new Button();
             pictureBox3 = new PictureBox();
             pictureBox2 = new PictureBox();
             pictureBox1 = new PictureBox();
             label6 = new Label();
-            label5 = new Label();
             label4 = new Label();
-            label3 = new Label();
             label2 = new Label();
-            button1 = new Button();
+            btoVoltar = new Button();
             linkLabel1 = new LinkLabel();
-            button5 = new Button();
             btoEditarProduto = new Button();
             lbProdutos = new ListBox();
             btoNovoProduto = new Button();
@@ -99,16 +96,6 @@
             label6.TabIndex = 64;
             label6.Text = "Onion Farmers";
             // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(392, 25);
-            label5.Name = "label5";
-            label5.Size = new Size(55, 15);
-            label5.TabIndex = 63;
-            label5.Text = "Produtos";
-            label5.Click += label5_Click;
-            // 
             // label4
             // 
             label4.AutoSize = true;
@@ -118,16 +105,6 @@
             label4.TabIndex = 62;
             label4.Text = "Informações";
             label4.Click += label4_Click;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(616, 25);
-            label3.Name = "label3";
-            label3.Size = new Size(66, 15);
-            label3.TabIndex = 61;
-            label3.Text = "Seus dados";
-            label3.Click += label3_Click;
             // 
             // label2
             // 
@@ -139,16 +116,17 @@
             label2.Text = "Quem somos";
             label2.Click += label2_Click;
             // 
-            // button1
+            // btoVoltar
             // 
-            button1.BackColor = Color.Gold;
-            button1.FlatStyle = FlatStyle.Popup;
-            button1.Location = new Point(702, 21);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 59;
-            button1.Text = "Logout";
-            button1.UseVisualStyleBackColor = false;
+            btoVoltar.BackColor = Color.Gold;
+            btoVoltar.FlatStyle = FlatStyle.Popup;
+            btoVoltar.Location = new Point(702, 21);
+            btoVoltar.Name = "btoVoltar";
+            btoVoltar.Size = new Size(75, 23);
+            btoVoltar.TabIndex = 59;
+            btoVoltar.Text = "Logout";
+            btoVoltar.UseVisualStyleBackColor = false;
+            btoVoltar.Click += this.btoVoltar_Click;
             // 
             // linkLabel1
             // 
@@ -157,17 +135,6 @@
             linkLabel1.Name = "linkLabel1";
             linkLabel1.Size = new Size(0, 15);
             linkLabel1.TabIndex = 58;
-            // 
-            // button5
-            // 
-            button5.BackColor = Color.DodgerBlue;
-            button5.FlatStyle = FlatStyle.Popup;
-            button5.Location = new Point(287, 21);
-            button5.Name = "button5";
-            button5.Size = new Size(91, 23);
-            button5.TabIndex = 77;
-            button5.Text = "Fornecedores";
-            button5.UseVisualStyleBackColor = false;
             // 
             // btoEditarProduto
             // 
@@ -202,7 +169,7 @@
             btoNovoProduto.UseVisualStyleBackColor = false;
             btoNovoProduto.Click += btoNovoProduto_Click;
             // 
-            // ListarProduto
+            // ListarSementes
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -211,20 +178,17 @@
             Controls.Add(btoNovoProduto);
             Controls.Add(lbProdutos);
             Controls.Add(btoEditarProduto);
-            Controls.Add(button5);
             Controls.Add(btoDeletarProduto);
             Controls.Add(pictureBox3);
             Controls.Add(pictureBox2);
             Controls.Add(pictureBox1);
             Controls.Add(label6);
-            Controls.Add(label5);
             Controls.Add(label4);
-            Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(button1);
+            Controls.Add(btoVoltar);
             Controls.Add(linkLabel1);
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Name = "ListarProduto";
+            Name = "ListarSementes";
             Text = "Onion Farmer";
             Load += ListarProduto_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
@@ -240,13 +204,10 @@
         private PictureBox pictureBox2;
         private PictureBox pictureBox1;
         private Label label6;
-        private Label label5;
         private Label label4;
-        private Label label3;
         private Label label2;
-        private Button button1;
+        private Button btoVoltar;
         private LinkLabel linkLabel1;
-        private Button button5;
         private Button btoEditarProduto;
         private ListBox lbProdutos;
         private Button btoNovoProduto;

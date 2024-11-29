@@ -12,9 +12,9 @@ using WinFormsApp1.Objetos;
 
 namespace WinFormsApp1
 {
-    public partial class ListarProduto : Form
+    public partial class ListarSementes : Form
     {
-        public ListarProduto()
+        public ListarSementes()
         {
             InitializeComponent();
         }
@@ -151,6 +151,10 @@ namespace WinFormsApp1
             QuemSomos form15 = new QuemSomos();
             form15.ShowDialog();
             this.Visible = true;
+        }
+        private void btoVoltar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }

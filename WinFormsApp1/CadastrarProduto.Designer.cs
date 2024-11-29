@@ -29,12 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastrarProduto));
-            button5 = new Button();
             pictureBox1 = new PictureBox();
             label6 = new Label();
-            label5 = new Label();
             label4 = new Label();
-            label3 = new Label();
             label2 = new Label();
             button1 = new Button();
             linkLabel1 = new LinkLabel();
@@ -68,17 +65,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
-            // button5
-            // 
-            button5.BackColor = Color.DodgerBlue;
-            button5.FlatStyle = FlatStyle.Popup;
-            button5.Location = new Point(287, 21);
-            button5.Name = "button5";
-            button5.Size = new Size(91, 23);
-            button5.TabIndex = 97;
-            button5.Text = "Fornecedores";
-            button5.UseVisualStyleBackColor = false;
-            // 
             // pictureBox1
             // 
             pictureBox1.BackgroundImage = Properties.Resources.pngtree_red_fresh_tomato_with_green_leaf_png_image_6561484;
@@ -99,16 +85,6 @@
             label6.TabIndex = 87;
             label6.Text = "Onion  Farmers";
             // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(392, 25);
-            label5.Name = "label5";
-            label5.Size = new Size(55, 15);
-            label5.TabIndex = 86;
-            label5.Text = "Produtos";
-            label5.Click += label5_Click;
-            // 
             // label4
             // 
             label4.AutoSize = true;
@@ -119,16 +95,6 @@
             label4.Text = "Informações";
             label4.Click += label4_Click;
             // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(616, 25);
-            label3.Name = "label3";
-            label3.Size = new Size(66, 15);
-            label3.TabIndex = 84;
-            label3.Text = "Seus dados";
-            label3.Click += label3_Click;
-            // 
             // label2
             // 
             label2.AutoSize = true;
@@ -137,6 +103,7 @@
             label2.Size = new Size(78, 15);
             label2.TabIndex = 83;
             label2.Text = "Quem somos";
+            label2.Click += label2_Click;
             // 
             // button1
             // 
@@ -455,12 +422,9 @@
             Controls.Add(txtQualidade);
             Controls.Add(txtPreco);
             Controls.Add(txtNomeProduto);
-            Controls.Add(button5);
             Controls.Add(pictureBox1);
             Controls.Add(label6);
-            Controls.Add(label5);
             Controls.Add(label4);
-            Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(button1);
             Controls.Add(linkLabel1);
@@ -473,14 +437,10 @@
         }
 
         #endregion
-
-        private Button button5;
         private Label erroValidade;
         private PictureBox pictureBox1;
         private Label label6;
-        private Label label5;
         private Label label4;
-        private Label label3;
         private Label label2;
         private Button button1;
         private LinkLabel linkLabel1;
