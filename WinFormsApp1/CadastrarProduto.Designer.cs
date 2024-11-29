@@ -95,9 +95,9 @@
             label6.ForeColor = Color.Gold;
             label6.Location = new Point(12, 9);
             label6.Name = "label6";
-            label6.Size = new Size(197, 32);
+            label6.Size = new Size(188, 32);
             label6.TabIndex = 87;
-            label6.Text = "Onion's Farmers";
+            label6.Text = "Onion  Farmers";
             // 
             // label5
             // 
@@ -148,6 +148,7 @@
             button1.TabIndex = 82;
             button1.Text = "Logout";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // linkLabel1
             // 
@@ -465,7 +466,7 @@
             Controls.Add(linkLabel1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "CadastrarProduto";
-            Text = "Onion's Farmers";
+            Text = "Onion Farmers";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();

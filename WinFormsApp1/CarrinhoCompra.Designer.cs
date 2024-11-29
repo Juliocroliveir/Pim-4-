@@ -146,9 +146,9 @@
             label6.ForeColor = Color.Gold;
             label6.Location = new Point(12, 9);
             label6.Name = "label6";
-            label6.Size = new Size(197, 32);
+            label6.Size = new Size(181, 32);
             label6.TabIndex = 66;
-            label6.Text = "Onion's Farmers";
+            label6.Text = "Onion Farmers";
             // 
             // label5
             // 
@@ -197,8 +197,9 @@
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 61;
-            button1.Text = "Login";
+            button1.Text = "Logout";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // linkLabel1
             // 
@@ -339,7 +340,7 @@
             Controls.Add(pictureBox2);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "CarrinhoCompra";
-            Text = "Onion's Farmers";
+            Text = "Onion Farmers";
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);

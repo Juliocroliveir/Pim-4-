@@ -186,10 +186,7 @@ namespace WinFormsApp1
                 erroMensagem.Visible = false;
         }
 
-        private void Form3_Load(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void txtCPF_KeyDown(object sender, KeyEventArgs e)
         {

@@ -64,7 +64,7 @@
             // 
             button1.BackColor = Color.Gold;
             button1.FlatStyle = FlatStyle.Popup;
-            button1.Location = new Point(705, 26);
+            button1.Location = new Point(702, 21);
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 2;
@@ -75,7 +75,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(535, 30);
+            label2.Location = new Point(532, 25);
             label2.Name = "label2";
             label2.Size = new Size(78, 15);
             label2.TabIndex = 3;
@@ -85,7 +85,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(456, 30);
+            label4.Location = new Point(453, 25);
             label4.Name = "label4";
             label4.Size = new Size(73, 15);
             label4.TabIndex = 5;
@@ -97,11 +97,11 @@
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.ForeColor = Color.Gold;
-            label6.Location = new Point(15, 14);
+            label6.Location = new Point(12, 9);
             label6.Name = "label6";
-            label6.Size = new Size(197, 32);
+            label6.Size = new Size(181, 32);
             label6.TabIndex = 7;
-            label6.Text = "Onion's Farmers";
+            label6.Text = "Onion Farmers";
             // 
             // label7
             // 
@@ -184,7 +184,7 @@
             Controls.Add(label1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Principal";
-            Text = "Onion's Farmers";
+            Text = "Onion Farmers";
             TransparencyKey = Color.Transparent;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);

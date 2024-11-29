@@ -37,12 +37,9 @@
             button3 = new Button();
             label7 = new Label();
             label6 = new Label();
-            label5 = new Label();
             label4 = new Label();
-            label3 = new Label();
             label2 = new Label();
             button1 = new Button();
-            linkLabel1 = new LinkLabel();
             SuspendLayout();
             // 
             // textBox7
@@ -115,19 +112,9 @@
             label6.ForeColor = Color.Gold;
             label6.Location = new Point(12, 9);
             label6.Name = "label6";
-            label6.Size = new Size(197, 32);
+            label6.Size = new Size(181, 32);
             label6.TabIndex = 56;
-            label6.Text = "Onion's Farmers";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(392, 25);
-            label5.Name = "label5";
-            label5.Size = new Size(55, 15);
-            label5.TabIndex = 55;
-            label5.Text = "Produtos";
-            label5.Visible = false;
+            label6.Text = "Onion Farmers";
             // 
             // label4
             // 
@@ -138,17 +125,6 @@
             label4.TabIndex = 54;
             label4.Text = "Informações";
             label4.Click += label4_Click;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(616, 25);
-            label3.Name = "label3";
-            label3.Size = new Size(66, 15);
-            label3.TabIndex = 53;
-            label3.Text = "Seus dados";
-            label3.Visible = false;
-            label3.Click += label3_Click;
             // 
             // label2
             // 
@@ -169,14 +145,7 @@
             button1.TabIndex = 51;
             button1.Text = "Logout";
             button1.UseVisualStyleBackColor = false;
-            // 
-            // linkLabel1
-            // 
-            linkLabel1.AutoSize = true;
-            linkLabel1.Location = new Point(654, 29);
-            linkLabel1.Name = "linkLabel1";
-            linkLabel1.Size = new Size(0, 15);
-            linkLabel1.TabIndex = 50;
+            button1.Click += button1_Click;
             // 
             // CadastrarFornecedores
             // 
@@ -192,15 +161,12 @@
             Controls.Add(button3);
             Controls.Add(label7);
             Controls.Add(label6);
-            Controls.Add(label5);
             Controls.Add(label4);
-            Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(button1);
-            Controls.Add(linkLabel1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "CadastrarFornecedores";
-            Text = "Onion's Farmers";
+            Text = "Onion Farmers";
             Load += Form13_Load;
             ResumeLayout(false);
             PerformLayout();
@@ -216,11 +182,8 @@
         private Button button3;
         private Label label7;
         private Label label6;
-        private Label label5;
         private Label label4;
-        private Label label3;
         private Label label2;
         private Button button1;
-        private LinkLabel linkLabel1;
     }
 }
