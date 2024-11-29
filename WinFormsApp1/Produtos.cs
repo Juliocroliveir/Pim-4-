@@ -184,10 +184,6 @@ namespace WinFormsApp1
             this.Visible = true;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void label2_Click(object sender, EventArgs e)
         {
