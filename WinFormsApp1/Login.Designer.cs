@@ -53,9 +53,9 @@
             label6.ForeColor = Color.Gold;
             label6.Location = new Point(12, 9);
             label6.Name = "label6";
-            label6.Size = new Size(197, 32);
+            label6.Size = new Size(181, 32);
             label6.TabIndex = 8;
-            label6.Text = "Onion's Farmers";
+            label6.Text = "Onion Farmers";
             // 
             // label4
             // 
@@ -222,7 +222,7 @@
             Controls.Add(label6);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Login";
-            Text = "Onion's Farmers";
+            Text = "Onion Farmers";
             ResumeLayout(false);
             PerformLayout();
         }

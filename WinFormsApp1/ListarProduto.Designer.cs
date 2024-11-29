@@ -95,9 +95,9 @@
             label6.ForeColor = Color.Gold;
             label6.Location = new Point(12, 9);
             label6.Name = "label6";
-            label6.Size = new Size(197, 32);
+            label6.Size = new Size(181, 32);
             label6.TabIndex = 64;
-            label6.Text = "Onion's Farmers";
+            label6.Text = "Onion Farmers";
             // 
             // label5
             // 
@@ -225,7 +225,7 @@
             Controls.Add(linkLabel1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "ListarProduto";
-            Text = "Onion's Farmer";
+            Text = "Onion Farmer";
             Load += ListarProduto_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
