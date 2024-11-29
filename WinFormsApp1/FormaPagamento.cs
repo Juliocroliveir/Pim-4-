@@ -56,5 +56,14 @@ namespace WinFormsApp1
                 this.Visible = true;
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //chamar a tela principal
+            this.Visible = false;
+            FinalizacaoCompra finaliza = new FinalizacaoCompra();
+            finaliza.ShowDialog();
+            this.Visible = true;
+        }
     }
 }

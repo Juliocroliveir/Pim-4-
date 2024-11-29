@@ -63,14 +63,14 @@ namespace WinFormsApp1
 
         private void EditarProduto_Load(object sender, EventArgs e)
         {
-            sqlProdutos prod = new sqlProdutos();
-            ProdutoCadastro produto = new ProdutoCadastro();
+            sqlSemente prod = new sqlSemente();
+            SementeCadastro produto = new SementeCadastro();
 
-            produto =  prod.BuscarProdutoPorId(int.Parse(this.id));
+            produto =  prod.BuscarSementePorId(int.Parse(this.id));
 
             txtNomeProduto.Text = produto.Nome;
             txtValidade.Text = produto.Validade.ToString();
-            txtPreco.Text = produto.PrecoKg.ToString();
+            txtPreco.Text = produto.Valor.ToString();
             txtQualidade.Text = produto.Qualidade.ToString();
             txtQuantidade.Text += produto.Quantidade.ToString();
             txtPureza.Text = produto.Pureza.ToString();

@@ -44,19 +44,27 @@ namespace WinFormsApp1
 
             if (!textBox2.Text.IsNullOrEmpty() && !textBox1.Text.IsNullOrEmpty())
             {
-                string email = textBox2.Text;
+                string loginUsuario = textBox2.Text;
                 string pass = textBox1.Text;
 
                 Conexao.sqlLogin login = new Conexao.sqlLogin();
-                var ret = login.ValidarLogin(email, pass);
+                int? ret = login.ValidarLogin(loginUsuario, pass);
 
-                if (ret)
+                if (ret != null)
                 {
                     //chamar a tela principal
                     this.Visible = false;
-                    Produtos produto = new Produtos();
+                    if (ret == 0)//funcionario
+                    {
+                        //Funcionario funcio = new Funcionario();
+                        //funcio.ShowDialog();
 
-                    produto.ShowDialog();
+                    }
+                    else if(ret == 1)//Fazendeiro
+                    {
+                        Produtos produto = new Produtos();
+                        produto.ShowDialog();
+                    }
                     this.Visible = true;
                 }
                 else

@@ -33,7 +33,7 @@ namespace WinFormsApp1.Conexao
             BancoSqlServer banco = new BancoSqlServer();
 
             // Exemplo: Inserir um novo usuário
-            string queryUpdate = $@"UPDATE [dbo].[Usuarios]
+            string queryUpdate = $@"UPDATE [dbo].[usuarios]
             SET [Nome] = '{uCadas.Nome}',[RG] = '{uCadas.RG}',[CPF] = '{uCadas.CPF}',[DataNascimento] = '{uCadas.DataNascimento}',[Endereco] = '{uCadas.Endereco}',[Telefone] = '{uCadas.Telefone}'
             WHERE [Email] = '{uCadas.Email}'";
 
@@ -51,7 +51,7 @@ namespace WinFormsApp1.Conexao
             var banco = new BancoSqlServer();
 
             // Exemplo: Consultar usuários
-            string querySelect = "select * from dbo.Usuarios where Email = '" + email + "' and Senha = '" + pass + "'";
+            string querySelect = "select * from dbo.usuarios where Email = '" + email + "' and Senha = '" + pass + "'";
             using (var leitor = banco.ExecutarConsulta(querySelect))
             {
                 while (leitor != null && leitor.Read())

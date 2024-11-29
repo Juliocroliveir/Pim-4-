@@ -183,8 +183,9 @@
             button2.TabIndex = 81;
             button2.Text = "Finalizar compra";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
-            // Form7
+            // FormaPagamento
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -205,7 +206,7 @@
             Controls.Add(label10);
             Controls.Add(button1);
             Controls.Add(linkLabel1);
-            Name = "Form7";
+            Name = "FormaPagamento";
             Text = "Form7";
             ResumeLayout(false);
             PerformLayout();

@@ -64,10 +64,10 @@ namespace WinFormsApp1
             // Limpa o ListBox
             lbProdutos.Items.Clear();
 
-            sqlProdutos listProd = new sqlProdutos();
+            sqlSemente listProd = new sqlSemente();
 
             // Busca a lista de produtos
-            List<ProdutoCadastro> listaProdutos = listProd.ListarProdutos();
+            List<SementeCadastro> listaProdutos = listProd.ListarSementes();
 
             // Verifica se há produtos cadastrados
             if (listaProdutos == null || listaProdutos.Count == 0)
@@ -83,7 +83,7 @@ namespace WinFormsApp1
             // Adiciona cada produto no ListBox
             foreach (var produto in listaProdutos)
             {
-                string linha = $"{produto.id}\t{produto.Nome}\t{produto.Validade:dd/MM/yyyy}\t{produto.PrecoKg}\t{produto.Germinacao}\t{produto.Qualidade}\t{produto.Pureza}\t{produto.Tamanho}\t{produto.Quantidade}";
+                string linha = $"{produto.id}\t{produto.Nome}\t{produto.Validade:dd/MM/yyyy}\t{produto.Valor}\t{produto.Germinacao}\t{produto.Qualidade}\t{produto.Pureza}\t{produto.Tamanho}\t{produto.Quantidade}";
                 lbProdutos.Items.Add(linha);
             }
         }
@@ -132,8 +132,8 @@ namespace WinFormsApp1
             string idString = itemSelecionado.Split('\t')[0]; // Separa pelo caractere de tabulação (\t)
 
 
-            sqlProdutos prod = new sqlProdutos();
-            bool ret = prod.DeletarProdutoPorId(int.Parse(idString));
+            sqlSemente prod = new sqlSemente();
+            bool ret = prod.DeletarSementePorId(int.Parse(idString));
 
         }
     }

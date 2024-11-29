@@ -10,21 +10,33 @@ namespace WinFormsApp1.Conexao
     public class sqlLogin
     {
 
-        public bool ValidarLogin(string email, string pass) {
+        //INSERT INTO[dbo].[usuario]
+        //([nome]
+        //   ,[rg]
+        //   ,[cpf]
+        //   ,[data_nascimento]
+        //   ,[email]
+        //   ,[endereco]
+        //   ,[telefone]
+        //   ,[loginUsuario]
+        //   ,[senha]
+        //   ,[perfil])
+
+
+        public int? ValidarLogin(string loginUsuario, string pass) {
 
             var banco = new BancoSqlServer();
 
             // Exemplo: Consultar usuários
-            string querySelect = "select * from dbo.Usuarios where Email = '" + email + "' and Senha = '" + pass + "'";
+            string querySelect = $"select * from usuario where loginUsuario = '{loginUsuario}' and senha = '{pass}'";
             using (var leitor = banco.ExecutarConsulta(querySelect))
             {
                 while (leitor != null && leitor.Read())
                 {
-                    MessageBox.Show($"Bem vindo! {leitor["Nome"]}");
-                    return true;
-
+                    MessageBox.Show($"Bem vindo! {leitor["nome"]}");
+                    return (int)leitor["perfil"];
                 }
-                return false;
+                return null;
             }
 
         }

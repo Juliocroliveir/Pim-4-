@@ -29,27 +29,26 @@
         private void InitializeComponent()
         {
             label6 = new Label();
-            label5 = new Label();
             label4 = new Label();
             label3 = new Label();
             label2 = new Label();
             button1 = new Button();
             linkLabel1 = new LinkLabel();
-            pictureBox1 = new PictureBox();
-            pictureBox2 = new PictureBox();
-            pictureBox3 = new PictureBox();
+            lbProdutos = new ListBox();
+            lblLista = new ListBox();
+            btoAdicionar = new Button();
+            txtQtd = new TextBox();
             label1 = new Label();
-            label7 = new Label();
+            btoRemover = new Button();
+            label5 = new Label();
+            lbSubTotal = new Label();
             label8 = new Label();
+            label7 = new Label();
             label9 = new Label();
-            label10 = new Label();
-            label11 = new Label();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            lbTaxa = new Label();
+            lbSomaTotal = new Label();
+            lbFrete = new Label();
+            btoIrPagamento = new Button();
             SuspendLayout();
             // 
             // label6
@@ -62,15 +61,6 @@
             label6.Size = new Size(197, 32);
             label6.TabIndex = 45;
             label6.Text = "Onion's Farmers";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(392, 25);
-            label5.Name = "label5";
-            label5.Size = new Size(55, 15);
-            label5.TabIndex = 44;
-            label5.Text = "Produtos";
             // 
             // label4
             // 
@@ -110,6 +100,7 @@
             button1.TabIndex = 40;
             button1.Text = "Logout";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // linkLabel1
             // 
@@ -119,152 +110,179 @@
             linkLabel1.Size = new Size(0, 15);
             linkLabel1.TabIndex = 39;
             // 
-            // pictureBox1
+            // lbProdutos
             // 
-            pictureBox1.BackgroundImage = Properties.Resources.pngtree_red_fresh_tomato_with_green_leaf_png_image_6561484;
-            pictureBox1.Location = new Point(70, 104);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(203, 243);
-            pictureBox1.TabIndex = 46;
-            pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click_1;
+            lbProdutos.FormattingEnabled = true;
+            lbProdutos.ItemHeight = 15;
+            lbProdutos.Location = new Point(22, 95);
+            lbProdutos.Name = "lbProdutos";
+            lbProdutos.Size = new Size(265, 304);
+            lbProdutos.TabIndex = 82;
             // 
-            // pictureBox2
+            // lblLista
             // 
-            pictureBox2.BackgroundImage = Properties.Resources.semente_800x445;
-            pictureBox2.Location = new Point(303, 104);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(203, 243);
-            pictureBox2.TabIndex = 47;
-            pictureBox2.TabStop = false;
+            lblLista.FormattingEnabled = true;
+            lblLista.ItemHeight = 15;
+            lblLista.Location = new Point(493, 95);
+            lblLista.Name = "lblLista";
+            lblLista.Size = new Size(265, 214);
+            lblLista.TabIndex = 82;
             // 
-            // pictureBox3
+            // btoAdicionar
             // 
-            pictureBox3.BackgroundImage = Properties.Resources.OIP__1_;
-            pictureBox3.Location = new Point(532, 104);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(203, 243);
-            pictureBox3.TabIndex = 48;
-            pictureBox3.TabStop = false;
+            btoAdicionar.Location = new Point(320, 204);
+            btoAdicionar.Name = "btoAdicionar";
+            btoAdicionar.Size = new Size(70, 23);
+            btoAdicionar.TabIndex = 83;
+            btoAdicionar.Text = "Adicionar";
+            btoAdicionar.UseVisualStyleBackColor = true;
+            btoAdicionar.Click += btoAdicionar_Click;
+            // 
+            // txtQtd
+            // 
+            txtQtd.Location = new Point(320, 173);
+            txtQtd.Name = "txtQtd";
+            txtQtd.Size = new Size(71, 23);
+            txtQtd.TabIndex = 84;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(70, 364);
+            label1.Location = new Point(320, 155);
             label1.Name = "label1";
-            label1.Size = new Size(166, 15);
-            label1.TabIndex = 49;
-            label1.Text = "Semente de tomante organica";
+            label1.Size = new Size(69, 15);
+            label1.TabIndex = 43;
+            label1.Text = "Quantidade";
             // 
-            // label7
+            // btoRemover
             // 
-            label7.AutoSize = true;
-            label7.Location = new Point(305, 364);
-            label7.Name = "label7";
-            label7.Size = new Size(142, 15);
-            label7.TabIndex = 50;
-            label7.Text = "Semente de soja organica";
+            btoRemover.Location = new Point(407, 204);
+            btoRemover.Name = "btoRemover";
+            btoRemover.Size = new Size(70, 23);
+            btoRemover.TabIndex = 83;
+            btoRemover.Text = "Remover";
+            btoRemover.UseVisualStyleBackColor = true;
+            btoRemover.Click += btoRemover_Click;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(493, 322);
+            label5.Name = "label5";
+            label5.Size = new Size(52, 15);
+            label5.TabIndex = 43;
+            label5.Text = "SubTotal";
+            // 
+            // lbSubTotal
+            // 
+            lbSubTotal.AutoSize = true;
+            lbSubTotal.Location = new Point(662, 322);
+            lbSubTotal.Name = "lbSubTotal";
+            lbSubTotal.Size = new Size(28, 15);
+            lbSubTotal.TabIndex = 43;
+            lbSubTotal.Text = "0,00";
             // 
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(532, 364);
+            label8.Location = new Point(493, 346);
             label8.Name = "label8";
-            label8.Size = new Size(156, 15);
-            label8.TabIndex = 51;
-            label8.Text = "Semente de cebola organica";
+            label8.Size = new Size(33, 15);
+            label8.TabIndex = 43;
+            label8.Text = "Frete";
+            label8.Click += label8_Click;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(493, 370);
+            label7.Name = "label7";
+            label7.Size = new Size(30, 15);
+            label7.TabIndex = 43;
+            label7.Text = "Taxa";
+            label7.Click += label8_Click;
             // 
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(70, 397);
+            label9.Location = new Point(494, 397);
             label9.Name = "label9";
-            label9.Size = new Size(68, 15);
-            label9.TabIndex = 52;
-            label9.Text = "R$ 5.99 / kg";
+            label9.Size = new Size(32, 15);
+            label9.TabIndex = 43;
+            label9.Text = "Total";
+            label9.Click += label8_Click;
             // 
-            // label10
+            // lbTaxa
             // 
-            label10.AutoSize = true;
-            label10.Location = new Point(303, 397);
-            label10.Name = "label10";
-            label10.Size = new Size(68, 15);
-            label10.TabIndex = 53;
-            label10.Text = "R$ 3.99 / kg";
+            lbTaxa.AutoSize = true;
+            lbTaxa.Location = new Point(662, 370);
+            lbTaxa.Name = "lbTaxa";
+            lbTaxa.Size = new Size(28, 15);
+            lbTaxa.TabIndex = 43;
+            lbTaxa.Text = "0,00";
             // 
-            // label11
+            // lbSomaTotal
             // 
-            label11.AutoSize = true;
-            label11.Location = new Point(532, 397);
-            label11.Name = "label11";
-            label11.Size = new Size(68, 15);
-            label11.TabIndex = 54;
-            label11.Text = "R$ 2.99 / kg";
+            lbSomaTotal.AutoSize = true;
+            lbSomaTotal.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            lbSomaTotal.ForeColor = Color.Green;
+            lbSomaTotal.Location = new Point(662, 397);
+            lbSomaTotal.Name = "lbSomaTotal";
+            lbSomaTotal.Size = new Size(31, 15);
+            lbSomaTotal.TabIndex = 43;
+            lbSomaTotal.Text = "0,00";
             // 
-            // button2
+            // lbFrete
             // 
-            button2.BackColor = Color.Gold;
-            button2.FlatStyle = FlatStyle.Popup;
-            button2.Location = new Point(198, 397);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 55;
-            button2.Text = "Comprar";
-            button2.UseVisualStyleBackColor = false;
+            lbFrete.AutoSize = true;
+            lbFrete.Location = new Point(662, 346);
+            lbFrete.Name = "lbFrete";
+            lbFrete.Size = new Size(28, 15);
+            lbFrete.TabIndex = 43;
+            lbFrete.Text = "7,50";
             // 
-            // button3
+            // btoIrPagamento
             // 
-            button3.BackColor = Color.Gold;
-            button3.FlatStyle = FlatStyle.Popup;
-            button3.Location = new Point(431, 397);
-            button3.Name = "button3";
-            button3.Size = new Size(75, 23);
-            button3.TabIndex = 56;
-            button3.Text = "Comprar";
-            button3.UseVisualStyleBackColor = false;
+            btoIrPagamento.BackColor = Color.Gold;
+            btoIrPagamento.FlatStyle = FlatStyle.Popup;
+            btoIrPagamento.Location = new Point(320, 389);
+            btoIrPagamento.Name = "btoIrPagamento";
+            btoIrPagamento.Size = new Size(142, 23);
+            btoIrPagamento.TabIndex = 40;
+            btoIrPagamento.Text = "Ir para Pagamento";
+            btoIrPagamento.UseVisualStyleBackColor = false;
+            btoIrPagamento.Click += btoIrPagamento_Click;
             // 
-            // button4
-            // 
-            button4.BackColor = Color.Gold;
-            button4.FlatStyle = FlatStyle.Popup;
-            button4.Location = new Point(660, 397);
-            button4.Name = "button4";
-            button4.Size = new Size(75, 23);
-            button4.TabIndex = 57;
-            button4.Text = "Comprar";
-            button4.UseVisualStyleBackColor = false;
-            button4.Click += button4_Click;
-            // 
-            // Form5
+            // Produtos
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.AliceBlue;
-            ClientSize = new Size(800, 450);
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
-            Controls.Add(label11);
-            Controls.Add(label10);
-            Controls.Add(label9);
-            Controls.Add(label8);
-            Controls.Add(label7);
-            Controls.Add(label1);
-            Controls.Add(pictureBox3);
-            Controls.Add(pictureBox2);
-            Controls.Add(pictureBox1);
+            ClientSize = new Size(800, 451);
+            Controls.Add(txtQtd);
+            Controls.Add(btoRemover);
+            Controls.Add(btoAdicionar);
+            Controls.Add(lblLista);
+            Controls.Add(lbProdutos);
             Controls.Add(label6);
+            Controls.Add(label1);
+            Controls.Add(label9);
+            Controls.Add(label7);
+            Controls.Add(label8);
+            Controls.Add(lbSomaTotal);
+            Controls.Add(lbFrete);
+            Controls.Add(lbTaxa);
+            Controls.Add(lbSubTotal);
             Controls.Add(label5);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(label2);
+            Controls.Add(btoIrPagamento);
             Controls.Add(button1);
             Controls.Add(linkLabel1);
-            Name = "Form5";
+            Name = "Produtos";
             Text = "Form5";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            Load += Produtos_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -272,23 +290,25 @@
         #endregion
 
         private Label label6;
-        private Label label5;
         private Label label4;
         private Label label3;
         private Label label2;
         private Button button1;
         private LinkLabel linkLabel1;
-        private PictureBox pictureBox1;
-        private PictureBox pictureBox2;
-        private PictureBox pictureBox3;
+        private ListBox lbProdutos;
+        private ListBox lblLista;
+        private Button btoAdicionar;
+        private TextBox txtQtd;
         private Label label1;
-        private Label label7;
+        private Button btoRemover;
+        private Label label5;
+        private Label lbSubTotal;
         private Label label8;
+        private Label label7;
         private Label label9;
-        private Label label10;
-        private Label label11;
-        private Button button2;
-        private Button button3;
-        private Button button4;
+        private Label lbTaxa;
+        private Label lbSomaTotal;
+        private Label lbFrete;
+        private Button btoIrPagamento;
     }
 }

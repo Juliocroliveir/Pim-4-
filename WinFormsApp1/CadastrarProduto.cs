@@ -140,20 +140,20 @@ namespace WinFormsApp1
 
 
 
-            ProdutoCadastro produtoCadastro = new ProdutoCadastro();
-            produtoCadastro.Nome = txtNomeProduto.Text;
-            produtoCadastro.Validade = DateTime.Parse(txtValidade.Text);
-            produtoCadastro.PrecoKg = txtPreco.Text;
-            produtoCadastro.Germinacao = txtGerminacao.Text;
-            produtoCadastro.Qualidade = txtQualidade.Text;
-            produtoCadastro.Pureza = txtPureza.Text;
-            produtoCadastro.Tamanho = txtTamanho.Text;
-            produtoCadastro.Quantidade = txtQuantidade.Text;
+            SementeCadastro sementeCadastro = new SementeCadastro();
+            sementeCadastro.Nome = txtNomeProduto.Text;
+            sementeCadastro.Validade = DateTime.Parse(txtValidade.Text);
+            sementeCadastro.Valor = txtPreco.Text;
+            sementeCadastro.Germinacao = txtGerminacao.Text;
+            sementeCadastro.Qualidade = txtQualidade.Text;
+            sementeCadastro.Pureza = txtPureza.Text;
+            sementeCadastro.Tamanho = txtTamanho.Text;
+            sementeCadastro.Quantidade = txtQuantidade.Text;
 
 
-            sqlProdutos produtosC = new sqlProdutos();
+            sqlSemente sementeC = new sqlSemente();
 
-            int ret = produtosC.CadastrarProduto(produtoCadastro);
+            int ret = sementeC.CadastrarSemente(sementeCadastro);
             if (ret == -1)
             {
                 MessageBox.Show("Não foi possível cadastrar, contate o Administrador");

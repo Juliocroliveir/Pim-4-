@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace WinFormsApp1.Objetos
 {
-    public class ProdutoCadastro
+    public class SementeCadastro
     {
         public int id;
         public string Nome;
         public DateTime Validade;
-        public string PrecoKg;
+        public string Valor;
         public string Germinacao;
         public string Qualidade;
         public string Pureza;

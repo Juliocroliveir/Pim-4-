@@ -139,7 +139,7 @@
             // 
             textBox2.Location = new Point(274, 153);
             textBox2.Name = "textBox2";
-            textBox2.PlaceholderText = "E-mail";
+            textBox2.PlaceholderText = "Usuário";
             textBox2.Size = new Size(210, 23);
             textBox2.TabIndex = 18;
             textBox2.KeyDown += TextBox2_KeyDown;
@@ -159,9 +159,9 @@
             label8.AutoSize = true;
             label8.Location = new Point(304, 123);
             label8.Name = "label8";
-            label8.Size = new Size(153, 15);
+            label8.Size = new Size(163, 15);
             label8.TabIndex = 15;
-            label8.Text = "Usando o seu email e senha";
+            label8.Text = "Usando o seu usuário e senha";
             // 
             // erroMensagem
             // 
