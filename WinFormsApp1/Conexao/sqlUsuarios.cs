@@ -17,8 +17,24 @@ namespace WinFormsApp1.Conexao
             BancoSqlServer banco = new BancoSqlServer();
 
             // Exemplo: Inserir um novo usuário
-            string queryInsert = $@"INSERT INTO dbo.Usuarios (Email,Senha,Nome,RG,CPF,DataNascimento,Endereco,Telefone) 
-            VALUES('{uCadas.Email}','{uCadas.Senha}','{uCadas.Nome }','{uCadas.RG}','{uCadas.CPF }','{uCadas.DataNascimento}','{uCadas.Endereco}','{uCadas.Telefone}') ";
+            string queryInsert = $@"INSERT INTO usuario (Nome,rg,cpf,data_nascimento,email,Endereco,Telefone,loginUsuario,senha,perfil) 
+            VALUES('{uCadas.Nome}','{uCadas.RG}','{uCadas.CPF}','{uCadas.DataNascimento}','{uCadas.Email}','{uCadas.Endereco}','{uCadas.Telefone}','{uCadas.Usuario}', '{uCadas.Senha}', '0') ";
+
+            int linhasAfetadas = banco.ExecutarComando(queryInsert);
+            //MessageBox.Show($"Linhas afetadas: {linhasAfetadas}");
+
+            return linhasAfetadas;
+        }
+        public int CadastrarFuncionario(UsuarioCadastro recUsu)
+        {
+            UsuarioCadastro uCadas = new UsuarioCadastro();
+            uCadas = recUsu;
+
+            BancoSqlServer banco = new BancoSqlServer();
+
+            // Exemplo: Inserir um novo usuário
+            string queryInsert = $@"INSERT INTO usuario (Nome,rg,cpf,data_nascimento,email,Endereco,Telefone,loginUsuario,senha,perfil) 
+            VALUES('{uCadas.Nome}','{uCadas.RG}','{uCadas.CPF}','{uCadas.DataNascimento}','{uCadas.Email}','{uCadas.Endereco}','{uCadas.Telefone}','{uCadas.Usuario}', '{uCadas.Senha}', '1') ";
 
             int linhasAfetadas = banco.ExecutarComando(queryInsert);
             //MessageBox.Show($"Linhas afetadas: {linhasAfetadas}");
@@ -33,7 +49,7 @@ namespace WinFormsApp1.Conexao
             BancoSqlServer banco = new BancoSqlServer();
 
             // Exemplo: Inserir um novo usuário
-            string queryUpdate = $@"UPDATE [dbo].[usuarios]
+            string queryUpdate = $@"UPDATE usuario
             SET [Nome] = '{uCadas.Nome}',[RG] = '{uCadas.RG}',[CPF] = '{uCadas.CPF}',[DataNascimento] = '{uCadas.DataNascimento}',[Endereco] = '{uCadas.Endereco}',[Telefone] = '{uCadas.Telefone}'
             WHERE [Email] = '{uCadas.Email}'";
 

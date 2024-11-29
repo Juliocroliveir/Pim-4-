@@ -29,29 +29,17 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ListarFornecedores));
-            button5 = new Button();
             label6 = new Label();
-            label5 = new Label();
             label4 = new Label();
-            label3 = new Label();
             label2 = new Label();
             button1 = new Button();
             linkLabel1 = new LinkLabel();
-            listBox1 = new ListBox();
+            lbFornecedores = new ListBox();
             label16 = new Label();
-            button2 = new Button();
+            btoNovo = new Button();
+            btoEditar = new Button();
+            btoDeletar = new Button();
             SuspendLayout();
-            // 
-            // button5
-            // 
-            button5.BackColor = Color.DodgerBlue;
-            button5.FlatStyle = FlatStyle.Popup;
-            button5.Location = new Point(287, 21);
-            button5.Name = "button5";
-            button5.Size = new Size(91, 23);
-            button5.TabIndex = 133;
-            button5.Text = "Fornecedores";
-            button5.UseVisualStyleBackColor = false;
             // 
             // label6
             // 
@@ -64,16 +52,6 @@
             label6.TabIndex = 132;
             label6.Text = "Onion Farmers";
             // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(392, 25);
-            label5.Name = "label5";
-            label5.Size = new Size(55, 15);
-            label5.TabIndex = 131;
-            label5.Text = "Produtos";
-            label5.Click += label5_Click;
-            // 
             // label4
             // 
             label4.AutoSize = true;
@@ -83,16 +61,6 @@
             label4.TabIndex = 130;
             label4.Text = "Informações";
             label4.Click += label4_Click;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(616, 25);
-            label3.Name = "label3";
-            label3.Size = new Size(66, 15);
-            label3.TabIndex = 129;
-            label3.Text = "Seus dados";
-            label3.Click += label3_Click;
             // 
             // label2
             // 
@@ -111,8 +79,9 @@
             button1.Name = "button1";
             button1.Size = new Size(75, 23);
             button1.TabIndex = 127;
-            button1.Text = "Logout";
+            button1.Text = "Voltar";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // linkLabel1
             // 
@@ -122,37 +91,61 @@
             linkLabel1.Size = new Size(0, 15);
             linkLabel1.TabIndex = 126;
             // 
-            // listBox1
+            // lbFornecedores
             // 
-            listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 15;
-            listBox1.Items.AddRange(new object[] { "1 Cliente", "2 Cliente ", "3 Cliente ", "4 Cliente ", "5 Cliente ", "6 Cliente ", "7 Cliente ", "8 Cliente ", "9 Cliente ", "10 Cliente ", "11 Cliente ", "12 Cliente ", "13 Cliente " });
-            listBox1.Location = new Point(80, 161);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(619, 199);
-            listBox1.TabIndex = 134;
-            listBox1.SelectedIndexChanged += listBox1_SelectedIndexChanged;
+            lbFornecedores.FormattingEnabled = true;
+            lbFornecedores.ItemHeight = 15;
+            lbFornecedores.Location = new Point(34, 86);
+            lbFornecedores.Name = "lbFornecedores";
+            lbFornecedores.Size = new Size(743, 304);
+            lbFornecedores.TabIndex = 81;
             // 
             // label16
             // 
             label16.AutoSize = true;
             label16.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label16.Location = new Point(277, 120);
+            label16.Location = new Point(271, 59);
             label16.Name = "label16";
             label16.Size = new Size(209, 21);
             label16.TabIndex = 145;
             label16.Text = "Fornecedores Cadastrados";
             // 
-            // button2
+            // btoNovo
             // 
-            button2.BackColor = Color.Gold;
-            button2.FlatStyle = FlatStyle.Popup;
-            button2.Location = new Point(287, 383);
-            button2.Name = "button2";
-            button2.Size = new Size(193, 23);
-            button2.TabIndex = 146;
-            button2.Text = "Adicionar Fornecedor";
-            button2.UseVisualStyleBackColor = false;
+            btoNovo.BackColor = Color.FromArgb(0, 192, 0);
+            btoNovo.FlatStyle = FlatStyle.Popup;
+            btoNovo.Location = new Point(540, 396);
+            btoNovo.Name = "btoNovo";
+            btoNovo.Size = new Size(75, 23);
+            btoNovo.TabIndex = 148;
+            btoNovo.Text = "Novo";
+            btoNovo.UseVisualStyleBackColor = false;
+            btoNovo.Click += btoNovoProduto_Click;
+            // 
+            // btoEditar
+            // 
+            btoEditar.BackColor = Color.Gold;
+            btoEditar.Enabled = false;
+            btoEditar.FlatStyle = FlatStyle.Popup;
+            btoEditar.Location = new Point(621, 396);
+            btoEditar.Name = "btoEditar";
+            btoEditar.Size = new Size(75, 23);
+            btoEditar.TabIndex = 147;
+            btoEditar.Text = "Editar";
+            btoEditar.UseVisualStyleBackColor = false;
+            btoEditar.Click += btoEditar_Click;
+            // 
+            // btoDeletar
+            // 
+            btoDeletar.BackColor = Color.Red;
+            btoDeletar.FlatStyle = FlatStyle.Popup;
+            btoDeletar.Location = new Point(702, 396);
+            btoDeletar.Name = "btoDeletar";
+            btoDeletar.Size = new Size(75, 23);
+            btoDeletar.TabIndex = 146;
+            btoDeletar.Text = "Deletar";
+            btoDeletar.UseVisualStyleBackColor = false;
+            btoDeletar.Click += btoDeletar_Click;
             // 
             // ListarFornecedores
             // 
@@ -160,36 +153,34 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.AliceBlue;
             ClientSize = new Size(800, 450);
-            Controls.Add(button2);
+            Controls.Add(btoNovo);
+            Controls.Add(btoEditar);
+            Controls.Add(btoDeletar);
             Controls.Add(label16);
-            Controls.Add(listBox1);
-            Controls.Add(button5);
+            Controls.Add(lbFornecedores);
             Controls.Add(label6);
-            Controls.Add(label5);
             Controls.Add(label4);
-            Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(button1);
             Controls.Add(linkLabel1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "ListarFornecedores";
             Text = "Onion Farmers";
+            Load += ListarFornecedores_Load;
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Button button5;
         private Label label6;
-        private Label label5;
         private Label label4;
-        private Label label3;
         private Label label2;
         private Button button1;
         private LinkLabel linkLabel1;
-        private ListBox listBox1;
+        private ListBox lbFornecedores;
         private Label label16;
-        private Button button2;
+        private Button btoNovo;
+        private Button btoEditar;
+        private Button btoDeletar;
     }
 }

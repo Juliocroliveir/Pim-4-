@@ -223,5 +223,25 @@ namespace WinFormsApp1
 
 
         }
+
+        private void txtQtd_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        private void txtQtd_KeyDown(object sender, KeyEventArgs e)
+        {
+            // Permitir apenas teclas numéricas e algumas teclas adicionais (Backspace, Delete, etc.)
+            if (!((e.KeyCode >= Keys.D0 && e.KeyCode <= Keys.D9) ||       // Teclas numéricas do teclado principal
+                  (e.KeyCode >= Keys.NumPad0 && e.KeyCode <= Keys.NumPad9) || // Teclas numéricas do teclado numérico
+                  e.KeyCode == Keys.Back ||                              // Backspace
+                  e.KeyCode == Keys.Delete ||                            // Delete
+                  e.KeyCode == Keys.Left ||                              // Seta para a esquerda
+                  e.KeyCode == Keys.Right ||                             // Seta para a direita
+                  e.KeyCode == Keys.Tab))                                // Tab
+            {
+                // Bloqueia a entrada de outros caracteres
+                e.SuppressKeyPress = true;
+            }
+        }
     }
 }

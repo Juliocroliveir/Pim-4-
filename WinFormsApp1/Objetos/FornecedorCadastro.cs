@@ -6,18 +6,13 @@ using System.Threading.Tasks;
 
 namespace WinFormsApp1.Objetos
 {
-    public class UsuarioCadastro
+    public class FornecedorCadastro
     {
-        public string Usuario;
-        public string Email;
-        public string Senha;
+        public int id;
         public string Nome;
-        public string RG;
-        public string CPF;
-        public DateTime DataNascimento;
+        public string cnpj;
+        public string Email;
         public string Endereco;
         public string Telefone;
-
-
     }
 }

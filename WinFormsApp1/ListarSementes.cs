@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,9 +13,9 @@ using WinFormsApp1.Objetos;
 
 namespace WinFormsApp1
 {
-    public partial class ListarProduto : Form
+    public partial class ListarSementes : Form
     {
-        public ListarProduto()
+        public ListarSementes()
         {
             InitializeComponent();
         }
@@ -127,6 +128,7 @@ namespace WinFormsApp1
             }
 
             string itemSelecionado = lbProdutos.SelectedItem.ToString();
+            int indexSelecionado = lbProdutos.SelectedIndex;
 
 
             string idString = itemSelecionado.Split('\t')[0]; // Separa pelo caractere de tabulação (\t)
@@ -134,6 +136,12 @@ namespace WinFormsApp1
 
             sqlSemente prod = new sqlSemente();
             bool ret = prod.DeletarSementePorId(int.Parse(idString));
+
+            // Remove o item selecionado
+            if (indexSelecionado > 1)
+            {
+                lbProdutos.Items.RemoveAt(indexSelecionado);
+            }
 
         }
 

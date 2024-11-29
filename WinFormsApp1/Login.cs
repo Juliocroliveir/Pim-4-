@@ -56,8 +56,8 @@ namespace WinFormsApp1
                     this.Visible = false;
                     if (ret == 0)//funcionario
                     {
-                        //Funcionario funcio = new Funcionario();
-                        //funcio.ShowDialog();
+                        Funcionario funcio = new Funcionario();
+                        funcio.ShowDialog();
 
                     }
                     else if(ret == 1)//Fazendeiro

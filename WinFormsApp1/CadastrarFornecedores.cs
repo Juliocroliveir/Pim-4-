@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WinFormsApp1.Conexao;
+using WinFormsApp1.Objetos;
 
 namespace WinFormsApp1
 {
@@ -49,6 +51,72 @@ namespace WinFormsApp1
 
         private void button3_Click(object sender, EventArgs e)
         {
+
+
+            bool erro = false;
+            //validações dos campos
+            //validar se confirmar senha e senha estão iguais
+
+            if (string.IsNullOrWhiteSpace(txtNome.Text))
+            {
+                erroNome.Visible = true;
+                erro = true;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtEmail.Text))
+            {
+                erroEmail.Visible = true;
+                erro = true;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtTelefone.Text))
+            {
+                erroTelefone.Visible = true;
+                erro = true;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtCNPJ.Text))
+            {
+                erroCNPJ.Visible = true;
+                erro = true;
+            }
+
+            if (string.IsNullOrWhiteSpace(txtEndereco.Text))
+            {
+                erroEndereco.Visible = true;
+                erro = true;
+            }
+            if (erro)
+            {
+                erroMensagem.Text = "* Campos Obrigatórios";
+                erroMensagem.Visible = true;
+                return;
+            }
+
+
+
+
+            FornecedorCadastro fornecedorCadastro = new FornecedorCadastro();
+            fornecedorCadastro.Nome = txtNome.Text;
+            fornecedorCadastro.cnpj = txtCNPJ.Text;
+            fornecedorCadastro.Telefone = txtTelefone.Text;
+            fornecedorCadastro.Endereco = txtEndereco.Text;
+            fornecedorCadastro.Email = txtEmail.Text;
+
+
+
+            sqlFornecedor fornecedorC = new sqlFornecedor();
+
+            int ret = fornecedorC.CadastrarFornecedor(fornecedorCadastro);
+            if (ret == -1)
+            {
+                MessageBox.Show("Não foi possível cadastrar, contate o Administrador");
+            }
+            if (ret == 1)
+            {
+                MessageBox.Show("Produto cadastrado com sucesso!");
+            }
+
 
         }
 

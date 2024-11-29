@@ -26,7 +26,11 @@ namespace WinFormsApp1
             bool erro = false;
             //validações dos campos
             //validar se confirmar senha e senha estão iguais
-
+            if (string.IsNullOrWhiteSpace(txtUsuario.Text))
+            {
+                errousuario.Visible = true;
+                erro = true;
+            }
             if (string.IsNullOrWhiteSpace(txtSenha.Text))
             {
                 erroSenha.Visible = true;
@@ -84,7 +88,7 @@ namespace WinFormsApp1
             if (erro)
             {
                 erroMensagem.Text = "* Campos Obrigatórios";
-                
+
             }
 
             var tam = txtEmail.Text.Count();
@@ -125,6 +129,7 @@ namespace WinFormsApp1
 
 
             UsuarioCadastro usuarioCadastro = new UsuarioCadastro();
+            usuarioCadastro.Usuario = txtUsuario.Text;
             usuarioCadastro.Email = txtEmail.Text;
             usuarioCadastro.Senha = txtSenha.Text;
             usuarioCadastro.Nome = txtNome.Text;
@@ -176,7 +181,14 @@ namespace WinFormsApp1
         {
 
         }
+        private void txtUsuario_TextChanged(object sender, EventArgs e)
+        {
+            if (txtUsuario.Text != "")
+                errousuario.Visible = false;
 
+            if (errousuario.Visible == false)
+                erroMensagem.Visible = false;
+        }
         private void txtEmail_TextChanged(object sender, EventArgs e)
         {
             if (txtEmail.Text != "")
@@ -186,7 +198,7 @@ namespace WinFormsApp1
                 erroMensagem.Visible = false;
         }
 
-        
+
 
         private void txtCPF_KeyDown(object sender, KeyEventArgs e)
         {

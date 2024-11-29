@@ -32,7 +32,6 @@
             label6 = new Label();
             label4 = new Label();
             label2 = new Label();
-            button1 = new Button();
             linkLabel1 = new LinkLabel();
             label7 = new Label();
             txtEmail = new TextBox();
@@ -55,6 +54,8 @@
             erroEndereco = new Label();
             erroTelefone = new Label();
             erroMensagem = new Label();
+            txtUsuario = new TextBox();
+            errousuario = new Label();
             SuspendLayout();
             // 
             // label6
@@ -88,19 +89,6 @@
             label2.Text = "Quem somos";
             label2.Click += label2_Click;
             // 
-            // button1
-            // 
-            button1.BackColor = Color.Gold;
-            button1.FlatStyle = FlatStyle.Popup;
-            button1.Location = new Point(702, 21);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 9;
-            button1.Text = "Login";
-            button1.UseVisualStyleBackColor = false;
-            button1.Visible = false;
-            button1.Click += button1_Click;
-            // 
             // linkLabel1
             // 
             linkLabel1.AutoSize = true;
@@ -121,7 +109,7 @@
             // 
             // txtEmail
             // 
-            txtEmail.Location = new Point(124, 121);
+            txtEmail.Location = new Point(453, 123);
             txtEmail.MaxLength = 20;
             txtEmail.Name = "txtEmail";
             txtEmail.PlaceholderText = "email@dominio.com";
@@ -163,7 +151,7 @@
             // 
             // txtCPF
             // 
-            txtCPF.Location = new Point(453, 121);
+            txtCPF.Location = new Point(453, 157);
             txtCPF.MaxLength = 11;
             txtCPF.Name = "txtCPF";
             txtCPF.PlaceholderText = "CPF";
@@ -195,7 +183,7 @@
             // 
             // txtTelefone
             // 
-            txtTelefone.Location = new Point(453, 245);
+            txtTelefone.Location = new Point(453, 281);
             txtTelefone.MaxLength = 15;
             txtTelefone.Name = "txtTelefone";
             txtTelefone.PlaceholderText = "Telefone";
@@ -205,7 +193,7 @@
             // 
             // txtDataNascimento
             // 
-            txtDataNascimento.Location = new Point(453, 162);
+            txtDataNascimento.Location = new Point(453, 198);
             txtDataNascimento.MaxLength = 8;
             txtDataNascimento.Name = "txtDataNascimento";
             txtDataNascimento.PlaceholderText = "Data de nascimento";
@@ -217,7 +205,7 @@
             // 
             // txtEndereco
             // 
-            txtEndereco.Location = new Point(453, 203);
+            txtEndereco.Location = new Point(453, 239);
             txtEndereco.MaxLength = 100;
             txtEndereco.Name = "txtEndereco";
             txtEndereco.PlaceholderText = "Endereço";
@@ -229,7 +217,7 @@
             // 
             erroEmail.AutoSize = true;
             erroEmail.ForeColor = Color.Red;
-            erroEmail.Location = new Point(106, 124);
+            erroEmail.Location = new Point(435, 126);
             erroEmail.Name = "erroEmail";
             erroEmail.Size = new Size(12, 15);
             erroEmail.TabIndex = 33;
@@ -285,7 +273,7 @@
             // 
             erroCpf.AutoSize = true;
             erroCpf.ForeColor = Color.Red;
-            erroCpf.Location = new Point(435, 124);
+            erroCpf.Location = new Point(435, 160);
             erroCpf.Name = "erroCpf";
             erroCpf.Size = new Size(12, 15);
             erroCpf.TabIndex = 38;
@@ -296,7 +284,7 @@
             // 
             erroDataNascimento.AutoSize = true;
             erroDataNascimento.ForeColor = Color.Red;
-            erroDataNascimento.Location = new Point(435, 165);
+            erroDataNascimento.Location = new Point(435, 201);
             erroDataNascimento.Name = "erroDataNascimento";
             erroDataNascimento.Size = new Size(12, 15);
             erroDataNascimento.TabIndex = 39;
@@ -307,7 +295,7 @@
             // 
             erroEndereco.AutoSize = true;
             erroEndereco.ForeColor = Color.Red;
-            erroEndereco.Location = new Point(435, 207);
+            erroEndereco.Location = new Point(435, 243);
             erroEndereco.Name = "erroEndereco";
             erroEndereco.Size = new Size(12, 15);
             erroEndereco.TabIndex = 40;
@@ -318,7 +306,7 @@
             // 
             erroTelefone.AutoSize = true;
             erroTelefone.ForeColor = Color.Red;
-            erroTelefone.Location = new Point(435, 248);
+            erroTelefone.Location = new Point(435, 284);
             erroTelefone.Name = "erroTelefone";
             erroTelefone.Size = new Size(12, 15);
             erroTelefone.TabIndex = 41;
@@ -337,6 +325,28 @@
             erroMensagem.Text = "* ";
             erroMensagem.Visible = false;
             // 
+            // txtUsuario
+            // 
+            txtUsuario.Location = new Point(124, 123);
+            txtUsuario.MaxLength = 20;
+            txtUsuario.Name = "txtUsuario";
+            txtUsuario.PlaceholderText = "usuário";
+            txtUsuario.Size = new Size(210, 23);
+            txtUsuario.TabIndex = 24;
+            txtUsuario.TextChanged += txtUsuario_TextChanged;
+            // 
+            // errousuario
+            // 
+            errousuario.AutoSize = true;
+            errousuario.ForeColor = Color.Red;
+            errousuario.Location = new Point(106, 126);
+            errousuario.Name = "errousuario";
+            errousuario.Size = new Size(12, 15);
+            errousuario.TabIndex = 33;
+            errousuario.Text = "*";
+            errousuario.Visible = false;
+            errousuario.Click += label1_Click;
+            // 
             // CadastroCliente
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -352,6 +362,7 @@
             Controls.Add(erroNome);
             Controls.Add(erroConfirmarSenha);
             Controls.Add(erroSenha);
+            Controls.Add(errousuario);
             Controls.Add(erroEmail);
             Controls.Add(txtTelefone);
             Controls.Add(txtDataNascimento);
@@ -360,6 +371,7 @@
             Controls.Add(txtNome);
             Controls.Add(txtRG);
             Controls.Add(txtConfirmaSenha);
+            Controls.Add(txtUsuario);
             Controls.Add(txtEmail);
             Controls.Add(txtSenha);
             Controls.Add(btoCadastrarUsuario);
@@ -367,7 +379,6 @@
             Controls.Add(label6);
             Controls.Add(label4);
             Controls.Add(label2);
-            Controls.Add(button1);
             Controls.Add(linkLabel1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "CadastroCliente";
@@ -381,7 +392,6 @@
         private Label label6;
         private Label label4;
         private Label label2;
-        private Button button1;
         private LinkLabel linkLabel1;
         private Label label7;
         private TextBox txtEmail;
@@ -404,5 +414,7 @@
         private Label erroEndereco;
         private Label erroTelefone;
         private Label erroMensagem;
+        private TextBox txtUsuario;
+        private Label errousuario;
     }
 }

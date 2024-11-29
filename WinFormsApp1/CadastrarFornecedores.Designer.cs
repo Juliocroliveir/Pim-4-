@@ -29,59 +29,65 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastrarFornecedores));
-            textBox7 = new TextBox();
-            textBox9 = new TextBox();
-            textBox5 = new TextBox();
-            textBox6 = new TextBox();
-            textBox2 = new TextBox();
+            txtTelefone = new TextBox();
+            txtEndereco = new TextBox();
+            txtNome = new TextBox();
+            txtCNPJ = new TextBox();
+            txtEmail = new TextBox();
             button3 = new Button();
             label7 = new Label();
             label6 = new Label();
             label4 = new Label();
             label2 = new Label();
             button1 = new Button();
+            erroEmail = new Label();
+            erroNome = new Label();
+            erroCNPJ = new Label();
+            erroTelefone = new Label();
+            erroMensagem = new Label();
+            erroEndereco = new Label();
             SuspendLayout();
             // 
-            // textBox7
+            // txtTelefone
             // 
-            textBox7.Location = new Point(285, 293);
-            textBox7.Name = "textBox7";
-            textBox7.PlaceholderText = "Telefone";
-            textBox7.Size = new Size(210, 23);
-            textBox7.TabIndex = 62;
+            txtTelefone.Location = new Point(285, 293);
+            txtTelefone.Name = "txtTelefone";
+            txtTelefone.PlaceholderText = "Telefone";
+            txtTelefone.Size = new Size(210, 23);
+            txtTelefone.TabIndex = 62;
             // 
-            // textBox9
+            // txtEndereco
             // 
-            textBox9.Location = new Point(285, 247);
-            textBox9.Name = "textBox9";
-            textBox9.PlaceholderText = "Endereço";
-            textBox9.Size = new Size(210, 23);
-            textBox9.TabIndex = 61;
+            txtEndereco.Location = new Point(285, 247);
+            txtEndereco.Name = "txtEndereco";
+            txtEndereco.PlaceholderText = "Endereço";
+            txtEndereco.Size = new Size(210, 23);
+            txtEndereco.TabIndex = 61;
             // 
-            // textBox5
+            // txtNome
             // 
-            textBox5.Location = new Point(285, 157);
-            textBox5.Name = "textBox5";
-            textBox5.PlaceholderText = "Nome";
-            textBox5.Size = new Size(210, 23);
-            textBox5.TabIndex = 59;
+            txtNome.Location = new Point(285, 157);
+            txtNome.Name = "txtNome";
+            txtNome.PlaceholderText = "Nome";
+            txtNome.Size = new Size(210, 23);
+            txtNome.TabIndex = 59;
             // 
-            // textBox6
+            // txtCNPJ
             // 
-            textBox6.Location = new Point(285, 198);
-            textBox6.Name = "textBox6";
-            textBox6.PlaceholderText = "CNPJ";
-            textBox6.Size = new Size(210, 23);
-            textBox6.TabIndex = 60;
-            textBox6.TextChanged += textBox6_TextChanged;
+            txtCNPJ.Location = new Point(285, 198);
+            txtCNPJ.Name = "txtCNPJ";
+            txtCNPJ.PlaceholderText = "CNPJ";
+            txtCNPJ.Size = new Size(210, 23);
+            txtCNPJ.TabIndex = 60;
+            txtCNPJ.TextChanged += textBox6_TextChanged;
             // 
-            // textBox2
+            // txtEmail
             // 
-            textBox2.Location = new Point(285, 116);
-            textBox2.Name = "textBox2";
-            textBox2.PlaceholderText = "email@dominio.com";
-            textBox2.Size = new Size(210, 23);
-            textBox2.TabIndex = 58;
+            txtEmail.Location = new Point(285, 116);
+            txtEmail.Name = "txtEmail";
+            txtEmail.PlaceholderText = "email@dominio.com";
+            txtEmail.Size = new Size(210, 23);
+            txtEmail.TabIndex = 58;
             // 
             // button3
             // 
@@ -147,20 +153,92 @@
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
+            // erroEmail
+            // 
+            erroEmail.AutoSize = true;
+            erroEmail.ForeColor = Color.Red;
+            erroEmail.Location = new Point(267, 116);
+            erroEmail.Name = "erroEmail";
+            erroEmail.Size = new Size(12, 15);
+            erroEmail.TabIndex = 54;
+            erroEmail.Text = "*";
+            erroEmail.Click += label4_Click;
+            // 
+            // erroNome
+            // 
+            erroNome.AutoSize = true;
+            erroNome.ForeColor = Color.Red;
+            erroNome.Location = new Point(267, 160);
+            erroNome.Name = "erroNome";
+            erroNome.Size = new Size(12, 15);
+            erroNome.TabIndex = 54;
+            erroNome.Text = "*";
+            erroNome.Click += label4_Click;
+            // 
+            // erroCNPJ
+            // 
+            erroCNPJ.AutoSize = true;
+            erroCNPJ.ForeColor = Color.Red;
+            erroCNPJ.Location = new Point(267, 201);
+            erroCNPJ.Name = "erroCNPJ";
+            erroCNPJ.Size = new Size(12, 15);
+            erroCNPJ.TabIndex = 54;
+            erroCNPJ.Text = "*";
+            erroCNPJ.Click += label4_Click;
+            // 
+            // erroTelefone
+            // 
+            erroTelefone.AutoSize = true;
+            erroTelefone.ForeColor = Color.Red;
+            erroTelefone.Location = new Point(267, 301);
+            erroTelefone.Name = "erroTelefone";
+            erroTelefone.Size = new Size(12, 15);
+            erroTelefone.TabIndex = 54;
+            erroTelefone.Text = "*";
+            erroTelefone.Click += label4_Click;
+            // 
+            // erroMensagem
+            // 
+            erroMensagem.AutoSize = true;
+            erroMensagem.ForeColor = Color.Red;
+            erroMensagem.Location = new Point(370, 393);
+            erroMensagem.Name = "erroMensagem";
+            erroMensagem.Size = new Size(12, 15);
+            erroMensagem.TabIndex = 54;
+            erroMensagem.Text = "*";
+            erroMensagem.Click += label4_Click;
+            // 
+            // erroEndereco
+            // 
+            erroEndereco.AutoSize = true;
+            erroEndereco.ForeColor = Color.Red;
+            erroEndereco.Location = new Point(267, 255);
+            erroEndereco.Name = "erroEndereco";
+            erroEndereco.Size = new Size(12, 15);
+            erroEndereco.TabIndex = 54;
+            erroEndereco.Text = "*";
+            erroEndereco.Click += label4_Click;
+            // 
             // CadastrarFornecedores
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.AliceBlue;
             ClientSize = new Size(800, 450);
-            Controls.Add(textBox7);
-            Controls.Add(textBox9);
-            Controls.Add(textBox5);
-            Controls.Add(textBox6);
-            Controls.Add(textBox2);
+            Controls.Add(txtTelefone);
+            Controls.Add(txtEndereco);
+            Controls.Add(txtNome);
+            Controls.Add(txtCNPJ);
+            Controls.Add(txtEmail);
             Controls.Add(button3);
             Controls.Add(label7);
             Controls.Add(label6);
+            Controls.Add(erroMensagem);
+            Controls.Add(erroTelefone);
+            Controls.Add(erroEndereco);
+            Controls.Add(erroCNPJ);
+            Controls.Add(erroNome);
+            Controls.Add(erroEmail);
             Controls.Add(label4);
             Controls.Add(label2);
             Controls.Add(button1);
@@ -174,16 +252,22 @@
 
         #endregion
 
-        private TextBox textBox7;
-        private TextBox textBox9;
-        private TextBox textBox5;
-        private TextBox textBox6;
-        private TextBox textBox2;
+        private TextBox txtTelefone;
+        private TextBox txtEndereco;
+        private TextBox txtNome;
+        private TextBox txtCNPJ;
+        private TextBox txtEmail;
         private Button button3;
         private Label label7;
         private Label label6;
         private Label label4;
         private Label label2;
         private Button button1;
+        private Label erroEmail;
+        private Label erroNome;
+        private Label erroCNPJ;
+        private Label erroTelefone;
+        private Label erroMensagem;
+        private Label erroEndereco;
     }
 }

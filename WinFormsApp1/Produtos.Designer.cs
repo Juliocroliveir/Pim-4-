@@ -147,6 +147,7 @@
             txtQtd.Name = "txtQtd";
             txtQtd.Size = new Size(71, 23);
             txtQtd.TabIndex = 84;
+            txtQtd.KeyDown += TxtQtd_KeyDown;
             // 
             // label1
             // 
@@ -285,12 +286,15 @@
             Controls.Add(linkLabel1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Produtos";
-            Text = "Onion Farmers";
-            Name = "Produtos";
             Text = "Form5";
             Load += Produtos_Load;
             ResumeLayout(false);
             PerformLayout();
+        }
+
+        private void TxtQtd_KeyDown(object sender, KeyEventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion
